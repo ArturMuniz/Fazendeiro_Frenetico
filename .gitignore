@@ -1,0 +1,17 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Local editor data and generated builds
+/export_templates/
+/feature_profiles/
+/script_templates/
+/text_editor_themes/
+/builds/
+*.log
+*.apk
+*.aab
+.env
+.env.*
+!.env.example
+export_credentials.cfg

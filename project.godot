@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="fazendeiro_caotico"
+run/main_scene="res://hub.tscn"
+config/features=PackedStringArray("4.7", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Pool="*res://pool.gd"
+AudioManager="*res://audio_manager.gd"
+WeaponDB="*res://weapon_db.gd"
+PassiveDB="*res://passive_db.gd"
+EnemyDB="*res://enemy_db.gd"
+MapDB="*res://map_db.gd"
+SaveManager="*res://save_manager.gd"
+CharacterDB="*res://character_db.gd"
+FarmUpgradeDB="*res://farm_upgrade_db.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

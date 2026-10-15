@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://melee_stab_weapon.gd" id="1_script"]
+
+[node name="MeleeStabWeapon" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Icon" type="Sprite2D" parent="."]
+
+[node name="AttackTimer" type="Timer" parent="."]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://run_end_ui.gd" id="1_script"]
+
+[node name="RunEndUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_script")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -130.0
+offset_right = 170.0
+offset_bottom = 130.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+horizontal_alignment = 1
+text = "Fim de run!"
+
+[node name="StatsLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+horizontal_alignment = 1
+text = "..."
+
+[node name="ButtonRow" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonRow"]
+text = "Jogar Novamente"
+
+[node name="HubButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonRow"]
+text = "Voltar ao Hub"
