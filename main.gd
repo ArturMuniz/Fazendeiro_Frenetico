@@ -26,7 +26,12 @@ func _ready() -> void:
 
 	var data: Dictionary = MapDB.MAPS[current_map_id]
 	map_label.text = "Mapa: %s" % data["name"]
+	map_label.hide()
+	pause_button.hide()
 	_fill_ground(MAP_SOURCE_ID.get(current_map_id, 0))
+	ground_tilemap.z_index = -10
+	$Background.z_index = -20
+	_decorate()
 
 	AudioManager.play_music(data.get("music_id", "gameplay"))
 
@@ -39,3 +44,24 @@ func _fill_ground(source_id: int) -> void:
 	for x in range(-TILE_RANGE, TILE_RANGE + 1):
 		for y in range(-TILE_RANGE, TILE_RANGE + 1):
 			ground_tilemap.set_cell(Vector2i(x, y), source_id, Vector2i(0, 0))
+
+func _decorate() -> void:
+	# Decoration stays behind gameplay and has no invisible collision.
+	var keys: Array = []
+	for key in GameArt.DATA.props:
+		if str(key).begins_with(current_map_id + "_"):
+			keys.append(key)
+	var random := RandomNumberGenerator.new()
+	random.seed = current_map_id.hash()
+	for x in range(-5, 6):
+		for y in range(-5, 6):
+			var spot := Vector2(x * 320, y * 320) + Vector2(random.randf_range(-110, 110), random.randf_range(-110, 110))
+			if spot.length() < 280:
+				continue
+			var prop := Sprite2D.new()
+			prop.texture = GameArt.texture(GameArt.DATA.props[keys[random.randi_range(0, keys.size()-1)]])
+			prop.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+			prop.position = spot
+			prop.z_index = -5
+			prop.modulate = Color(0.78, 0.78, 0.78, 0.85)
+			add_child(prop)

@@ -20,8 +20,16 @@ O movimento usa joystick virtual; a emulação de toque pelo mouse está habilit
 
 ## Estado do desenvolvimento
 
-Versão em desenvolvimento, com polimento visual e correções técnicas pendentes. Alguns personagens e inimigos ainda usam arte provisória. Não há configuração de exportação Android incluída nesta cópia.
+O primeiro pacote de controle e estabilidade está implementado. Consulte [o relatório técnico e os comandos de teste](RELATORIO_ESTABILIDADE.md). A validação dirigida passou em Windows; testes em Android físico e de longa duração continuam pendentes.
+
+Versão em desenvolvimento. Os três personagens e os sete inimigos ativos têm famílias visuais próprias; animações e recortes selecionados foram integrados em16/10/2026. A revisão em Android físico e algumas artes complementares continuam pendentes. Não há configuração de exportação Android incluída nesta cópia.
 
 Os documentos `DOCUMENTO_COMPLETO_PROJETO.md`, `RELATORIO_SPRITES.md` e `ESPECIFICACAO_AUDIO.md` registram etapas do desenvolvimento e podem conter descrições anteriores às regras atualmente implementadas.
 
 Os recursos utilizados pelo jogo estão em `art/` e `audio/`. Caches do Godot e arquivos de configuração local do editor não são versionados.
+
+A [direção visual e o fluxo de entrega de arte pelo Google Flow](docs/direcao_visual/README.md) incluem a auditoria dos 120 arquivos, os layouts de UI e o backlog de assets. Esses documentos descrevem o planejamento da nova interface.
+
+A interface rural foi implementada com os assets aprovados. Veja o [relatório de implementação, validação e limitações](RELATORIO_INTERFACE_RURAL.md): lobby, HUD, pausa/inventário, cartas com valores e confirmação, vitória e derrota.
+
+O [relatório dos sprites polidos](RELATORIO_SPRITES_POLIDOS.md) registra a integração posterior:184 fontes revisadas, personagens/inimigos animados, substituições,275 verificações e25 capturas do renderizador.

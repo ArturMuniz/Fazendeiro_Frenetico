@@ -13,23 +13,28 @@ var attack_cooldown: float = 1.0
 
 var _player: Player
 var _can_attack: bool = true
+var art_animator: SpriteAnimator
 
 @onready var attack_timer: Timer = $AttackTimer
 @onready var sprite: Sprite2D = $Sprite2D
 
 
 func _ready() -> void:
+	art_animator = SpriteAnimator.new()
+	add_child(art_animator)
 	attack_timer.timeout.connect(func() -> void: _can_attack = true)
 
 
-func configure(stats: Dictionary, player: Player) -> void:
+func configure(stats: Dictionary, player: Player, level: int = 1) -> void:
 	_player = player
 	damage = stats["damage"]
 	attack_cooldown = stats["cooldown"]
 	attack_timer.wait_time = attack_cooldown
+	art_animator.configure("bezerro_%d" % level, sprite)
 
 
 func _physics_process(_delta: float) -> void:
+	art_animator.play("walk" if velocity.length() > 1 else "idle")
 	var target: Node2D = _find_nearest_enemy()
 
 	if target == null:
@@ -79,6 +84,7 @@ func _find_nearest_enemy() -> Node2D:
 
 
 func _attack(target: Node2D) -> void:
+	art_animator.once("attack")
 	var effective_damage: float = damage
 	if _player != null:
 		effective_damage += _player.damage_bonus

@@ -5,24 +5,26 @@
 [node name="TouchJoystick" type="Control" unique_id=160332783]
 script = ExtResource("1_script")
 layout_mode = 3
-anchors_preset = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = -25.0
-offset_right = 80.0
-offset_bottom = 15.0
+offset_top = -160.0
+offset_right = 160.0
+offset_bottom = -40.0
+mouse_filter = 2
 
 [node name="Base" type="ColorRect" parent="." unique_id=831793012]
 layout_mode = 0
-offset_left = -48.0
-offset_top = -56.0
-offset_right = 72.0
-offset_bottom = 64.0
+offset_right = 120.0
+offset_bottom = 120.0
+mouse_filter = 2
 color = Color(0.4117647, 0.4117647, 0.4117647, 1)
 
 [node name="Handle" type="ColorRect" parent="." unique_id=554497929]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 1.0
-offset_right = 59.0
-offset_bottom = 51.0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 85.0
+offset_bottom = 85.0
+mouse_filter = 2
 color = Color(0.30588236, 1, 1, 1)

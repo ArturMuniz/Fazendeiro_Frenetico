@@ -11,7 +11,7 @@ class_name Enemy
 ##
 ## Reaproveitado via Pool em vez de destruído a cada morte (ver die()).
 
-const SELF_SCENE: PackedScene = preload("res://enemy.tscn")
+const POOL_SCENE_PATH: String = "res://enemy.tscn"
 const XP_ORB_SCENE: PackedScene = preload("res://xp_orb.tscn")
 const ENEMY_PROJECTILE_SCENE: PackedScene = preload("res://enemy_projectile.tscn")
 const DAMAGE_NUMBER_SCENE: PackedScene = preload("res://damage_number.tscn")
@@ -27,6 +27,8 @@ var health: float
 var _player: Node2D
 var _touching_player: bool = false
 var _despawning: bool = false
+var _return_pending: bool = false
+var _landing_timer: Timer
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var body_shape: CollisionShape2D = $CollisionShape2D
@@ -36,6 +38,7 @@ var _despawning: bool = false
 
 var _frames: Array = []
 var _frame_index: int = 0
+var art_animator: SpriteAnimator
 
 # Estado usado por "jumper" e pelo boss "boss_leaper"
 var _jump_speed: float = 250.0
@@ -58,15 +61,35 @@ var _enemy_projectile_speed: float = 200.0
 
 
 func _ready() -> void:
+	art_animator = SpriteAnimator.new()
+	add_child(art_animator)
+	body_shape.shape = body_shape.shape.duplicate()
+	hitbox_shape.shape = hitbox_shape.shape.duplicate()
+	_landing_timer = Timer.new()
+	_landing_timer.one_shot = true
+	add_child(_landing_timer)
+	_landing_timer.timeout.connect(_on_jump_landed)
 	damage_timer.timeout.connect(_on_damage_timer_timeout)
 
 
 ## Chamado pelo spawner logo após add_child, define o arquétipo.
 ## difficulty_multiplier escala HP e dano conforme o tempo de run.
 ## Também serve como "reset" quando o inimigo vem reaproveitado do
-## Pool — por isso reconfigura tudo do zero, incluindo o grupo (sair
-## da árvore tira o nó dos grupos automaticamente).
-func configure(id: String, difficulty_multiplier: float = 1.0) -> void:
+## Pool — por isso reconfigura estado transitório e alvo a cada utilização.
+## O grupo é removido explicitamente na desativação.
+func configure(id: String, difficulty_multiplier: float = 1.0, target: Node2D = null) -> void:
+	_player = target if is_instance_valid(target) else get_tree().get_first_node_in_group("player")
+	velocity = Vector2.ZERO
+	_jump_direction = Vector2.ZERO
+	_return_pending = false
+	_frames.clear()
+	_frame_index = 0
+	sprite.flip_h = false
+	_burst_count = 0
+	_landing_timer.stop()
+	frame_timer.stop()
+	body_shape.set_deferred("disabled", false)
+	hitbox_shape.set_deferred("disabled", false)
 	visible = true
 	set_physics_process(true)
 	add_to_group("enemies")
@@ -86,25 +109,7 @@ func configure(id: String, difficulty_multiplier: float = 1.0) -> void:
 	xp_value = data["xp_value"]
 
 	var visual_scale: float = data.get("scale", 0.5)
-	var sprite_frames: Array = data.get("sprite_frames", [])
-
-	if sprite_frames.size() > 0:
-		sprite.modulate = Color(1, 1, 1)
-		_frames = []
-		for frame_path in sprite_frames:
-			_frames.append(load(frame_path))
-		_frame_index = 0
-		sprite.texture = _frames[0]
-		sprite.scale = Vector2.ONE
-		if _frames.size() > 1:
-			frame_timer.wait_time = 0.25
-			if not frame_timer.timeout.is_connected(_on_frame_timer_timeout):
-				frame_timer.timeout.connect(_on_frame_timer_timeout)
-			frame_timer.start()
-	else:
-		sprite.texture = load("res://icon.svg")
-		sprite.modulate = data.get("color", Color(1.0, 0.4, 0.4))
-		sprite.scale = Vector2.ONE * visual_scale
+	art_animator.configure(id, sprite)
 
 	(body_shape.shape as CircleShape2D).radius = 14.0 * visual_scale
 	(hitbox_shape.shape as CircleShape2D).radius = 16.0 * visual_scale
@@ -129,8 +134,8 @@ func configure(id: String, difficulty_multiplier: float = 1.0) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if _player == null:
-		_player = get_tree().get_first_node_in_group("player")
+	if _despawning or not is_instance_valid(_player):
+		velocity = Vector2.ZERO
 		return
 
 	match behavior:
@@ -140,6 +145,7 @@ func _physics_process(_delta: float) -> void:
 			_process_shooter()
 		_:
 			_move_toward_player()
+	art_animator.play("jump" if _jumping else ("walk" if velocity.length() > 1 else "idle"))
 
 
 func _move_toward_player() -> void:
@@ -174,18 +180,21 @@ func _setup_jumper(data: Dictionary, multiplier: float = 1.0) -> void:
 
 
 func _on_jump_timer_timeout() -> void:
-	if _player == null:
+	if _despawning or not is_instance_valid(_player) or get_tree().paused:
 		return
 	_jumping = true
 	_jump_direction = (_player.global_position - global_position).normalized()
 	_update_facing(_jump_direction)
-	get_tree().create_timer(_jump_duration).timeout.connect(_on_jump_landed)
+	_landing_timer.start(_jump_duration)
 
 
 func _on_jump_landed() -> void:
+	if _despawning or not is_instance_valid(_player):
+		return
 	_jumping = false
+	art_animator.once("land")
 	# Só o boss "Gafanhoto Gigante" causa dano de área ao pousar.
-	if behavior == "boss_leaper" and _player != null:
+	if behavior == "boss_leaper":
 		var dist: float = global_position.distance_to(_player.global_position)
 		if dist <= _impact_radius:
 			_deal_contact_damage(_player, _impact_damage)
@@ -228,8 +237,9 @@ func _process_shooter() -> void:
 
 
 func _on_shoot_timer_timeout() -> void:
-	if _player == null:
+	if _despawning or not is_instance_valid(_player) or get_tree().paused:
 		return
+	art_animator.once("attack")
 	var projectile: EnemyProjectile = Pool.acquire(ENEMY_PROJECTILE_SCENE)
 	get_tree().current_scene.add_child(projectile)
 	var direction: Vector2 = (_player.global_position - global_position).normalized()
@@ -256,6 +266,9 @@ func _setup_boss(data: Dictionary, multiplier: float = 1.0) -> void:
 
 
 func _on_burst_timer_timeout() -> void:
+	if _despawning or not is_instance_valid(_player) or get_tree().paused:
+		return
+	art_animator.once("attack")
 	for i in range(_burst_count):
 		var angle: float = (TAU / _burst_count) * i
 		var direction: Vector2 = Vector2(cos(angle), sin(angle))
@@ -271,6 +284,7 @@ func take_damage(amount: float) -> void:
 	if _despawning:
 		return
 	health -= amount
+	art_animator.flash()
 	_spawn_damage_number(amount)
 	AudioManager.play_sfx("hit")
 	if health <= 0.0:
@@ -287,11 +301,12 @@ func die() -> void:
 	if _despawning:
 		return
 	_despawning = true
+	VisualFX.spawn(get_tree().current_scene, "death", global_position, sprite.flip_h, enemy_id)
 
 	var is_boss: bool = enemy_id.begins_with("boss_")
 	AudioManager.play_sfx("boss_death" if is_boss else "enemy_death")
 
-	if _player != null and _player.has_method("register_kill"):
+	if is_instance_valid(_player) and _player.has_method("register_kill"):
 		_player.register_kill(is_boss)
 
 	var orb: XPOrb = XP_ORB_SCENE.instantiate()
@@ -307,6 +322,17 @@ func die() -> void:
 ## de física (colisão de projétil), e mexer na árvore nesse momento
 ## dá o erro "flushing queries" do motor de física.
 func _despawn() -> void:
+	if _return_pending:
+		return
+	_return_pending = true
+	_despawning = true
+	remove_from_group("enemies")
+	_touching_player = false
+	_jumping = false
+	velocity = Vector2.ZERO
+	_landing_timer.stop()
+	body_shape.set_deferred("disabled", true)
+	hitbox_shape.set_deferred("disabled", true)
 	visible = false
 	set_physics_process(false)
 	damage_timer.stop()
@@ -318,12 +344,15 @@ func _despawn() -> void:
 
 
 func _return_to_pool() -> void:
+	_player = null
 	if get_parent() != null:
 		get_parent().remove_child(self)
-	Pool.release(SELF_SCENE, self)
+	Pool.release(load(POOL_SCENE_PATH), self)
 
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
+	if _despawning or get_tree().paused:
+		return
 	if body.is_in_group("player"):
 		_touching_player = true
 		_deal_contact_damage(body)
@@ -337,13 +366,15 @@ func _on_hitbox_body_exited(body: Node2D) -> void:
 
 
 func _on_damage_timer_timeout() -> void:
-	if _touching_player and _player != null:
+	if not _despawning and _touching_player and is_instance_valid(_player):
 		_deal_contact_damage(_player)
 
 
 ## amount < 0 usa o contact_damage padrão; usado com valor explícito
 ## pelo impacto de pouso do Gafanhoto Gigante.
 func _deal_contact_damage(body: Node2D, amount: float = -1.0) -> void:
+	if _despawning or get_tree().paused or not is_instance_valid(body):
+		return
 	var dmg: float = amount if amount >= 0.0 else contact_damage
 	if body.has_method("take_damage"):
 		body.take_damage(dmg)

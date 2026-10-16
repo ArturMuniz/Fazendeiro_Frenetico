@@ -173,9 +173,9 @@ func _on_spawn_timer_timeout() -> void:
 
 
 func _spawn_enemy(id: String) -> void:
-	if _player == null:
+	if not is_instance_valid(_player):
 		_player = get_tree().get_first_node_in_group("player")
-	if _player == null:
+	if not is_instance_valid(_player):
 		return
 
 	var angle: float = randf() * TAU
@@ -184,4 +184,4 @@ func _spawn_enemy(id: String) -> void:
 	var enemy: Enemy = Pool.acquire(ENEMY_SCENE)
 	get_tree().current_scene.add_child(enemy)
 	enemy.global_position = _player.global_position + offset
-	enemy.configure(id, _current_difficulty_multiplier())
+	enemy.configure(id, _current_difficulty_multiplier(), _player)

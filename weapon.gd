@@ -46,6 +46,8 @@ func configure(id: String, lvl: int) -> void:
 	var icon_path: String = weapon_data.get("icon_texture", "")
 	if icon_path != "" and icon != null:
 		icon.texture = load(icon_path)
+	if icon != null:
+		GameArt.equip(icon, id, lvl)
 
 	var multiplier: float = 1.0
 	if _player != null:
@@ -91,6 +93,7 @@ func _fire_at(target: Node2D) -> void:
 	projectile.setup(direction, projectile_speed, effective_damage, pierce, bounces, splash_radius, splash_damage)
 	if _projectile_texture_path != "":
 		var sprite_node: Sprite2D = projectile.get_node("Sprite2D")
-		sprite_node.texture = load(_projectile_texture_path)
+		sprite_node.texture = GameArt.ui("projectile_" + weapon_id)
 		sprite_node.modulate = Color(1, 1, 1)
 		sprite_node.scale = Vector2(1, 1)
+		sprite_node.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST

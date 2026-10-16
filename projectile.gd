@@ -6,7 +6,7 @@ class_name Projectile
 ## (pula pro próximo inimigo mais próximo) e dano em área, tudo
 ## configurado via setup(). Reaproveitado via Pool.
 
-const SELF_SCENE: PackedScene = preload("res://projectile.tscn")
+const POOL_SCENE_PATH: String = "res://projectile.tscn"
 
 @export var lifetime: float = 2.0
 
@@ -18,12 +18,16 @@ var _bounces: int = 0  # quantas vezes procura outro alvo após acertar
 var _splash_radius: float = 0.0  # >0 causa dano em área a cada acerto (Canhão de Batata)
 var _splash_damage: float = 0.0
 var _hit_enemies: Array = []
-var _use_id: int = 0  # evita que um timer de vida útil "fantasma" (de um uso anterior, antes de voltar pro pool) despache esse projétil por engano
 var _despawning: bool = false
+var _lifetime_timer: Timer
 
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
+	_lifetime_timer = Timer.new()
+	_lifetime_timer.one_shot = true
+	add_child(_lifetime_timer)
+	_lifetime_timer.timeout.connect(_despawn)
 
 
 ## Chamado pela arma logo após instanciar/reaproveitar o projétil.
@@ -42,14 +46,7 @@ func setup(direction: Vector2, speed: float, damage: float, pierce: int = 0, bou
 	set_physics_process(true)
 	_despawning = false
 
-	_use_id += 1
-	var my_id: int = _use_id
-	get_tree().create_timer(lifetime).timeout.connect(func() -> void: _on_lifetime_expired(my_id))
-
-
-func _on_lifetime_expired(id: int) -> void:
-	if id == _use_id:
-		_despawn()
+	_lifetime_timer.start(lifetime)
 
 
 func _physics_process(delta: float) -> void:
@@ -57,12 +54,15 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
+	if _despawning or get_tree().paused:
+		return
 	if not body.is_in_group("enemies") or not body.has_method("take_damage"):
 		return
 	if _hit_enemies.has(body):
 		return
 
 	body.take_damage(_damage)
+	VisualFX.spawn(get_tree().current_scene, "impact", global_position)
 	_hit_enemies.append(body)
 
 	if _splash_radius > 0.0:
@@ -116,6 +116,7 @@ func _despawn() -> void:
 	if _despawning:
 		return
 	_despawning = true
+	_lifetime_timer.stop()
 	set_physics_process(false)
 	set_deferred("monitoring", false)
 	visible = false
@@ -125,4 +126,5 @@ func _despawn() -> void:
 func _return_to_pool() -> void:
 	if get_parent() != null:
 		get_parent().remove_child(self)
-	Pool.release(SELF_SCENE, self)
+	_hit_enemies.clear()
+	Pool.release(load(POOL_SCENE_PATH), self)

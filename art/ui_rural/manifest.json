@@ -1,0 +1,382 @@
+[
+  {
+    "output": "campaign.png",
+    "source": "Pixel_art_campaign_map_20261015080945.jpg",
+    "crop": null,
+    "size": [
+      768,
+      1376
+    ],
+    "source_sha256": "af5def53e5d52d72d9d0907d00ba58ae0ac73d2c3e3e0c8544758b89816b9a5b"
+  },
+  {
+    "output": "panel.png",
+    "source": "Wooden_panel_frame_asset_20261015081140.jpg",
+    "crop": null,
+    "size": [
+      256,
+      247
+    ],
+    "source_sha256": "f7319451785e8b2fe54da4f836613977f9418c215ec51e7d83713dc868b2f570"
+  },
+  {
+    "output": "emblem.png",
+    "source": "Wooden_farm_game_logo_emblem_20261015081042.jpg",
+    "crop": null,
+    "size": [
+      256,
+      236
+    ],
+    "source_sha256": "9d7f244213c8b77bbf98300d95b8ba86fbfcf6f0709d6ad15bd8918aa4ab0a4e"
+  },
+  {
+    "output": "button.png",
+    "source": "Wooden_buttons_pixel_art_sheet_20261015081053.jpg",
+    "crop": [
+      0,
+      0,
+      1024,
+      342
+    ],
+    "size": [
+      512,
+      163
+    ],
+    "source_sha256": "b8db93a1acd38ffaf6c9f6b77adbceb9ff797b2fb4916e1d01a48591c6ebbfe0"
+  },
+  {
+    "output": "button_pressed.png",
+    "source": "Wooden_buttons_pixel_art_sheet_20261015081053.jpg",
+    "crop": [
+      0,
+      342,
+      1024,
+      676
+    ],
+    "size": [
+      512,
+      169
+    ],
+    "source_sha256": "b8db93a1acd38ffaf6c9f6b77adbceb9ff797b2fb4916e1d01a48591c6ebbfe0"
+  },
+  {
+    "output": "button_disabled.png",
+    "source": "Wooden_buttons_pixel_art_sheet_20261015081053.jpg",
+    "crop": [
+      0,
+      676,
+      1024,
+      1024
+    ],
+    "size": [
+      512,
+      163
+    ],
+    "source_sha256": "b8db93a1acd38ffaf6c9f6b77adbceb9ff797b2fb4916e1d01a48591c6ebbfe0"
+  },
+  {
+    "output": "map_locked.png",
+    "source": "Four_wooden_medallion_game_buttons_20261015080958.jpg",
+    "crop": [
+      0,
+      0,
+      344,
+      768
+    ],
+    "size": [
+      128,
+      125
+    ],
+    "source_sha256": "dbfb4f1d1bbf22b90b2044e2c28cfa311791d5bf8281600151c49788ebe354f8"
+  },
+  {
+    "output": "map_available.png",
+    "source": "Four_wooden_medallion_game_buttons_20261015080958.jpg",
+    "crop": [
+      344,
+      0,
+      688,
+      768
+    ],
+    "size": [
+      128,
+      125
+    ],
+    "source_sha256": "dbfb4f1d1bbf22b90b2044e2c28cfa311791d5bf8281600151c49788ebe354f8"
+  },
+  {
+    "output": "map_cleared.png",
+    "source": "Four_wooden_medallion_game_buttons_20261015080958.jpg",
+    "crop": [
+      688,
+      0,
+      1032,
+      768
+    ],
+    "size": [
+      128,
+      125
+    ],
+    "source_sha256": "dbfb4f1d1bbf22b90b2044e2c28cfa311791d5bf8281600151c49788ebe354f8"
+  },
+  {
+    "output": "map_boss.png",
+    "source": "Four_wooden_medallion_game_buttons_20261015080958.jpg",
+    "crop": [
+      1032,
+      0,
+      1376,
+      768
+    ],
+    "size": [
+      128,
+      125
+    ],
+    "source_sha256": "dbfb4f1d1bbf22b90b2044e2c28cfa311791d5bf8281600151c49788ebe354f8"
+  },
+  {
+    "output": "passive_espantalho.png",
+    "source": "icons_passives.png",
+    "crop": [
+      0,
+      0,
+      341,
+      500
+    ],
+    "size": [
+      62,
+      96
+    ],
+    "source_sha256": "441ac5d6d53e0fc55ffdca6c0a6e7c9d3b4dbc8b518465f477ee1e0face5005c"
+  },
+  {
+    "output": "passive_sementes.png",
+    "source": "icons_passives.png",
+    "crop": [
+      341,
+      0,
+      700,
+      500
+    ],
+    "size": [
+      78,
+      96
+    ],
+    "source_sha256": "441ac5d6d53e0fc55ffdca6c0a6e7c9d3b4dbc8b518465f477ee1e0face5005c"
+  },
+  {
+    "output": "passive_termica.png",
+    "source": "icons_passives.png",
+    "crop": [
+      700,
+      0,
+      1024,
+      500
+    ],
+    "size": [
+      52,
+      96
+    ],
+    "source_sha256": "441ac5d6d53e0fc55ffdca6c0a6e7c9d3b4dbc8b518465f477ee1e0face5005c"
+  },
+  {
+    "output": "passive_galochas.png",
+    "source": "icons_passives.png",
+    "crop": [
+      0,
+      500,
+      512,
+      1024
+    ],
+    "size": [
+      92,
+      96
+    ],
+    "source_sha256": "441ac5d6d53e0fc55ffdca6c0a6e7c9d3b4dbc8b518465f477ee1e0face5005c"
+  },
+  {
+    "output": "passive_ima.png",
+    "source": "icons_passives.png",
+    "crop": [
+      512,
+      500,
+      1024,
+      1024
+    ],
+    "size": [
+      96,
+      92
+    ],
+    "source_sha256": "441ac5d6d53e0fc55ffdca6c0a6e7c9d3b4dbc8b518465f477ee1e0face5005c"
+  },
+  {
+    "output": "farm_vida_extra.png",
+    "source": "Pixel_art_item_icons_20261015081106.jpg",
+    "crop": [
+      0,
+      0,
+      380,
+      1024
+    ],
+    "size": [
+      96,
+      89
+    ],
+    "source_sha256": "9194598766e9f11bf3af949f045acdb3cfce7954b3bf3220b2d2f4f870e13828"
+  },
+  {
+    "output": "farm_dano_extra.png",
+    "source": "Pixel_art_item_icons_20261015081106.jpg",
+    "crop": [
+      380,
+      0,
+      680,
+      1024
+    ],
+    "size": [
+      81,
+      96
+    ],
+    "source_sha256": "9194598766e9f11bf3af949f045acdb3cfce7954b3bf3220b2d2f4f870e13828"
+  },
+  {
+    "output": "farm_velocidade_extra.png",
+    "source": "Pixel_art_item_icons_20261015081106.jpg",
+    "crop": [
+      680,
+      0,
+      1024,
+      1024
+    ],
+    "size": [
+      96,
+      84
+    ],
+    "source_sha256": "9194598766e9f11bf3af949f045acdb3cfce7954b3bf3220b2d2f4f870e13828"
+  },
+  {
+    "output": "char_fazendeiro.png",
+    "source": "1.1 Idle — 2 a 4 frames.png",
+    "crop": [
+      0,
+      0,
+      128,
+      128
+    ],
+    "size": [
+      65,
+      104
+    ],
+    "source_sha256": "cc8829521ab1479839f42c492d2fce952414289ca54a406e4650cc608d687c2f"
+  },
+  {
+    "output": "char_netinho.png",
+    "source": "netinhoagil-andando.jpg",
+    "crop": [
+      0,
+      0,
+      344,
+      768
+    ],
+    "size": [
+      65,
+      128
+    ],
+    "source_sha256": "1b47ceab21166cedd2358513ecb055b36504e5e7b222de41383814f34dd3866f"
+  },
+  {
+    "output": "weapon_bezerro_2.png",
+    "source": "bezerro-lv2.jpg",
+    "crop": null,
+    "size": [
+      96,
+      84
+    ],
+    "source_sha256": "1c488abf3217e3066f6edc8260a1cccf6a84ebef498a995dd599359ffd6cbc4a"
+  },
+  {
+    "output": "weapon_bezerro_3.png",
+    "source": "bezerro-lv3.jpg",
+    "crop": null,
+    "size": [
+      96,
+      88
+    ],
+    "source_sha256": "de1f296c39005543f23d7937dd328b49a70195e60d52127e40d9885174c866e5"
+  },
+  {
+    "output": "weapon_batata_3.png",
+    "source": "canhaobatata-arma-lv3.jpg",
+    "crop": null,
+    "size": [
+      96,
+      84
+    ],
+    "source_sha256": "80a52a25cc7af6a06266d011cc7576e1baaf9ded90181dd89a2d617ac1ed50d4"
+  },
+  {
+    "output": "weapon_mamona_2.png",
+    "source": "estilinguemamona-arma-lv2.jpg",
+    "crop": null,
+    "size": [
+      86,
+      96
+    ],
+    "source_sha256": "103aa7bb944776fab11c3b5e1fb86615fbe11f0b9808cff6eed87f80f95d9947"
+  },
+  {
+    "output": "weapon_mamona_3.png",
+    "source": "estilinguemamona-arma-lv3.jpg",
+    "crop": null,
+    "size": [
+      96,
+      91
+    ],
+    "source_sha256": "c3aa1ce7fd5f490b54ebd6e704bd5f1032d2b151368b3fc1a6b55a7d2d1ccedd"
+  },
+  {
+    "output": "weapon_milho_2.png",
+    "source": "metralhadora-arma-lv2.jpg",
+    "crop": null,
+    "size": [
+      96,
+      53
+    ],
+    "source_sha256": "eb67f67677318317705e277330d7cf1dc2dc8df80aa1efc7d9d659d9e6de3e18"
+  },
+  {
+    "output": "weapon_motosserra_2.png",
+    "source": "serraele-armalv2.jpg",
+    "crop": null,
+    "size": [
+      96,
+      38
+    ],
+    "source_sha256": "fa10700f5e75f2a23988a0ec39f176847e3e20f28e9514a77b13f24a92e03a17"
+  },
+  {
+    "output": "weapon_motosserra_3.png",
+    "source": "serraele-armalv3.jpg",
+    "crop": null,
+    "size": [
+      96,
+      52
+    ],
+    "source_sha256": "a1f7dfcaeeeccaa8e04e2e93b76f5497595eeb7ea922b46dea6c29744d7e223a"
+  },
+  {
+    "output": "weapon_bezerro_1.png",
+    "source": "icone-bezerro.jpg",
+    "crop": [
+      0,
+      0,
+      341,
+      1024
+    ],
+    "size": [
+      96,
+      82
+    ],
+    "source_sha256": "58e8554452d918a14472d08eb20882b1427038cdd8335dbd4987220d90e56613"
+  }
+]

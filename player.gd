@@ -27,12 +27,13 @@ const WEAPON_SCENES: Dictionary = {
 @onready var joystick: TouchJoystick = get_node(joystick_path)
 @onready var anim_timer: Timer = $AnimTimer
 
-const IDLE_TEXTURE: Texture2D = preload("res://art/player_idle_0.png")
+const IDLE_TEXTURE: Texture2D = preload("res://art/polished/fazendeiro_idle_00.png")
 const WALK_TEXTURES: Array = [
-	preload("res://art/player_walk_0.png"),
-	preload("res://art/player_walk_1.png"),
+	preload("res://art/polished/fazendeiro_walk_00.png"),
+	preload("res://art/polished/fazendeiro_walk_01.png"),
 ]
 var _walk_frame: int = 0
+var art_animator: SpriteAnimator
 
 var health: float
 var xp: float = 0.0
@@ -42,6 +43,11 @@ var pending_level_ups: int = 0
 var survival_time: float = 0.0
 var kills: int = 0
 var boss_defeated: bool = false
+var _run_id: String
+var _boss_gold_paid: int = 0
+var _result_ui: RunEndUI
+var _pending_victory: bool = false
+var _pending_next_map: String = ""
 
 var _starting_weapon: String = "foice"
 
@@ -67,12 +73,17 @@ var _auto_collect_timer: Timer
 
 
 func _ready() -> void:
+	_run_id = SaveManager.new_run_id()
 	add_to_group("player")
 	xp_to_next = xp_to_first_level
 	_apply_meta_progression()
 	health = max_health
 	add_weapon(_starting_weapon)
 	anim_timer.timeout.connect(_on_anim_timer_timeout)
+	anim_timer.stop()
+	art_animator = SpriteAnimator.new()
+	add_child(art_animator)
+	art_animator.configure(SaveManager.selected_character, sprite)
 
 
 ## Aplica o personagem escolhido no Hub e os upgrades permanentes da
@@ -100,6 +111,8 @@ func _apply_meta_progression() -> void:
 
 
 func add_xp(amount: float) -> void:
+	if _dead:
+		return
 	xp += amount
 	while xp >= xp_to_next:
 		xp -= xp_to_next
@@ -121,14 +134,15 @@ func heal_percent(fraction: float) -> void:
 ## Carta grátis: reaproveita a tela de level-up sem gastar XP (usado na
 ## pausa entre fases).
 func grant_free_level_up() -> void:
+	if _dead:
+		return
 	pending_level_ups += 1
 	leveled_up.emit()
 
 
-var _first_clear: bool = false
-
-
 func register_kill(is_boss: bool = false) -> void:
+	if _dead:
+		return
 	kills += 1
 	if is_boss:
 		boss_defeated = true
@@ -140,7 +154,6 @@ func register_kill(is_boss: bool = false) -> void:
 ## Boss morreu: registra o mapa como concluído (salva na hora, mesmo que
 ## o jogador escolha continuar no modo livre) e mostra a escolha.
 func _on_boss_defeated() -> void:
-	_first_clear = SaveManager.mark_map_cleared(SaveManager.selected_map)
 	_show_boss_victory_choice()
 
 
@@ -154,13 +167,18 @@ func _show_boss_victory_choice() -> void:
 	ui.next_map_chosen.connect(_on_next_map_chosen.bind(next_id))
 	ui.continue_chosen.connect(_on_continue_free_mode)
 	ui.end_run_chosen.connect(_on_end_run_as_victory)
+	ui.save_retry_requested.connect(_save_victory.bind(ui))
+	_save_victory(ui)
 
 
-func _victory_gold() -> int:
-	var gold: int = int(survival_time / 5.0) + level * 3 + 50
-	if _first_clear:
-		gold += 100  # bônus de primeira conclusão do mapa
-	return gold
+func _save_victory(ui: BossVictoryUI) -> void:
+	var result := SaveManager.claim_boss_reward(_run_id, SaveManager.selected_map)
+	if not result["ok"]:
+		ui.show_save_error()
+		return
+	_boss_gold_paid = result["amount"]
+	var next_id: String = MapDB.get_next_map_id(SaveManager.selected_map)
+	ui.configure(MapDB.MAPS[next_id]["name"] if next_id != "" else "", _boss_gold_paid)
 
 
 func _on_continue_free_mode() -> void:
@@ -174,34 +192,14 @@ func _on_continue_free_mode() -> void:
 func _on_next_map_chosen(next_id: String) -> void:
 	if _dead:
 		return
-	_dead = true
-	set_physics_process(false)
-	SaveManager.add_gold(_victory_gold())
-	SaveManager.selected_map = next_id
-	get_tree().change_scene_to_file("res://main.tscn")
+	_finish_run(true, next_id)
 
 
 func _on_end_run_as_victory() -> void:
 	if _dead:
 		return
-	_dead = true
-	set_physics_process(false)
-	AudioManager.stop_music()
 	AudioManager.play_sfx("level_up")
-
-	var gold_earned: int = _victory_gold()
-	SaveManager.add_gold(gold_earned)
-
-	var run_end_ui: RunEndUI = RUN_END_UI_SCENE.instantiate()
-	get_tree().current_scene.add_child(run_end_ui)
-	run_end_ui.show_results({
-		"victory": true,
-		"survival_time": survival_time,
-		"level": level,
-		"kills": kills,
-		"boss_defeated": true,
-		"gold_earned": gold_earned,
-	})
+	_finish_run(true)
 
 
 ## Adiciona uma arma nova ao inventário, ou funde com uma cópia já
@@ -346,6 +344,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	_update_facing(move_vector)
+	art_animator.play("walk" if velocity.length() > 5.0 else "idle")
 	_update_weapon_orbit(delta)
 
 
@@ -376,6 +375,8 @@ func _update_weapon_orbit(delta: float) -> void:
 
 
 func _on_anim_timer_timeout() -> void:
+	if art_animator != null:
+		return
 	if velocity.length() > 5.0:
 		_walk_frame = (_walk_frame + 1) % WALK_TEXTURES.size()
 		sprite.texture = WALK_TEXTURES[_walk_frame]
@@ -387,10 +388,11 @@ var _dead: bool = false
 
 
 func take_damage(amount: float) -> void:
-	if _dead:
+	if _dead or get_tree().paused:
 		return
 	var reduced_amount: float = amount * (1.0 - defense_percent)
 	health -= reduced_amount
+	art_animator.flash()
 	AudioManager.play_sfx("player_hurt")
 	if health <= 0.0:
 		_die()
@@ -402,20 +404,55 @@ const RUN_END_UI_SCENE: PackedScene = preload("res://run_end_ui.tscn")
 func _die() -> void:
 	if _dead:
 		return
-	_dead = true
-	set_physics_process(false)
-	AudioManager.stop_music()
 	AudioManager.play_sfx("game_over")
+	art_animator.once("death")
+	# Death is a short presentation state; simulation and reward settlement
+	# stop immediately, while this one animator finishes before revealing UI.
+	art_animator.process_mode = Node.PROCESS_MODE_ALWAYS
+	art_animator.completed.connect(_on_death_visual_completed, CONNECT_ONE_SHOT)
+	_finish_run(false)
+	_result_ui.reveal_after_death(art_animator)
 
-	var gold_earned: int = int(survival_time / 5.0) + level * 3 + (20 if boss_defeated else 0)
-	SaveManager.add_gold(gold_earned)
+func _on_death_visual_completed(_state: String) -> void:
+	art_animator.process_mode = Node.PROCESS_MODE_INHERIT
 
-	var run_end_ui: RunEndUI = RUN_END_UI_SCENE.instantiate()
-	get_tree().current_scene.add_child(run_end_ui)
-	run_end_ui.show_results({
+
+func is_dead() -> bool:
+	return _dead
+
+
+func _finish_run(victory: bool, next_map: String = "") -> void:
+	_dead = true
+	pending_level_ups = 0
+	set_physics_process(false)
+	joystick.reset_input()
+	AudioManager.stop_music()
+	_pending_victory = victory
+	_pending_next_map = next_map
+	_settle_and_show_results()
+
+
+func _settle_and_show_results() -> void:
+	# Preserva o bônus preexistente de derrota após chefe, além da vitória já salva.
+	var death_bonus := 20 if boss_defeated and not _pending_victory else 0
+	var result := SaveManager.settle_run(_run_id, int(survival_time / 5.0) + level * 3 + death_bonus)
+	if result["ok"] and _pending_next_map != "":
+		SaveManager.selected_map = _pending_next_map
+		PauseManager.change_scene("res://main.tscn")
+		return
+	if not is_instance_valid(_result_ui):
+		_result_ui = RUN_END_UI_SCENE.instantiate()
+		get_tree().current_scene.add_child(_result_ui)
+		_result_ui.save_retry_requested.connect(_settle_and_show_results)
+	_result_ui.show_results({
+		"victory": _pending_victory,
 		"survival_time": survival_time,
 		"level": level,
 		"kills": kills,
 		"boss_defeated": boss_defeated,
-		"gold_earned": gold_earned,
+		"gold_earned": _boss_gold_paid + int(result["amount"]),
+		"gold_already_paid": _boss_gold_paid,
+		"death_bonus": death_bonus,
+		"gold_paid_now": result["amount"],
+		"save_failed": not result["ok"],
 	})

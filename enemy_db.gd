@@ -30,7 +30,7 @@ const ENEMIES: Dictionary = {
 		"xp_value": 3,
 		"scale": 0.75,
 		"color": Color(0.55, 0.35, 0.75),
-		"sprite_frames": ["res://art/enemy_lesma_0.png", "res://art/enemy_lesma_1.png"],
+		"sprite_frames": ["res://art/polished/lesma_idle_00.png", "res://art/polished/lesma_idle_01.png"],
 	},
 	"gafanhoto": {
 		"name": "Gafanhoto Saltador",
@@ -44,7 +44,7 @@ const ENEMIES: Dictionary = {
 		"jump_interval": 1.4,
 		"jump_speed": 260.0,
 		"jump_duration": 0.35,
-		"sprite_frames": ["res://art/enemy_gafanhoto_0.png", "res://art/enemy_gafanhoto_1.png"],
+		"sprite_frames": ["res://art/polished/gafanhoto_idle_00.png", "res://art/polished/gafanhoto_idle_01.png"],
 	},
 	"mosca": {
 		"name": "Mosca Atiradora",
@@ -69,7 +69,7 @@ const ENEMIES: Dictionary = {
 		"xp_value": 35,
 		"scale": 1.7,
 		"color": Color(0.4, 0.8, 0.3),
-		"sprite_frames": ["res://art/boss_lagarta.png"],
+		"sprite_frames": ["res://art/polished/boss_lagarta_idle_00.png"],
 	},
 	"boss_rainha_moscas": {
 		"name": "Rainha das Moscas",

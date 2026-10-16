@@ -152,3 +152,20 @@ func set_sfx_volume_db(db: float) -> void:
 func set_music_volume_db(db: float) -> void:
 	music_volume_db = db
 	_music_player.volume_db = db
+
+
+## Libera playbacks antes do encerramento, inclusive ao rodar testes headless.
+func shutdown() -> void:
+	stop_music()
+	if is_instance_valid(_music_player):
+		_music_player.stream = null
+	for player in _sfx_players:
+		if is_instance_valid(player):
+			player.stop()
+			player.stream = null
+	_sfx_streams.clear()
+	_music_streams.clear()
+
+
+func _exit_tree() -> void:
+	shutdown()

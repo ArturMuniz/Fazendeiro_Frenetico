@@ -15,3 +15,4 @@
 .env.*
 !.env.example
 export_credentials.cfg
+/tests/.tmp/

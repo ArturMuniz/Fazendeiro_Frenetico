@@ -12,6 +12,11 @@ var damage: float = 2.0
 
 
 func _ready() -> void:
+	var sprite := $Sprite2D as Sprite2D
+	sprite.texture = GameArt.ui("trap_base")
+	sprite.scale = Vector2.ONE
+	sprite.modulate = Color.WHITE
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	tick_timer.timeout.connect(_on_tick)
 	lifetime_timer.one_shot = true
 	lifetime_timer.timeout.connect(queue_free)
@@ -32,4 +37,5 @@ func _on_tick() -> void:
 			body.take_damage(damage)
 			hit_something = true
 	if hit_something:
+		VisualFX.spawn(get_tree().current_scene, "electric", global_position)
 		AudioManager.play_sfx("attack_ranged", 0.05)

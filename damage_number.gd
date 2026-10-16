@@ -5,7 +5,7 @@ class_name DamageNumber
 ## foi atingido. Reaproveitado via Pool (é o objeto mais criado no
 ## jogo, cada hit de cada arma gera um).
 
-const SELF_SCENE: PackedScene = preload("res://damage_number.tscn")
+const POOL_SCENE_PATH: String = "res://damage_number.tscn"
 
 @onready var label: Label = $Label
 
@@ -50,4 +50,4 @@ func _despawn() -> void:
 func _return_to_pool() -> void:
 	if get_parent() != null:
 		get_parent().remove_child(self)
-	Pool.release(SELF_SCENE, self)
+	Pool.release(load(POOL_SCENE_PATH), self)

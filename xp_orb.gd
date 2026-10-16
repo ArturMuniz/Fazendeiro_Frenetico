@@ -13,6 +13,11 @@ var _collected: bool = false
 
 
 func _ready() -> void:
+	var sprite := $Sprite2D as Sprite2D
+	sprite.texture = GameArt.ui("pickup_xp")
+	sprite.modulate = Color.WHITE
+	sprite.scale = Vector2.ONE
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	add_to_group("xp_orbs")
 	_player = get_tree().get_first_node_in_group("player")
 	body_entered.connect(_on_body_entered)

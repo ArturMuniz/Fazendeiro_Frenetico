@@ -19,6 +19,10 @@ var _spin_duration: float = 0.6
 var _tick_timer: Timer
 
 
+func _ready() -> void:
+	shape.shape = shape.shape.duplicate()
+
+
 func setup(target_pos: Vector2, damage: float, radius: float, spin_duration: float, icon_texture: Texture2D) -> void:
 	_target_pos = target_pos
 	_damage = damage
@@ -27,6 +31,8 @@ func setup(target_pos: Vector2, damage: float, radius: float, spin_duration: flo
 	if icon_texture != null:
 		sprite.texture = icon_texture
 		sprite.modulate = Color(1, 1, 1)
+		sprite.scale = Vector2.ONE * minf(1.0, 44.0 / icon_texture.get_size().length())
+		sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 
 
 func _physics_process(delta: float) -> void:
@@ -51,7 +57,11 @@ func _start_spin() -> void:
 	_tick_timer.timeout.connect(_on_tick)
 	_tick_timer.start()
 	_on_tick()
-	get_tree().create_timer(_spin_duration).timeout.connect(queue_free)
+	var lifetime_timer := Timer.new()
+	lifetime_timer.one_shot = true
+	add_child(lifetime_timer)
+	lifetime_timer.timeout.connect(queue_free)
+	lifetime_timer.start(_spin_duration)
 
 
 func _on_tick() -> void:

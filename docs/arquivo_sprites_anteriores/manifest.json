@@ -1,0 +1,94 @@
+[
+  {
+    "previous": "art/boss_lagarta.png",
+    "archive": "docs/arquivo_sprites_anteriores/boss_lagarta.png"
+  },
+  {
+    "previous": "art/enemy_gafanhoto_0.png",
+    "archive": "docs/arquivo_sprites_anteriores/enemy_gafanhoto_0.png"
+  },
+  {
+    "previous": "art/enemy_gafanhoto_1.png",
+    "archive": "docs/arquivo_sprites_anteriores/enemy_gafanhoto_1.png"
+  },
+  {
+    "previous": "art/enemy_lesma_0.png",
+    "archive": "docs/arquivo_sprites_anteriores/enemy_lesma_0.png"
+  },
+  {
+    "previous": "art/enemy_lesma_1.png",
+    "archive": "docs/arquivo_sprites_anteriores/enemy_lesma_1.png"
+  },
+  {
+    "previous": "art/passive_termica.png",
+    "archive": "docs/arquivo_sprites_anteriores/passive_termica.png"
+  },
+  {
+    "previous": "art/player_idle_0.png",
+    "archive": "docs/arquivo_sprites_anteriores/player_idle_0.png"
+  },
+  {
+    "previous": "art/player_idle_1.png",
+    "archive": "docs/arquivo_sprites_anteriores/player_idle_1.png"
+  },
+  {
+    "previous": "art/player_walk_0.png",
+    "archive": "docs/arquivo_sprites_anteriores/player_walk_0.png"
+  },
+  {
+    "previous": "art/player_walk_1.png",
+    "archive": "docs/arquivo_sprites_anteriores/player_walk_1.png"
+  },
+  {
+    "previous": "art/projectile_batata.png",
+    "archive": "docs/arquivo_sprites_anteriores/projectile_batata.png"
+  },
+  {
+    "previous": "art/projectile_mamona.png",
+    "archive": "docs/arquivo_sprites_anteriores/projectile_mamona.png"
+  },
+  {
+    "previous": "art/projectile_milho.png",
+    "archive": "docs/arquivo_sprites_anteriores/projectile_milho.png"
+  },
+  {
+    "previous": "art/tile_celeiro.png",
+    "archive": "docs/arquivo_sprites_anteriores/tile_celeiro.png"
+  },
+  {
+    "previous": "art/tile_horta.png",
+    "archive": "docs/arquivo_sprites_anteriores/tile_horta.png"
+  },
+  {
+    "previous": "art/ui_health_bar.png",
+    "archive": "docs/arquivo_sprites_anteriores/ui_health_bar.png"
+  },
+  {
+    "previous": "art/ui_xp_bar.png",
+    "archive": "docs/arquivo_sprites_anteriores/ui_xp_bar.png"
+  },
+  {
+    "previous": "art/weapon_batata.png",
+    "archive": "docs/arquivo_sprites_anteriores/weapon_batata.png"
+  },
+  {
+    "previous": "art/weapon_foice.png",
+    "archive": "docs/arquivo_sprites_anteriores/weapon_foice.png"
+  },
+  {
+    "previous": "art/weapon_forquilha.png",
+    "archive": "docs/arquivo_sprites_anteriores/weapon_forquilha.png"
+  },
+  {
+    "previous": "art/weapon_mamona.png",
+    "archive": "docs/arquivo_sprites_anteriores/weapon_mamona.png"
+  },
+  {
+    "previous": "art/weapon_milho.png",
+    "archive": "docs/arquivo_sprites_anteriores/weapon_milho.png"
+  },
+  {
+    "previous": "art/weapon_motosserra.png",
+    "archive": "docs/arquivo_sprites_anteriores/weapon_motosserra.png"
+  }
+]

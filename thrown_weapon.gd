@@ -41,6 +41,9 @@ func configure(id: String, lvl: int) -> void:
 		_icon_texture = load(icon_path)
 		if icon != null:
 			icon.texture = _icon_texture
+	if icon != null:
+		GameArt.equip(icon, id, lvl)
+		_icon_texture = icon.texture
 
 	var multiplier: float = 1.0
 	if _player != null:

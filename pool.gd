@@ -16,12 +16,31 @@ var _pools: Dictionary = {}
 
 func acquire(scene: PackedScene) -> Node:
 	var list: Array = _pools.get(scene, [])
-	if list.size() > 0:
-		return list.pop_back()
+	while not list.is_empty():
+		var candidate: Variant = list.pop_back()
+		if is_instance_valid(candidate) and not candidate.is_queued_for_deletion():
+			return candidate
 	return scene.instantiate()
 
 
 func release(scene: PackedScene, node: Node) -> void:
+	if not is_instance_valid(node) or node.is_queued_for_deletion():
+		return
+	assert(node.get_parent() == null, "O nó precisa sair da árvore antes de voltar ao pool.")
 	var list: Array = _pools.get(scene, [])
+	if list.has(node):
+		return
 	list.append(node)
 	_pools[scene] = list
+
+
+func clear_idle() -> void:
+	for list in _pools.values():
+		for node in list:
+			if is_instance_valid(node):
+				node.free()
+	_pools.clear()
+
+
+func _exit_tree() -> void:
+	clear_idle()

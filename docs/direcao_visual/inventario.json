@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "name": "1.1 Idle — 2 a 4 frames.png",
+    "size": [
+      256,
+      256
+    ],
+    "mode": "RGBA",
+    "hash": "cc8829521ab1479839f42c492d2fce952414289ca54a406e4650cc608d687c2f"
+  },
+  {
+    "id": 2,
+    "name": "abelha-pomar.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "856dd6076ced72e75850f6c300ea30a9f5b36d80f0faef5542073cb30dddaa62"
+  },
+  {
+    "id": 3,
+    "name": "aranha-celeiro.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "e8e4de724c85073e1f95893f81f5eb3f72e12ec9143d9b138456f53ddaada15c"
+  },
+  {
+    "id": 4,
+    "name": "arte-visual-bezerro.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "b8751616a515b895dea15832bc8b45dc0074264c46d4e466e4d49a329f1c3da1"
+  },
+  {
+    "id": 5,
+    "name": "arte-visual-fazendeiro.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "792ded5a58644a04cdf23c80449832c5850e54a40d047a9b596fca19bef419b0"
+  },
+  {
+    "id": 6,
+    "name": "arte-visual-gafanhoto.jpg",
+    "size": [
+      1024,
+      512
+    ],
+    "mode": "RGB",
+    "hash": "f5c8107f862b3db3852938dcbf4b3cc2bb3240e10af2824587ea7bd089454fa2"
+  },
+  {
+    "id": 7,
+    "name": "arte-visual-lesmatank.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "29cd2e0bd59383351aedddde3e4e0d0c0cee22dee1c8bf349a9904803fc0bb47"
+  },
+  {
+    "id": 8,
+    "name": "arte-visual-menina.jpeg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "236a3d8eb40bbca64730c98ce499ad2ebc32b8bf9a77cd8161bd81d712184cbc"
+  },
+  {
+    "id": 9,
+    "name": "arte-visual-netinho.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "d99e1569d33dea72417d646721a091b0f1d766cac039bf5b84fe74c7c4fc7a8b"
+  },
+  {
+    "id": 10,
+    "name": "arte-visual-purgao.jpg",
+    "size": [
+      910,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "e25a82755c9d9b770d320973a6075daaee3e9b476a0cbfb72c16ebc023e10b64"
+  },
+  {
+    "id": 11,
+    "name": "arte-visual-vovó.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "fd84b0ba8c5d6d44ab91ede2372782b2882cc83e745d22cf5cb7efc694b8ac85"
+  },
+  {
+    "id": 12,
+    "name": "Autumn_orchard_ground_pixel_art_20261015080932.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "a41233766808d95528bc6d71026a8b8e415ee9c5fd082fec6d65dec0b97c73c3"
+  },
+  {
+    "id": 13,
+    "name": "Autumn_orchard_ground_texture_20261015080914.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "1a737627d54b9614835790bbe0b99fe62ff4f2d74afbe36698944c48607846db"
+  },
+  {
+    "id": 14,
+    "name": "bala-e-rastro-batata.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "1dde4d1d6518be7298cc7013bc4b95d429ad34dd7b32116c6f887708219270dc"
+  },
+  {
+    "id": 15,
+    "name": "bala-e-rastro-milho.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "431639c1bb8a7bfb7c8e4961a26fae4c343cad35dc4822df38fa57e973599cb9"
+  },
+  {
+    "id": 16,
+    "name": "barata-celeiro.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "4122072b9fc99668ee6d959dc10b04d20d7014b9986c5f2dc9c75665538fc454"
+  },
+  {
+    "id": 17,
+    "name": "barra-de-vida.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "874f832dbbf38180ba96bf95a347d1b3f9579ecd23679a03f20e112165fc14c0"
+  },
+  {
+    "id": 18,
+    "name": "barra-de-xp.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "2f40bbc6874b49e10663cd01d9be226768eb9a3077478790953f2264438a31fc"
+  },
+  {
+    "id": 19,
+    "name": "besouroblindado-pomar.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "2d8a995a36c0cfb6b42d1c5d606cd2b191ea78a2cacdbc1de2902f4e168b241e"
+  },
+  {
+    "id": 20,
+    "name": "bezerro-andando.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "1c3e9aeee860ebdabbbd27573e483c10cf0453daefae5c8a1b3eba45e1394b00"
+  },
+  {
+    "id": 21,
+    "name": "bezerro-base.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "3f3a8ad20ed8238a1c20a91afb1f807ee970f29a8afb86901f66b2320aa2acaf"
+  },
+  {
+    "id": 22,
+    "name": "bezerro-idle.png",
+    "size": [
+      2976,
+      2784
+    ],
+    "mode": "RGBA",
+    "hash": "ab0ec8cfacfa22d5dc83c0e4756d3981dd305f63c50da880a384cf5e0fc7c3f9"
+  },
+  {
+    "id": 23,
+    "name": "bezerro-lv2-lv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "a241e0cde2e36664d13dea26061a05c94da332dfefcfd9b73744cc2d0c26b175"
+  },
+  {
+    "id": 24,
+    "name": "bezerro-lv2.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "1c488abf3217e3066f6edc8260a1cccf6a84ebef498a995dd599359ffd6cbc4a"
+  },
+  {
+    "id": 25,
+    "name": "bezerro-lv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "de1f296c39005543f23d7937dd328b49a70195e60d52127e40d9885174c866e5"
+  },
+  {
+    "id": 26,
+    "name": "bezerro_ataque.jpg",
+    "size": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "hash": "e264601307f46add13c72a5ca3c70e29c0021b1510db6b320fa53affbd15d55e"
+  },
+  {
+    "id": 27,
+    "name": "boss-largatagi.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "1dbfdfe19af2a2f4438c74cb9b93a54a3ba48d1ff8b36aa72c384617e91c8ea7"
+  },
+  {
+    "id": 28,
+    "name": "boss-praga-ataque.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "b14176f888a52e820854ee7efdad4821b9d75ef787ab98b3b5e7317722511734"
+  },
+  {
+    "id": 29,
+    "name": "caixa-decorativo-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "376685a24b14296f8650ab9001424c152a4ec2b3cbb40daaeaae45dff90d7324"
+  },
+  {
+    "id": 30,
+    "name": "canhaobatata-arma-lv1.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "2bf6e36e8e92e7328ea03c5103f0caed4529a6b0b30455a2be30094e05e2502a"
+  },
+  {
+    "id": 31,
+    "name": "canhaobatata-arma-lv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "80a52a25cc7af6a06266d011cc7576e1baaf9ded90181dd89a2d617ac1ed50d4"
+  },
+  {
+    "id": 32,
+    "name": "canhaobatata-arma.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "9d35475974d33491f9fe3e15446ff491c4e7f08e4a5e062f176cbf939e2afc31"
+  },
+  {
+    "id": 33,
+    "name": "caramujo-celeiro.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "c9a97df4fe50a94bffeaa787696eebeca6df4cdd3ca111a40134f64be9261b57"
+  },
+  {
+    "id": 34,
+    "name": "carta-de-escolha.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "4cc3548c2f45210f7a8bfbcff212c33509c4ae4b96dcf781f6dc33fe53c70784"
+  },
+  {
+    "id": 35,
+    "name": "celeiro-assentes-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "6a8776ddd8c7c1fd400875a636f67e7e2d18a76fe98af7aad5330439e3323cde"
+  },
+  {
+    "id": 36,
+    "name": "celeiro-mapa-cão.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "f5db8a31f2a80507b43a0b20fd4f220b074f1427036afe6fe5c6feea1b422e7a"
+  },
+  {
+    "id": 37,
+    "name": "celeiro-mapa-terra_palha.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "82b6243e0f7ff31afae292051bf771cf3b01f46e2ecd778cd5d3c7e6b101d456"
+  },
+  {
+    "id": 38,
+    "name": "cerca-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "bf1b590ab094f5aba4d5acb4008316162b4ad4a3a9f85a632671b335ff00a8dc"
+  },
+  {
+    "id": 39,
+    "name": "cercaeletrica-arma-lv2.jpg",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGB",
+    "hash": "d6926db719ca554d4ae17636f9b9cdfff3495cf4f12585f33d1f6a941273d43d"
+  },
+  {
+    "id": 40,
+    "name": "cercaeletrica-arma-lv3.jpg",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGB",
+    "hash": "b853340b5c244b6f9ee2c8fbbbf5530e803705c5afa5c4c55d9fcefcef6eb074"
+  },
+  {
+    "id": 41,
+    "name": "cercaeletrica-arma.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "22db13d6bda98a845a78648b453a96eaf41b0cdb9878b7a5658af11a45f5dea8"
+  },
+  {
+    "id": 42,
+    "name": "cercaeletrica-ataque.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "ca76d2bfebe0cf81fbad0e0118c5b17239fea0898be115c9cd6ac312ab7abfcd"
+  },
+  {
+    "id": 43,
+    "name": "espantalho-decorativo-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "d5c97959f934d64b0e04088c713e0893ed22f46a21beea650b8b21060c72c2e0"
+  },
+  {
+    "id": 44,
+    "name": "espantalho-item.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "7eb29af23b13927faf3cec586ad086aecadf70e077e210c89da3c992d4b2705e"
+  },
+  {
+    "id": 45,
+    "name": "estilinguemamona-arma-lv2.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "103aa7bb944776fab11c3b5e1fb86615fbe11f0b9808cff6eed87f80f95d9947"
+  },
+  {
+    "id": 46,
+    "name": "estilinguemamona-arma-lv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "c3aa1ce7fd5f490b54ebd6e704bd5f1032d2b151368b3fc1a6b55a7d2d1ccedd"
+  },
+  {
+    "id": 47,
+    "name": "estilinguemamona-arma.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "5f5f46eaf6d5c68001de41201240719c791833d083c44a82e5d1f570df40c40a"
+  },
+  {
+    "id": 48,
+    "name": "fazendeiro andando.jpg",
+    "size": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "hash": "f60b9aac8076612daf28760b09d958d1941085157d0385d2a54ec46adc7dbf24"
+  },
+  {
+    "id": 49,
+    "name": "feno-decorativo-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "f3764f52aa3a1447b184d30879ee2295bbe6feb3b3cea893c9214ed1321da608"
+  },
+  {
+    "id": 50,
+    "name": "foice-arma-lv2.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "ca7e1716e310adc34d2ae35dd0aa0d09db4ca615caeaf8b6b4a7e4d21be9914c"
+  },
+  {
+    "id": 51,
+    "name": "foice-arma-lv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "e046b9492bebd3b3fbe5bccbcfe61c9b1cbb72c1177d45bb9c2cc5be02167c3d"
+  },
+  {
+    "id": 52,
+    "name": "foice-arma.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "ff7245c274aead190acb5376767b692cfbc33bfe32bd7075a00cea289fe98903"
+  },
+  {
+    "id": 53,
+    "name": "foice-ataque.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "f465ed4c7db95680961d29edf6c95d23d65c0cd275235d3726e9b454b2e4aec4"
+  },
+  {
+    "id": 54,
+    "name": "formiga-exame.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "bf59e1d9dabdc1184345e127a99892196d4a05266d3921d8ad8625438dce4b51"
+  },
+  {
+    "id": 55,
+    "name": "forquilha-arma.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "47006d3df98496b8f756c0df081570373355a8c849c6514130281e8d9931138a"
+  },
+  {
+    "id": 56,
+    "name": "forquilha-arna-lv2.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "989ff78491449cc32a2eab3e3549ae96c9d29ed6f41bfef1409342d3dd8bbdfd"
+  },
+  {
+    "id": 57,
+    "name": "forquilha-arna-lv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "670ba5591e639ca278f4f837db90c3bd17d008bfb33ec89efe05cec566733609"
+  },
+  {
+    "id": 58,
+    "name": "forquilha-ataque.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "063afe40b10852b80b85c3a99060a51694176f73b67a3ae7362d01a639a67e43"
+  },
+  {
+    "id": 59,
+    "name": "Four_wooden_medallion_game_buttons_20261015080958.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "dbfb4f1d1bbf22b90b2044e2c28cfa311791d5bf8281600151c49788ebe354f8"
+  },
+  {
+    "id": 60,
+    "name": "fx_combat.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "61054659d02697b9308fa4522dfd83afb5c24dbd3a804256563bef3a50ee41c5"
+  },
+  {
+    "id": 61,
+    "name": "fx_enemy_projectiles.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "a045b1c73c249bf421c6bf59dbc6305ed89f34ca5cbc315e45fbdf18186ecef1"
+  },
+  {
+    "id": 62,
+    "name": "fx_pickups.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "cb3b8aeade7634c6a12f510900d93971bdf7fe31cd72ff59ef0c6303b519f1b2"
+  },
+  {
+    "id": 63,
+    "name": "fx_puddle_and_shockwave.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "be82874821f3be4a8462fe73ae7526db88cc648ed1dc6f88104db31fc50243b8"
+  },
+  {
+    "id": 64,
+    "name": "gafanhoto-correndo.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "hash": "9cc597d4f0a37c402954da2860856bbc533ef25484d02e53a8378c17b4bb558e"
+  },
+  {
+    "id": 65,
+    "name": "gafanhotogigante-3frames.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "26f013f244a556afc2bbb34e007a071416e495b87715aa8f1a7988a5dc0e6dc3"
+  },
+  {
+    "id": 66,
+    "name": "gafanhotogigante-6framescomplexos.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "5beadc3c870ae16c3128e0d14741cb13566ee8b7c691896909bd13148851dcfa"
+  },
+  {
+    "id": 67,
+    "name": "galocha-item.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "51ff36c7cddcecabfaf4b5d4a2d378ae2299188cf5697541253ddb9afbb7fa3b"
+  },
+  {
+    "id": 68,
+    "name": "garafatermica-item.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "be5f9b5d8c62e13ab8587abe26084628db24853b90927dd2400e86cbf77bf0c1"
+  },
+  {
+    "id": 69,
+    "name": "grama-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "7ee2bd0f17ba8caf07d5abcc6d8c523ce294d61b01ca79d088e65ebb26f6b1ff"
+  },
+  {
+    "id": 70,
+    "name": "griloestondoso-pomar.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "7e4c9194ec2273bd0ebf9ec97bd91b0a75cb0b8261bc43ebfbf2451c4b4d92f2"
+  },
+  {
+    "id": 71,
+    "name": "horta-assentes-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "e0ea995d9d0cfcb47572f33d87b051352649c520e91793eaf57c6fb27414eee9"
+  },
+  {
+    "id": 72,
+    "name": "icone-bezerro.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "58e8554452d918a14472d08eb20882b1427038cdd8335dbd4987220d90e56613"
+  },
+  {
+    "id": 73,
+    "name": "icone-cercaeletrica.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "d011c9284828d161f22c3e5e551f858505595e6b39fb59ca0af7f908a99d8e60"
+  },
+  {
+    "id": 74,
+    "name": "icons_passives.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "441ac5d6d53e0fc55ffdca6c0a6e7c9d3b4dbc8b518465f477ee1e0face5005c"
+  },
+  {
+    "id": 75,
+    "name": "imageladeira-item.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "cdc6df8a284ac246b0223a6973861f3c763c633c6daa3d55dd07cc13115337a9"
+  },
+  {
+    "id": 76,
+    "name": "joias-item.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "e4c03cca94dadb55ab2d6c156e6fc35d44ed72843d913f220b541fe623e3a282"
+  },
+  {
+    "id": 77,
+    "name": "joystick.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "151e8f3827388158183e45c09815dcfe320ec02da25b356c8bb99ba0341a23bb"
+  },
+  {
+    "id": 78,
+    "name": "Lush_vegetable_garden_grass_texture_20261015081012.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "b939f4052b0ac2e0bfc0cf27b87f0f423796fd6fc807761f9960b0b499e94c30"
+  },
+  {
+    "id": 79,
+    "name": "metralhadora-arma-lv2.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "eb67f67677318317705e277330d7cf1dc2dc8df80aa1efc7d9d659d9e6de3e18"
+  },
+  {
+    "id": 80,
+    "name": "metralhadora-arma-lv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "ef95f4a8733cffe67e697188b5d36aadd105a98388dbbb11a4eda9be2311ad17"
+  },
+  {
+    "id": 81,
+    "name": "metralhadora-arma.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "195eed5332f871b4b384d85e09a01d8112a5267c0ca0ead116ad9313c8061e93"
+  },
+  {
+    "id": 82,
+    "name": "MOEDAS.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "26b15472285728d68c12d407e671c8efe2f629f990c0af3d892b45d5bef7fb0a"
+  },
+  {
+    "id": 83,
+    "name": "morte-inimigos-geral.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "5aa08c47adeaa5fbb797a4a8945c1b7631b67369900d07d6c3a4637016eb3244"
+  },
+  {
+    "id": 84,
+    "name": "morte_fazendeiro.jpg",
+    "size": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "hash": "e7364432a719de301aeb1ab270a9b5dcb344cc91b060a7c5cec1208875e7f717"
+  },
+  {
+    "id": 85,
+    "name": "MOSCARAINHA-3FRAMES.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "b3aec990f75523a353f92aca634ebae2dc8f13f12802b5492d8fbfed5fe5447a"
+  },
+  {
+    "id": 86,
+    "name": "MOSCARAINHA-6FRAMESCOMPLEXOS.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "bc345bf53f4613978b3bc86031a2a5411fe2d5dbaae60d6900cc75dd753a9a5a"
+  },
+  {
+    "id": 87,
+    "name": "mosta atiradora.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "8abf84d4fb7bbdcf2bd143f452167526de3a66cf191accfeef55b8de52d401be"
+  },
+  {
+    "id": 88,
+    "name": "netinhoagil-andando.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "1b47ceab21166cedd2358513ecb055b36504e5e7b222de41383814f34dd3866f"
+  },
+  {
+    "id": 89,
+    "name": "netinhoagil-descanso.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "97c92774dfb65f3395c0ce418bdcd2b108b22f28f536539937fbc746fd90060d"
+  },
+  {
+    "id": 90,
+    "name": "netinhoagil-morte.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "6677ecabda51c7716563c259264da9eda25da05cc69d52c101d8d212bc27ba65"
+  },
+  {
+    "id": 91,
+    "name": "netinhoagil.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "1b47ceab21166cedd2358513ecb055b36504e5e7b222de41383814f34dd3866f"
+  },
+  {
+    "id": 92,
+    "name": "Orchard_props_in_pixel_art_20261015081131.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "4ef2b34125820502b78b9307789469087ed65526daf5971ca0deae212f8c7481"
+  },
+  {
+    "id": 93,
+    "name": "Pixel_art_barn_props_layout_20261015081208.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "82f54dd6430f74cb8712f33f7bfeec5cfd709cc414127ef9576c60e2bfd396cd"
+  },
+  {
+    "id": 94,
+    "name": "Pixel_art_campaign_map_20261015080945.jpg",
+    "size": [
+      768,
+      1376
+    ],
+    "mode": "RGB",
+    "hash": "af5def53e5d52d72d9d0907d00ba58ae0ac73d2c3e3e0c8544758b89816b9a5b"
+  },
+  {
+    "id": 95,
+    "name": "Pixel_art_garden_props_grid_20261015081152.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "38410fc174c6cd766e28e61cfee5a2e853a94b3fe0f386871991f83c92bf2bc7"
+  },
+  {
+    "id": 96,
+    "name": "Pixel_art_item_icons_20261015081106.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "9194598766e9f11bf3af949f045acdb3cfce7954b3bf3220b2d2f4f870e13828"
+  },
+  {
+    "id": 97,
+    "name": "Pixel_art_UI_icons_grid_20261015081119.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "fe7c1b9106d15c8764a48caf8fe4d4cb5bb56b9011f1a68575dad412abf0e513"
+  },
+  {
+    "id": 98,
+    "name": "pomar-assentes-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "192a49551c2598ec9aa0b2793f9ece5fc5989175b4ab2eb79775ee147e6a81b8"
+  },
+  {
+    "id": 99,
+    "name": "projetil-mamona.jpg",
+    "size": [
+      768,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "a4e5120697de53270be35bc638d4f7c79a5502552bde99bc2a2ae49669101d3b"
+  },
+  {
+    "id": 100,
+    "name": "pugao-corredor.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "14ceda0f642fbc7132fb50cb4df7731e23a6730f7c6ea3f74833b370612879ba"
+  },
+  {
+    "id": 101,
+    "name": "pulgao-correndo.jpg",
+    "size": [
+      1952,
+      2196
+    ],
+    "mode": "RGB",
+    "hash": "29d455890138a9ac445adee0c9b0f6052be45771bc5de03c93acfc33b46ab96b"
+  },
+  {
+    "id": 102,
+    "name": "pulgao-morte.jpg",
+    "size": [
+      910,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "170bcd37911a1b7151df6ee2f5f7cdd9bf926993e69eb2f16ec06f8bd1f01793"
+  },
+  {
+    "id": 103,
+    "name": "rato-celeiro.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "0ebe053210b797a97a5011d7580c7da7afa068cd24a732ce2da74711c610ea3a"
+  },
+  {
+    "id": 104,
+    "name": "ricochete-mamona.jpg",
+    "size": [
+      768,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "65237df526d6c18d8b617289aa9353d4fbd6a36b82c772daab4efc03a8e2df6f"
+  },
+  {
+    "id": 105,
+    "name": "serraele-arma.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "f293cd5a58bea4f458f3ad6dedb5308ed4a0ab080aa423334e454763ad95d7ef"
+  },
+  {
+    "id": 106,
+    "name": "serraele-armalv2.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "fa10700f5e75f2a23988a0ec39f176847e3e20f28e9514a77b13f24a92e03a17"
+  },
+  {
+    "id": 107,
+    "name": "serraele-armalv3.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "a1f7dfcaeeeccaa8e04e2e93b76f5497595eeb7ea922b46dea6c29744d7e223a"
+  },
+  {
+    "id": 108,
+    "name": "serraele-ataque.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "af0eb6d5de93f4bc1b7e43e56f15ed6ddb1241826c9ed662ccbdd44caeef55e5"
+  },
+  {
+    "id": 109,
+    "name": "telsmatank-andando.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "5ac692288b5d4e08ad45907d670d0b47bea4a53f1405c0225ec07f509d411c58"
+  },
+  {
+    "id": 110,
+    "name": "terra-caminho-mapa.jpg",
+    "size": [
+      1024,
+      559
+    ],
+    "mode": "RGB",
+    "hash": "54134f60be870d651f8558765e8fbce6864be78945aa2515f2c79e7dc1569d86"
+  },
+  {
+    "id": 111,
+    "name": "Vegetable_garden_grass_texture_20261015081024.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "a01630b49d9522fba088ae848c64a72bb0b8ff194d405b94ff7f1e4db035dc09"
+  },
+  {
+    "id": 112,
+    "name": "vovoresistente-andando.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "6a5a6a8bf27faaa7c73fe380e5c20e4da8637457161f8d2cb3fe1f0126d703e6"
+  },
+  {
+    "id": 113,
+    "name": "vovoresistente-descanso.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "97571ec488563e35e3b6539a145ebe8cd21aca8ea36d2910ef87c973bbf4f2e9"
+  },
+  {
+    "id": 114,
+    "name": "vovoresistente-morte.jpg",
+    "size": [
+      1376,
+      768
+    ],
+    "mode": "RGB",
+    "hash": "4a663f838f7633c50c647c39224d87ae906b3b4442e9fa6f61db4976b2798d18"
+  },
+  {
+    "id": 115,
+    "name": "Wooden_barn_floor_planks_20261015080844.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "1f61d551c10bb9552e83bbaf724f2c674c37c52e1c7fade8a4778edb918cab66"
+  },
+  {
+    "id": 116,
+    "name": "Wooden_barn_floor_planks_20261015080900.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "1f61d551c10bb9552e83bbaf724f2c674c37c52e1c7fade8a4778edb918cab66"
+  },
+  {
+    "id": 117,
+    "name": "Wooden_barn_floor_with_straw_20261015080806.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "5e8440a9ae68fc409347ab74ff0edacc091bdef78d2381f6267fdfa9e3360f24"
+  },
+  {
+    "id": 118,
+    "name": "Wooden_buttons_pixel_art_sheet_20261015081053.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "b8db93a1acd38ffaf6c9f6b77adbceb9ff797b2fb4916e1d01a48591c6ebbfe0"
+  },
+  {
+    "id": 119,
+    "name": "Wooden_farm_game_logo_emblem_20261015081042.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "9d7f244213c8b77bbf98300d95b8ba86fbfcf6f0709d6ad15bd8918aa4ab0a4e"
+  },
+  {
+    "id": 120,
+    "name": "Wooden_panel_frame_asset_20261015081140.jpg",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "hash": "f7319451785e8b2fe54da4f836613977f9418c215ec51e7d83713dc868b2f570"
+  }
+]

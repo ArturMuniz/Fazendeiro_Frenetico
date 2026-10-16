@@ -30,4 +30,4 @@ func configure(id: String, lvl: int) -> void:
 		get_tree().current_scene.add_child(_companion)
 		_companion.global_position = global_position
 
-	_companion.configure(stats, _player)
+	_companion.configure(stats, _player, lvl)

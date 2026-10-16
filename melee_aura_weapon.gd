@@ -17,6 +17,7 @@ var _player: Player
 
 
 func _ready() -> void:
+	shape.shape = shape.shape.duplicate()
 	_player = get_parent() as Player
 	tick_timer.timeout.connect(_on_tick)
 
@@ -33,6 +34,7 @@ func configure(id: String, lvl: int) -> void:
 	var icon_path: String = weapon_data.get("icon_texture", "")
 	if icon_path != "":
 		icon.texture = load(icon_path)
+	GameArt.equip(icon, id, lvl)
 
 	tick_timer.start()
 
@@ -47,4 +49,5 @@ func _on_tick() -> void:
 			body.take_damage(effective_damage)
 			hit_something = true
 	if hit_something:
+		VisualFX.spawn(get_tree().current_scene, "sawdust", _player.global_position)
 		AudioManager.play_sfx("attack_melee", 0.05)

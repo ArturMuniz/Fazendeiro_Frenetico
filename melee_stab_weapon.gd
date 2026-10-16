@@ -33,6 +33,7 @@ func configure(id: String, lvl: int) -> void:
 	var icon_path: String = weapon_data.get("icon_texture", "")
 	if icon_path != "":
 		icon.texture = load(icon_path)
+	GameArt.equip(icon, id, lvl)
 
 	var multiplier: float = 1.0
 	if _player != null:
@@ -55,6 +56,7 @@ func _on_attack_timer_timeout() -> void:
 
 	if target.has_method("take_damage"):
 		AudioManager.play_sfx("attack_melee")
+		VisualFX.spawn(get_tree().current_scene, "impact", target.global_position)
 		target.take_damage(effective_damage)
 
 

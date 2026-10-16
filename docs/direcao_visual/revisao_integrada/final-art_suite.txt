@@ -1,0 +1,79 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS fazendeiro usa a própria família visual
+PASS fazendeiro caminhada avança
+PASS fazendeiro animação congela na pausa real
+PASS fazendeiro retoma a animação
+PASS fazendeiro morte aparece no mundo antes do painel final
+PASS fazendeiro morte revela resultado sem reativar gameplay
+PASS fazendeiro morte termina no resultado com gameplay pausado
+PASS fazendeiro morte preserva o último quadro
+PASS vovo usa a própria família visual
+PASS vovo caminhada avança
+PASS vovo animação congela na pausa real
+PASS vovo retoma a animação
+PASS vovo morte aparece no mundo antes do painel final
+PASS vovo morte revela resultado sem reativar gameplay
+PASS vovo morte termina no resultado com gameplay pausado
+PASS vovo morte preserva o último quadro
+PASS netinho usa a própria família visual
+PASS netinho caminhada avança
+PASS netinho animação congela na pausa real
+PASS netinho retoma a animação
+PASS netinho morte aparece no mundo antes do painel final
+PASS netinho morte revela resultado sem reativar gameplay
+PASS netinho morte termina no resultado com gameplay pausado
+PASS netinho morte preserva o último quadro
+PASS pulgao tem sprite próprio
+PASS pulgao reset de escala e cor
+PASS pulgao pool limpa animação e orientação
+PASS pulgao arte não altera colisão
+PASS pulgao sai dos alvos antes de animar morte
+PASS pulgao morte visual não duplica XP
+PASS lesma tem sprite próprio
+PASS lesma reset de escala e cor
+PASS lesma pool limpa animação e orientação
+PASS lesma arte não altera colisão
+PASS lesma sai dos alvos antes de animar morte
+PASS lesma morte visual não duplica XP
+PASS gafanhoto tem sprite próprio
+PASS gafanhoto reset de escala e cor
+PASS gafanhoto pool limpa animação e orientação
+PASS gafanhoto arte não altera colisão
+PASS gafanhoto sai dos alvos antes de animar morte
+PASS gafanhoto morte visual não duplica XP
+PASS mosca tem sprite próprio
+PASS mosca reset de escala e cor
+PASS mosca pool limpa animação e orientação
+PASS mosca arte não altera colisão
+PASS mosca sai dos alvos antes de animar morte
+PASS mosca morte visual não duplica XP
+PASS boss_lagarta tem sprite próprio
+PASS boss_lagarta reset de escala e cor
+PASS boss_lagarta pool limpa animação e orientação
+PASS boss_lagarta arte não altera colisão
+PASS boss_lagarta sai dos alvos antes de animar morte
+PASS boss_lagarta morte visual não duplica XP
+PASS boss_rainha_moscas tem sprite próprio
+PASS boss_rainha_moscas reset de escala e cor
+PASS boss_rainha_moscas pool limpa animação e orientação
+PASS boss_rainha_moscas arte não altera colisão
+PASS boss_rainha_moscas sai dos alvos antes de animar morte
+PASS boss_rainha_moscas morte visual não duplica XP
+PASS boss_gafanhoto_gigante tem sprite próprio
+PASS boss_gafanhoto_gigante reset de escala e cor
+PASS boss_gafanhoto_gigante pool limpa animação e orientação
+PASS boss_gafanhoto_gigante arte não altera colisão
+PASS boss_gafanhoto_gigante sai dos alvos antes de animar morte
+PASS boss_gafanhoto_gigante morte visual não duplica XP
+PASS companheiro nível 1 tem a família correta
+PASS companheiro nível 2 tem a família correta
+PASS companheiro nível 3 tem a família correta
+PASS 138 quadros importados com margens transparentes
+PASS canvas estável em todas as sequências
+PASS cenário de efeitos começa sem modal de vitória residual
+PASS limite de quarenta efeitos inclui spawns no mesmo frame
+PASS efeitos congelam junto do gameplay
+PASS efeitos terminam e liberam memória ao retomar
+PASS retorno ao Hub limpa estados visuais e pausa
+ART RESULT checks=76 failures=0

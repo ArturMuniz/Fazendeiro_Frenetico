@@ -1,0 +1,3906 @@
+[
+  {
+    "output": "fazendeiro_idle_00.png",
+    "source": "Pixel_art_of_young_farmer_20261016143635.jpg",
+    "sha256": "c6ea904711cd24a3ac1e7a0e7d36ef6cbcca143fd11158239f99fa5cc7b2c9b4",
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "raw_bounds_size": [
+      206,
+      414
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_idle_01.png",
+    "source": "Pixel_art_farmer_breathing_inspi…_20261016143719.jpg",
+    "sha256": "6c74e026ff61cb422740dc7f734750fc422de834d282989b1bdd5ded7d4cc4e8",
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "raw_bounds_size": [
+      206,
+      414
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_idle_02.png",
+    "source": "Pixel_art_farmer_blinking_20261016143700.jpg",
+    "sha256": "5032b633123d3026fdae887dc6b79fdc4a52b4488b0889061941f7e77387b027",
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "raw_bounds_size": [
+      206,
+      414
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_idle_03.png",
+    "source": "Pixel_art_of_young_farmer_20261016143635.jpg",
+    "sha256": "c6ea904711cd24a3ac1e7a0e7d36ef6cbcca143fd11158239f99fa5cc7b2c9b4",
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "raw_bounds_size": [
+      206,
+      414
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_walk_00.png",
+    "source": "Farmer_walking_pixel_art_20261016143742.jpg",
+    "sha256": "70f48eeeee585b4fe8f9084650990d1dcdff492e317d3d4216789831023d7ec5",
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "raw_bounds_size": [
+      206,
+      410
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_walk_01.png",
+    "source": "Farmer_walking_pixel_art_20261016143742.jpg",
+    "sha256": "70f48eeeee585b4fe8f9084650990d1dcdff492e317d3d4216789831023d7ec5",
+    "crop": [
+      0.5,
+      0,
+      1,
+      0.5
+    ],
+    "raw_bounds_size": [
+      210,
+      410
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_walk_02.png",
+    "source": "Farmer_walking_pixel_art_20261016143742.jpg",
+    "sha256": "70f48eeeee585b4fe8f9084650990d1dcdff492e317d3d4216789831023d7ec5",
+    "crop": [
+      0,
+      0.5,
+      0.5,
+      1
+    ],
+    "raw_bounds_size": [
+      204,
+      402
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_walk_03.png",
+    "source": "Farmer_walking_pixel_art_20261016143742.jpg",
+    "sha256": "70f48eeeee585b4fe8f9084650990d1dcdff492e317d3d4216789831023d7ec5",
+    "crop": [
+      0.5,
+      0.5,
+      1,
+      1
+    ],
+    "raw_bounds_size": [
+      202,
+      402
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_death_00.png",
+    "source": "Pixel_art_farmer_death_sequence_20261016143831.jpg",
+    "sha256": "c722624701e7bc45642ae5293e4be97037c89c8cf5b178293c134e1e94b513b2",
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "raw_bounds_size": [
+      206,
+      414
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_death_01.png",
+    "source": "Pixel_art_character_bending_knees_20261016143842.jpg",
+    "sha256": "f350e192461c5332164257523f41140ce24fa4bf3f4fe06a79fedf007146d9f7",
+    "crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ],
+    "raw_bounds_size": [
+      206,
+      414
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_death_02.png",
+    "source": "Farmer_losing_balance_pixel_art_20261016143850.jpg",
+    "sha256": "26d613ca5cda29e98d5ef04ba72149b70fc3108ed0388cb7b4369dbd83245c54",
+    "crop": null,
+    "raw_bounds_size": [
+      506,
+      610
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_death_03.png",
+    "source": "Farmer_falling_sideways_pixel_art_20261016143836.jpg",
+    "sha256": "edea7bb27c4c668d2628a853dce7a2b7c579451274acace1d15c55452a8fdfdd",
+    "crop": null,
+    "raw_bounds_size": [
+      866,
+      378
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "fazendeiro_death_04.png",
+    "source": "Farmer_death_sequence_pixel_art_20261016143908.jpg",
+    "sha256": "2f296944da758da0fb85fb58a813a1a2f2d71fea16fd768b972cb608f08d3b90",
+    "crop": null,
+    "raw_bounds_size": [
+      846,
+      367
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": true,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_idle_00.png",
+    "source": "Creating_Resistant_Granny_sprite_20261016143859.jpg",
+    "sha256": "f5d8868fb816fb543552a7275cccaae0e4efc74012ce01d84083a8622393ebfe",
+    "crop": null,
+    "raw_bounds_size": [
+      454,
+      942
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_idle_01.png",
+    "source": "Pixel_art_granny_breathing_anima…_20261016143935.jpg",
+    "sha256": "fa98f9d5a2be5cb1c4c3a3b333234123e69878b7157679b1744e843ea091c6ab",
+    "crop": null,
+    "raw_bounds_size": [
+      454,
+      942
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_idle_02.png",
+    "source": "Granny_blinking_pixel_art_20261016143941.jpg",
+    "sha256": "bbcf5cf569c9192790a0d39641b58dda2eecd0850482753232cdafbf589f2f3e",
+    "crop": null,
+    "raw_bounds_size": [
+      454,
+      942
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_idle_03.png",
+    "source": "Creating_Resistant_Granny_sprite_20261016143859.jpg",
+    "sha256": "f5d8868fb816fb543552a7275cccaae0e4efc74012ce01d84083a8622393ebfe",
+    "crop": null,
+    "raw_bounds_size": [
+      454,
+      942
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_walk_00.png",
+    "source": "Pixel_art_granny_walking_cycle_20261016144042.jpg",
+    "sha256": "175fcee7a94b8e9d6bfd7304e754c1c7f44553da26fb896196a3ed5729bdc6c4",
+    "crop": null,
+    "raw_bounds_size": [
+      454,
+      942
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_walk_01.png",
+    "source": "Pixel_art_walk_cycle_20261016144053.jpg",
+    "sha256": "fc66aa7124692205039a2f0096182c7783e1218257e20920e6d3c22c9ddc1acf",
+    "crop": null,
+    "raw_bounds_size": [
+      458,
+      926
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_walk_02.png",
+    "source": "Resistant_Granny_walking_pixel_art_20261016144027.jpg",
+    "sha256": "759608dde9cb87061a20fe49be28f488fc2be409225a2b39e979c80017b859c9",
+    "crop": null,
+    "raw_bounds_size": [
+      466,
+      926
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_walk_03.png",
+    "source": "Resistant_Granny_walking_pixel_art_20261016144047.jpg",
+    "sha256": "23894d001484af636175f7f3a9b4735da455abae52443d1706e126a575e53026",
+    "crop": null,
+    "raw_bounds_size": [
+      478,
+      934
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_death_00.png",
+    "source": "Resistant_Granny_death_sequence_20261016143949.jpg",
+    "sha256": "5d3f1cb801c6a830cc53ea0a330856e9e4a55bfe964cb566a90eaaabc24161c1",
+    "crop": null,
+    "raw_bounds_size": [
+      454,
+      942
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_death_01.png",
+    "source": "Resistant_Granny_death_sequence_20261016144016.jpg",
+    "sha256": "91451f7ade201d3152b7f9ddc30bee83261793892e3b7cbc8821b55bebe37483",
+    "crop": null,
+    "raw_bounds_size": [
+      762,
+      942
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_death_02.png",
+    "source": "Grandma_buckling_knees_pixel_art_20261016144035.jpg",
+    "sha256": "1190d9778954b80afd686952612ee8ae35bf3f6e1c8f0201e2a2de4de6cafb19",
+    "crop": null,
+    "raw_bounds_size": [
+      514,
+      858
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "vovo_death_03.png",
+    "source": "Resilient_Granny_rests_motionless_20261016143956.jpg",
+    "sha256": "6ec3210e59c1bd508e9504a4fbe20b01a9752b98ed6732a4404e921fcda0f097",
+    "crop": null,
+    "raw_bounds_size": [
+      934,
+      370
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_idle_00.png",
+    "source": "Pixel_art_character_returning_ne…_20261016144111.jpg",
+    "sha256": "8bdcab792c4e70d1c21ac3d5cb5ca77e3f6185a530286daf5edf29f60bdbaae7",
+    "crop": null,
+    "raw_bounds_size": [
+      498,
+      906
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_idle_01.png",
+    "source": "Pixel_art_character_standing_20261016144218.jpg",
+    "sha256": "d868880dcdfd2097ea84b252473c3f841ea52aaa9b761d9031814c9f7560d8e1",
+    "crop": null,
+    "raw_bounds_size": [
+      539,
+      954
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_walk_00.png",
+    "source": "Agile_Netinho_walking_in_place_20261016144202.jpg",
+    "sha256": "b51671188e887eefdae478d8cd55762409db61eb44cc375561a9088a1fffca07",
+    "crop": null,
+    "raw_bounds_size": [
+      606,
+      863
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_walk_01.png",
+    "source": "Character_walking_in_place_20261016144208.jpg",
+    "sha256": "d964e68a19f82687d3951ef9e43a5d1aad166fddded4af1406deb98efab2f3fe",
+    "crop": null,
+    "raw_bounds_size": [
+      718,
+      902
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_walk_02.png",
+    "source": "Fast_walking_cycle_in_place_20261016144248.jpg",
+    "sha256": "11073f976d34ac2967a1b7fdf3691d50d16ca3765872738c6a7658396879881c",
+    "crop": null,
+    "raw_bounds_size": [
+      586,
+      866
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_walk_03.png",
+    "source": "Character_walking_in_place_cycle_20261016150502.jpg",
+    "sha256": "47bc0da0b7c9e80d27f966528b4935d6bc155367da0db3a0b382b0c37de962aa",
+    "crop": null,
+    "raw_bounds_size": [
+      606,
+      894
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_death_00.png",
+    "source": "Character_in_shock_death_sequence_20261016144153.jpg",
+    "sha256": "bee4c975bc77bb1fa8fee6d6e917e2ab77f5416da2d608b77f9a01ad510c6a51",
+    "crop": null,
+    "raw_bounds_size": [
+      751,
+      904
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_death_01.png",
+    "source": "Pedido_014._Quadro_02_(Joelhos_20261016144117.jpg",
+    "sha256": "78875f57468a907c38474f07509e99836a3497a3efde17d09065eb7acb9c9a2c",
+    "crop": [
+      0,
+      0.04,
+      1,
+      1
+    ],
+    "raw_bounds_size": [
+      878,
+      806
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_death_02.png",
+    "source": "Character_falling_sideways_in_an…_20261016144139.jpg",
+    "sha256": "5d897c6ba257e3c61171d53c59b429b42c954efbc5fe89f7fd58b71ac278af88",
+    "crop": null,
+    "raw_bounds_size": [
+      870,
+      638
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "netinho_death_03.png",
+    "source": "Character_falling_sideways_in_an…_20261016144139.jpg",
+    "sha256": "5d897c6ba257e3c61171d53c59b429b42c954efbc5fe89f7fd58b71ac278af88",
+    "crop": null,
+    "raw_bounds_size": [
+      870,
+      638
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "pulgao_idle_00.png",
+    "source": "Running_aphid_idle_animation_sheet_20261016144919.jpg",
+    "sha256": "42e897169e91b04aa78cad273f6311e5ab0514c4cc9014b20d0b25835b0cf959",
+    "crop": [
+      0.014,
+      0.03,
+      0.236,
+      0.75
+    ],
+    "raw_bounds_size": [
+      295,
+      285
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "pulgao_idle_01.png",
+    "source": "Running_aphid_idle_animation_sheet_20261016144919.jpg",
+    "sha256": "42e897169e91b04aa78cad273f6311e5ab0514c4cc9014b20d0b25835b0cf959",
+    "crop": [
+      0.514,
+      0.03,
+      0.736,
+      0.75
+    ],
+    "raw_bounds_size": [
+      301,
+      290
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "pulgao_walk_00.png",
+    "source": "Running_aphid_idle_animation_sheet_20261016144919.jpg",
+    "sha256": "42e897169e91b04aa78cad273f6311e5ab0514c4cc9014b20d0b25835b0cf959",
+    "crop": [
+      0.014,
+      0.03,
+      0.236,
+      0.75
+    ],
+    "raw_bounds_size": [
+      295,
+      285
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "pulgao_walk_01.png",
+    "source": "Running_aphid_idle_animation_sheet_20261016144919.jpg",
+    "sha256": "42e897169e91b04aa78cad273f6311e5ab0514c4cc9014b20d0b25835b0cf959",
+    "crop": [
+      0.514,
+      0.03,
+      0.736,
+      0.75
+    ],
+    "raw_bounds_size": [
+      301,
+      290
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_idle_00.png",
+    "source": "Pixel_art_shooter_fly_20261016144423.jpg",
+    "sha256": "49e0b2bd1d56a6ab207978a2fe6c067ed39a68f90374009d36df9a1c1da30c3f",
+    "crop": null,
+    "raw_bounds_size": [
+      572,
+      810
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_idle_01.png",
+    "source": "Wings_opening_and_hovering_body_20261016144507.jpg",
+    "sha256": "13eb9e34b0043d188e4049b8fcc20b18fd58a18fedcaa987556e53ec1012fc5d",
+    "crop": null,
+    "raw_bounds_size": [
+      621,
+      678
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_idle_02.png",
+    "source": "Wings_in_intermediate_position_20261016144354.jpg",
+    "sha256": "845a0fdef64858373e11c1f0040b1d5cfafeda722e34b72e22b9eba7e849216a",
+    "crop": null,
+    "raw_bounds_size": [
+      633,
+      595
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_idle_03.png",
+    "source": "Flight_cycle_closed_wings_image_20261016144400.jpg",
+    "sha256": "0c2ad3b85152c5bdb7d45d4c4bb55e1c77d34686bff1b827ec8bede7afa660f0",
+    "crop": null,
+    "raw_bounds_size": [
+      551,
+      457
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_walk_00.png",
+    "source": "Pixel_art_shooter_fly_20261016144423.jpg",
+    "sha256": "49e0b2bd1d56a6ab207978a2fe6c067ed39a68f90374009d36df9a1c1da30c3f",
+    "crop": null,
+    "raw_bounds_size": [
+      572,
+      810
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_walk_01.png",
+    "source": "Wings_opening_and_hovering_body_20261016144507.jpg",
+    "sha256": "13eb9e34b0043d188e4049b8fcc20b18fd58a18fedcaa987556e53ec1012fc5d",
+    "crop": null,
+    "raw_bounds_size": [
+      621,
+      678
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_walk_02.png",
+    "source": "Wings_in_intermediate_position_20261016144354.jpg",
+    "sha256": "845a0fdef64858373e11c1f0040b1d5cfafeda722e34b72e22b9eba7e849216a",
+    "crop": null,
+    "raw_bounds_size": [
+      633,
+      595
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_walk_03.png",
+    "source": "Flight_cycle_closed_wings_image_20261016144400.jpg",
+    "sha256": "0c2ad3b85152c5bdb7d45d4c4bb55e1c77d34686bff1b827ec8bede7afa660f0",
+    "crop": null,
+    "raw_bounds_size": [
+      551,
+      457
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_attack_00.png",
+    "source": "Shooter_fly_discrete_alert_20261016144347.jpg",
+    "sha256": "3e7a49b26b95c2898c345bae590fc5d8b9ec7a82c608e267ec9f50d10f073687",
+    "crop": null,
+    "raw_bounds_size": [
+      674,
+      695
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_attack_01.png",
+    "source": "Generating_magenta_background_wi…_20261016144342.jpg",
+    "sha256": "d5dbf1d5d0d6937eee6f0459fa676e389590efc4ed650002148a4bfdf4bb6171",
+    "crop": null,
+    "raw_bounds_size": [
+      833,
+      732
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_attack_02.png",
+    "source": "Pixel_art_shooter_fly_20261016144423.jpg",
+    "sha256": "49e0b2bd1d56a6ab207978a2fe6c067ed39a68f90374009d36df9a1c1da30c3f",
+    "crop": null,
+    "raw_bounds_size": [
+      572,
+      810
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_death_00.png",
+    "source": "Shooter_fly_death_animation_sheet_20261016144842.jpg",
+    "sha256": "a2714549d4e6b9578bf9ac86bc50d90705af3cfcb6ea0ce0b4eb98aa394b14ad",
+    "crop": [
+      0.014,
+      0.05,
+      0.236,
+      0.88
+    ],
+    "raw_bounds_size": [
+      221,
+      422
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_death_01.png",
+    "source": "Shooter_fly_death_animation_sheet_20261016144842.jpg",
+    "sha256": "a2714549d4e6b9578bf9ac86bc50d90705af3cfcb6ea0ce0b4eb98aa394b14ad",
+    "crop": [
+      0.264,
+      0.05,
+      0.486,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      290
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_death_02.png",
+    "source": "Shooter_fly_death_animation_sheet_20261016144842.jpg",
+    "sha256": "a2714549d4e6b9578bf9ac86bc50d90705af3cfcb6ea0ce0b4eb98aa394b14ad",
+    "crop": [
+      0.514,
+      0.05,
+      0.736,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      354
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "mosca_death_03.png",
+    "source": "Shooter_fly_death_animation_sheet_20261016144842.jpg",
+    "sha256": "a2714549d4e6b9578bf9ac86bc50d90705af3cfcb6ea0ce0b4eb98aa394b14ad",
+    "crop": [
+      0.764,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      279,
+      231
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_idle_00.png",
+    "source": "Grasshopper_compressing_legs_ani…_20261016144832.jpg",
+    "sha256": "c443fe720ca888f2b157c6bb514513743f35ef49d3c37caf76d3fd5aa846cb42",
+    "crop": [
+      0.014,
+      0.05,
+      0.486,
+      0.92
+    ],
+    "raw_bounds_size": [
+      457,
+      364
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_idle_01.png",
+    "source": "Grasshopper_compressing_legs_ani…_20261016144832.jpg",
+    "sha256": "c443fe720ca888f2b157c6bb514513743f35ef49d3c37caf76d3fd5aa846cb42",
+    "crop": [
+      0.514,
+      0.05,
+      0.986,
+      0.92
+    ],
+    "raw_bounds_size": [
+      479,
+      267
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_jump_00.png",
+    "source": "Jumping_grasshopper_pixel_art_an…_20261016144900.jpg",
+    "sha256": "d522481935d96e394657ad212895610530578ab16fbc319672cf4bbe5d77bbc4",
+    "crop": [
+      0.014,
+      0.05,
+      0.486,
+      0.92
+    ],
+    "raw_bounds_size": [
+      406,
+      388
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_jump_01.png",
+    "source": "Jumping_grasshopper_pixel_art_an…_20261016144900.jpg",
+    "sha256": "d522481935d96e394657ad212895610530578ab16fbc319672cf4bbe5d77bbc4",
+    "crop": [
+      0.514,
+      0.05,
+      0.986,
+      0.92
+    ],
+    "raw_bounds_size": [
+      405,
+      388
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_land_00.png",
+    "source": "Grasshopper_landing_animation_sheet_20261016144914.jpg",
+    "sha256": "000e02d45c112ab3613cbb53596e68961c35e2ba82b417a1d96e7fb57d805ddf",
+    "crop": [
+      0.66,
+      0.05,
+      0.99,
+      0.92
+    ],
+    "raw_bounds_size": [
+      439,
+      347
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_death_00.png",
+    "source": "Grasshopper_death_animation_sheet_20261016144856.jpg",
+    "sha256": "6a7379feae578ed07c4c510f5748af6c80e61c6989fe8966b2f4e1c683972749",
+    "crop": [
+      0.014,
+      0.05,
+      0.236,
+      0.88
+    ],
+    "raw_bounds_size": [
+      278,
+      503
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_death_01.png",
+    "source": "Grasshopper_death_animation_sheet_20261016144856.jpg",
+    "sha256": "6a7379feae578ed07c4c510f5748af6c80e61c6989fe8966b2f4e1c683972749",
+    "crop": [
+      0.264,
+      0.05,
+      0.486,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      405
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_death_02.png",
+    "source": "Grasshopper_death_animation_sheet_20261016144856.jpg",
+    "sha256": "6a7379feae578ed07c4c510f5748af6c80e61c6989fe8966b2f4e1c683972749",
+    "crop": [
+      0.514,
+      0.05,
+      0.736,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      353
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "gafanhoto_death_03.png",
+    "source": "Grasshopper_death_animation_sheet_20261016144856.jpg",
+    "sha256": "6a7379feae578ed07c4c510f5748af6c80e61c6989fe8966b2f4e1c683972749",
+    "crop": [
+      0.764,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      301,
+      239
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "lesma_idle_00.png",
+    "source": "telsmatank-andando.jpg",
+    "sha256": "5ac692288b5d4e08ad45907d670d0b47bea4a53f1405c0225ec07f509d411c58",
+    "crop": [
+      0,
+      0,
+      0.5,
+      1
+    ],
+    "raw_bounds_size": [
+      401,
+      286
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": true
+  },
+  {
+    "output": "lesma_idle_01.png",
+    "source": "telsmatank-andando.jpg",
+    "sha256": "5ac692288b5d4e08ad45907d670d0b47bea4a53f1405c0225ec07f509d411c58",
+    "crop": [
+      0.5,
+      0,
+      1,
+      1
+    ],
+    "raw_bounds_size": [
+      392,
+      277
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": true
+  },
+  {
+    "output": "boss_lagarta_idle_00.png",
+    "source": "boss-largatagi.jpg",
+    "sha256": "1dbfdfe19af2a2f4438c74cb9b93a54a3ba48d1ff8b36aa72c384617e91c8ea7",
+    "crop": [
+      0.008,
+      0.12,
+      0.242,
+      0.59
+    ],
+    "raw_bounds_size": [
+      238,
+      249
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": true
+  },
+  {
+    "output": "boss_lagarta_idle_01.png",
+    "source": "boss-largatagi.jpg",
+    "sha256": "1dbfdfe19af2a2f4438c74cb9b93a54a3ba48d1ff8b36aa72c384617e91c8ea7",
+    "crop": [
+      0.258,
+      0.12,
+      0.492,
+      0.59
+    ],
+    "raw_bounds_size": [
+      240,
+      261
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": true
+  },
+  {
+    "output": "boss_lagarta_idle_02.png",
+    "source": "boss-largatagi.jpg",
+    "sha256": "1dbfdfe19af2a2f4438c74cb9b93a54a3ba48d1ff8b36aa72c384617e91c8ea7",
+    "crop": [
+      0.508,
+      0.12,
+      0.742,
+      0.59
+    ],
+    "raw_bounds_size": [
+      239,
+      259
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": true
+  },
+  {
+    "output": "boss_lagarta_idle_03.png",
+    "source": "boss-largatagi.jpg",
+    "sha256": "1dbfdfe19af2a2f4438c74cb9b93a54a3ba48d1ff8b36aa72c384617e91c8ea7",
+    "crop": [
+      0.758,
+      0.12,
+      0.992,
+      0.59
+    ],
+    "raw_bounds_size": [
+      238,
+      257
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": true
+  },
+  {
+    "output": "boss_rainha_moscas_idle_00.png",
+    "source": "Queen_of_flies_idle_animation_20261016150317.jpg",
+    "sha256": "7393326d574932a8b64f0fb4a074b6ae050558da18a6c24577a70e72b1c85535",
+    "crop": [
+      0.014,
+      0.05,
+      0.3193333333333333,
+      0.88
+    ],
+    "raw_bounds_size": [
+      301,
+      427
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_idle_01.png",
+    "source": "Queen_of_flies_idle_animation_20261016150317.jpg",
+    "sha256": "7393326d574932a8b64f0fb4a074b6ae050558da18a6c24577a70e72b1c85535",
+    "crop": [
+      0.3473333333333333,
+      0.05,
+      0.6526666666666666,
+      0.88
+    ],
+    "raw_bounds_size": [
+      364,
+      359
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_idle_02.png",
+    "source": "Queen_of_flies_idle_animation_20261016150317.jpg",
+    "sha256": "7393326d574932a8b64f0fb4a074b6ae050558da18a6c24577a70e72b1c85535",
+    "crop": [
+      0.6806666666666666,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      340,
+      370
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_walk_00.png",
+    "source": "Queen_of_Flies_flying_animation_20261016150342.jpg",
+    "sha256": "2b58bccf4056875d07aac1e545149a744604ef10ff1db9fa578d34322df3af4d",
+    "crop": [
+      0.014,
+      0.05,
+      0.3193333333333333,
+      0.88
+    ],
+    "raw_bounds_size": [
+      301,
+      427
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_walk_01.png",
+    "source": "Queen_of_Flies_flying_animation_20261016150342.jpg",
+    "sha256": "2b58bccf4056875d07aac1e545149a744604ef10ff1db9fa578d34322df3af4d",
+    "crop": [
+      0.3473333333333333,
+      0.05,
+      0.6526666666666666,
+      0.88
+    ],
+    "raw_bounds_size": [
+      364,
+      359
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_walk_02.png",
+    "source": "Queen_of_Flies_flying_animation_20261016150342.jpg",
+    "sha256": "2b58bccf4056875d07aac1e545149a744604ef10ff1db9fa578d34322df3af4d",
+    "crop": [
+      0.6806666666666666,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      340,
+      427
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_attack_00.png",
+    "source": "Queen_of_Flies_attack_animation_20261016150252.jpg",
+    "sha256": "f2d9da71285115a2ac804173916b897f4fa102c127294bb0f12b8af3e0189b92",
+    "crop": [
+      0.014,
+      0.05,
+      0.236,
+      0.88
+    ],
+    "raw_bounds_size": [
+      220,
+      427
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_attack_01.png",
+    "source": "Queen_of_Flies_attack_animation_20261016150252.jpg",
+    "sha256": "f2d9da71285115a2ac804173916b897f4fa102c127294bb0f12b8af3e0189b92",
+    "crop": [
+      0.264,
+      0.05,
+      0.486,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      388
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_attack_02.png",
+    "source": "Queen_of_Flies_attack_animation_20261016150252.jpg",
+    "sha256": "f2d9da71285115a2ac804173916b897f4fa102c127294bb0f12b8af3e0189b92",
+    "crop": [
+      0.514,
+      0.05,
+      0.736,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      394
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_attack_03.png",
+    "source": "Queen_of_Flies_attack_animation_20261016150252.jpg",
+    "sha256": "f2d9da71285115a2ac804173916b897f4fa102c127294bb0f12b8af3e0189b92",
+    "crop": [
+      0.764,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      302,
+      423
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_death_00.png",
+    "source": "Queen_of_flies_animation_sheet_20261016150239.jpg",
+    "sha256": "0fd8ad8c9ad9daed8893b0eb8c003a6a6580f4ac9eee428fa8cfa6b95169f89b",
+    "crop": [
+      0.014,
+      0.05,
+      0.236,
+      0.88
+    ],
+    "raw_bounds_size": [
+      289,
+      416
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_death_01.png",
+    "source": "Queen_of_flies_animation_sheet_20261016150239.jpg",
+    "sha256": "0fd8ad8c9ad9daed8893b0eb8c003a6a6580f4ac9eee428fa8cfa6b95169f89b",
+    "crop": [
+      0.264,
+      0.05,
+      0.486,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      513
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_death_02.png",
+    "source": "Queen_of_flies_animation_sheet_20261016150239.jpg",
+    "sha256": "0fd8ad8c9ad9daed8893b0eb8c003a6a6580f4ac9eee428fa8cfa6b95169f89b",
+    "crop": [
+      0.514,
+      0.05,
+      0.736,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      339
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_rainha_moscas_death_03.png",
+    "source": "Queen_of_flies_animation_sheet_20261016150239.jpg",
+    "sha256": "0fd8ad8c9ad9daed8893b0eb8c003a6a6580f4ac9eee428fa8cfa6b95169f89b",
+    "crop": [
+      0.764,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      301,
+      185
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_gafanhoto_gigante_idle_00.png",
+    "source": "Giant_Grasshopper_Idle_Animation…_20261016150352.jpg",
+    "sha256": "69cc1c3711878e0b0ac4907f11f22ef3c138f42a0773ff9900698987e87ac26e",
+    "crop": [
+      0.035,
+      0.055,
+      0.232,
+      0.45
+    ],
+    "raw_bounds_size": [
+      255,
+      279
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_gafanhoto_gigante_idle_01.png",
+    "source": "Giant_Grasshopper_Idle_Animation…_20261016150352.jpg",
+    "sha256": "69cc1c3711878e0b0ac4907f11f22ef3c138f42a0773ff9900698987e87ac26e",
+    "crop": [
+      0.28500000000000003,
+      0.055,
+      0.482,
+      0.45
+    ],
+    "raw_bounds_size": [
+      265,
+      291
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_gafanhoto_gigante_idle_02.png",
+    "source": "Giant_Grasshopper_Idle_Animation…_20261016150352.jpg",
+    "sha256": "69cc1c3711878e0b0ac4907f11f22ef3c138f42a0773ff9900698987e87ac26e",
+    "crop": [
+      0.535,
+      0.055,
+      0.732,
+      0.45
+    ],
+    "raw_bounds_size": [
+      255,
+      289
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_gafanhoto_gigante_idle_03.png",
+    "source": "Giant_Grasshopper_Idle_Animation…_20261016150352.jpg",
+    "sha256": "69cc1c3711878e0b0ac4907f11f22ef3c138f42a0773ff9900698987e87ac26e",
+    "crop": [
+      0.785,
+      0.055,
+      0.982,
+      0.45
+    ],
+    "raw_bounds_size": [
+      271,
+      302
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_gafanhoto_gigante_jump_00.png",
+    "source": "Grasshopper_jump_animation_sheet_20261016150307.jpg",
+    "sha256": "1d3d0b3bfdf8acee4e576d7b594127ece7e44aa99e77648c5c5d2443e3709a63",
+    "crop": [
+      0.014,
+      0.03,
+      0.486,
+      0.92
+    ],
+    "raw_bounds_size": [
+      454,
+      576
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_gafanhoto_gigante_jump_01.png",
+    "source": "Grasshopper_jump_animation_sheet_20261016150307.jpg",
+    "sha256": "1d3d0b3bfdf8acee4e576d7b594127ece7e44aa99e77648c5c5d2443e3709a63",
+    "crop": [
+      0.514,
+      0.03,
+      0.986,
+      0.92
+    ],
+    "raw_bounds_size": [
+      377,
+      449
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_gafanhoto_gigante_land_00.png",
+    "source": "Giant_grasshopper_compresses_legs_20261016150313.jpg",
+    "sha256": "466a98d15eafd816320602a14e472910283e2bbed13f44073c6acafad5496018",
+    "crop": [
+      0,
+      0.03,
+      0.5,
+      0.47
+    ],
+    "raw_bounds_size": [
+      455,
+      440
+    ],
+    "size": [
+      256,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_idle_00.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.005,
+      0.012,
+      0.245,
+      0.475
+    ],
+    "raw_bounds_size": [
+      301,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_idle_01.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.255,
+      0.012,
+      0.495,
+      0.475
+    ],
+    "raw_bounds_size": [
+      301,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_idle_02.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.505,
+      0.012,
+      0.745,
+      0.475
+    ],
+    "raw_bounds_size": [
+      302,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_idle_03.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.755,
+      0.012,
+      0.995,
+      0.475
+    ],
+    "raw_bounds_size": [
+      301,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_00.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.005,
+      0.012,
+      0.245,
+      0.475
+    ],
+    "raw_bounds_size": [
+      301,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_01.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.255,
+      0.012,
+      0.495,
+      0.475
+    ],
+    "raw_bounds_size": [
+      301,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_02.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.505,
+      0.012,
+      0.745,
+      0.475
+    ],
+    "raw_bounds_size": [
+      302,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_03.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.755,
+      0.012,
+      0.995,
+      0.475
+    ],
+    "raw_bounds_size": [
+      301,
+      248
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_04.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.005,
+      0.512,
+      0.245,
+      0.975
+    ],
+    "raw_bounds_size": [
+      299,
+      251
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_05.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.255,
+      0.512,
+      0.495,
+      0.975
+    ],
+    "raw_bounds_size": [
+      301,
+      249
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_06.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.505,
+      0.512,
+      0.745,
+      0.975
+    ],
+    "raw_bounds_size": [
+      300,
+      249
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_walk_07.png",
+    "source": "Generate_walking_animation_sprit…_20261016144523.jpg",
+    "sha256": "6fccde6fab546c6d550339a10cf50793256a415a17f9d981074354a6b936f699",
+    "crop": [
+      0.755,
+      0.512,
+      0.995,
+      0.975
+    ],
+    "raw_bounds_size": [
+      300,
+      252
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_attack_00.png",
+    "source": "Calf_headbutt_animation_sheet_20261016144535.jpg",
+    "sha256": "2a975ee30a7d14bc43d725384da123cffeaa66d58803219bdec251df4f555aae",
+    "crop": [
+      0.005,
+      0.012,
+      0.245,
+      0.475
+    ],
+    "raw_bounds_size": [
+      270,
+      190
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_attack_01.png",
+    "source": "Calf_headbutt_animation_sheet_20261016144535.jpg",
+    "sha256": "2a975ee30a7d14bc43d725384da123cffeaa66d58803219bdec251df4f555aae",
+    "crop": [
+      0.255,
+      0.012,
+      0.495,
+      0.475
+    ],
+    "raw_bounds_size": [
+      299,
+      167
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_attack_02.png",
+    "source": "Calf_headbutt_animation_sheet_20261016144535.jpg",
+    "sha256": "2a975ee30a7d14bc43d725384da123cffeaa66d58803219bdec251df4f555aae",
+    "crop": [
+      0.505,
+      0.012,
+      0.745,
+      0.475
+    ],
+    "raw_bounds_size": [
+      314,
+      196
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_1_attack_03.png",
+    "source": "Calf_headbutt_animation_sheet_20261016144535.jpg",
+    "sha256": "2a975ee30a7d14bc43d725384da123cffeaa66d58803219bdec251df4f555aae",
+    "crop": [
+      0.755,
+      0.012,
+      0.995,
+      0.475
+    ],
+    "raw_bounds_size": [
+      267,
+      238
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_idle_00.png",
+    "source": "Creating_pixel_art_animation_sheet_20261016144607.jpg",
+    "sha256": "d4483a9c892ea08441a7a8aa238b34dacdc0e4ee1c15849ebb1a72e17e1f1796",
+    "crop": [
+      0.005,
+      0.012,
+      0.245,
+      0.475
+    ],
+    "raw_bounds_size": [
+      330,
+      321
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_idle_01.png",
+    "source": "Creating_pixel_art_animation_sheet_20261016144607.jpg",
+    "sha256": "d4483a9c892ea08441a7a8aa238b34dacdc0e4ee1c15849ebb1a72e17e1f1796",
+    "crop": [
+      0.255,
+      0.012,
+      0.495,
+      0.475
+    ],
+    "raw_bounds_size": [
+      330,
+      326
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_idle_02.png",
+    "source": "Creating_pixel_art_animation_sheet_20261016144607.jpg",
+    "sha256": "d4483a9c892ea08441a7a8aa238b34dacdc0e4ee1c15849ebb1a72e17e1f1796",
+    "crop": [
+      0.505,
+      0.012,
+      0.745,
+      0.475
+    ],
+    "raw_bounds_size": [
+      330,
+      321
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_idle_03.png",
+    "source": "Creating_pixel_art_animation_sheet_20261016144607.jpg",
+    "sha256": "d4483a9c892ea08441a7a8aa238b34dacdc0e4ee1c15849ebb1a72e17e1f1796",
+    "crop": [
+      0.755,
+      0.012,
+      0.995,
+      0.475
+    ],
+    "raw_bounds_size": [
+      330,
+      321
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_walk_00.png",
+    "source": "Creating_walk_animation_sheet_20261016144614.jpg",
+    "sha256": "d4bf4ddefb0c21552340a4d82332d04e065b32a19e1304accd42508ef59121e0",
+    "crop": [
+      0.002,
+      0.01,
+      0.3313333333333333,
+      0.49
+    ],
+    "raw_bounds_size": [
+      421,
+      347
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_walk_01.png",
+    "source": "Creating_walk_animation_sheet_20261016144614.jpg",
+    "sha256": "d4bf4ddefb0c21552340a4d82332d04e065b32a19e1304accd42508ef59121e0",
+    "crop": [
+      0.3353333333333333,
+      0.01,
+      0.6646666666666666,
+      0.49
+    ],
+    "raw_bounds_size": [
+      444,
+      345
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_walk_02.png",
+    "source": "Creating_walk_animation_sheet_20261016144614.jpg",
+    "sha256": "d4bf4ddefb0c21552340a4d82332d04e065b32a19e1304accd42508ef59121e0",
+    "crop": [
+      0.6686666666666666,
+      0.01,
+      0.998,
+      0.49
+    ],
+    "raw_bounds_size": [
+      453,
+      347
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_walk_03.png",
+    "source": "Creating_walk_animation_sheet_20261016144614.jpg",
+    "sha256": "d4bf4ddefb0c21552340a4d82332d04e065b32a19e1304accd42508ef59121e0",
+    "crop": [
+      0.002,
+      0.51,
+      0.3313333333333333,
+      0.99
+    ],
+    "raw_bounds_size": [
+      444,
+      348
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_walk_04.png",
+    "source": "Creating_walk_animation_sheet_20261016144614.jpg",
+    "sha256": "d4bf4ddefb0c21552340a4d82332d04e065b32a19e1304accd42508ef59121e0",
+    "crop": [
+      0.3353333333333333,
+      0.51,
+      0.6646666666666666,
+      0.99
+    ],
+    "raw_bounds_size": [
+      444,
+      348
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_walk_05.png",
+    "source": "Creating_walk_animation_sheet_20261016144614.jpg",
+    "sha256": "d4bf4ddefb0c21552340a4d82332d04e065b32a19e1304accd42508ef59121e0",
+    "crop": [
+      0.6686666666666666,
+      0.51,
+      0.998,
+      0.99
+    ],
+    "raw_bounds_size": [
+      450,
+      354
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_attack_00.png",
+    "source": "Create_16-bit_headbutt_animation…_20261016144634.jpg",
+    "sha256": "b1760358849f281299741409a548beb4231d86a8db3b0cd74496621634326169",
+    "crop": [
+      0.005,
+      0.015,
+      0.245,
+      0.49
+    ],
+    "raw_bounds_size": [
+      324,
+      325
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_attack_01.png",
+    "source": "Create_16-bit_headbutt_animation…_20261016144634.jpg",
+    "sha256": "b1760358849f281299741409a548beb4231d86a8db3b0cd74496621634326169",
+    "crop": [
+      0.255,
+      0.015,
+      0.495,
+      0.49
+    ],
+    "raw_bounds_size": [
+      328,
+      204
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_attack_02.png",
+    "source": "Create_16-bit_headbutt_animation…_20261016144634.jpg",
+    "sha256": "b1760358849f281299741409a548beb4231d86a8db3b0cd74496621634326169",
+    "crop": [
+      0.505,
+      0.015,
+      0.745,
+      0.49
+    ],
+    "raw_bounds_size": [
+      325,
+      228
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_2_attack_03.png",
+    "source": "Create_16-bit_headbutt_animation…_20261016144634.jpg",
+    "sha256": "b1760358849f281299741409a548beb4231d86a8db3b0cd74496621634326169",
+    "crop": [
+      0.005,
+      0.015,
+      0.245,
+      0.49
+    ],
+    "raw_bounds_size": [
+      324,
+      325
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_idle_00.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.014,
+      0.06,
+      0.236,
+      0.9
+    ],
+    "raw_bounds_size": [
+      295,
+      298
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_idle_01.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.264,
+      0.06,
+      0.486,
+      0.9
+    ],
+    "raw_bounds_size": [
+      306,
+      289
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_idle_02.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.514,
+      0.06,
+      0.736,
+      0.9
+    ],
+    "raw_bounds_size": [
+      306,
+      302
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_idle_03.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.764,
+      0.06,
+      0.986,
+      0.9
+    ],
+    "raw_bounds_size": [
+      298,
+      290
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_walk_00.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.014,
+      0.06,
+      0.236,
+      0.9
+    ],
+    "raw_bounds_size": [
+      295,
+      298
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_walk_01.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.264,
+      0.06,
+      0.486,
+      0.9
+    ],
+    "raw_bounds_size": [
+      306,
+      289
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_walk_02.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.514,
+      0.06,
+      0.736,
+      0.9
+    ],
+    "raw_bounds_size": [
+      306,
+      302
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_walk_03.png",
+    "source": "Flying_cow_idle_animation_sheet_20261016144552.jpg",
+    "sha256": "69f26f7b0d7172b82d50376ac6ce93618f64501d91072225d2362fa3987738ed",
+    "crop": [
+      0.764,
+      0.06,
+      0.986,
+      0.9
+    ],
+    "raw_bounds_size": [
+      298,
+      290
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_attack_00.png",
+    "source": "Creating_pixel_art_attack_animation_20261016144559.jpg",
+    "sha256": "40634b9dff712606f6558434bb59178238e6544cd59e0beba74d93995bc2e6b3",
+    "crop": [
+      0.005,
+      0.012,
+      0.245,
+      0.475
+    ],
+    "raw_bounds_size": [
+      300,
+      274
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_attack_01.png",
+    "source": "Creating_pixel_art_attack_animation_20261016144559.jpg",
+    "sha256": "40634b9dff712606f6558434bb59178238e6544cd59e0beba74d93995bc2e6b3",
+    "crop": [
+      0.255,
+      0.012,
+      0.495,
+      0.475
+    ],
+    "raw_bounds_size": [
+      313,
+      293
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_attack_02.png",
+    "source": "Creating_pixel_art_attack_animation_20261016144559.jpg",
+    "sha256": "40634b9dff712606f6558434bb59178238e6544cd59e0beba74d93995bc2e6b3",
+    "crop": [
+      0.505,
+      0.012,
+      0.745,
+      0.475
+    ],
+    "raw_bounds_size": [
+      319,
+      224
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "bezerro_3_attack_03.png",
+    "source": "Creating_pixel_art_attack_animation_20261016144559.jpg",
+    "sha256": "40634b9dff712606f6558434bb59178238e6544cd59e0beba74d93995bc2e6b3",
+    "crop": [
+      0.755,
+      0.012,
+      0.995,
+      0.475
+    ],
+    "raw_bounds_size": [
+      310,
+      274
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "app_icon.png",
+    "source": "Farmer_app_icon_pixel_art_20261016145900.jpg",
+    "sha256": "91e84a13b0722b3f5d2051547b0347571fb4b941a94e6d4231699fc1d55f7ff0",
+    "crop": null,
+    "raw_bounds_size": [
+      897,
+      911
+    ],
+    "size": [
+      189,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "portrait_fazendeiro.png",
+    "source": "Farmer_pixel_art_portrait_20261016143917.jpg",
+    "sha256": "d5ae931df08eab47ad94257bcab9fe4e42b3269eeff1dafcc19a8d32867012e6",
+    "crop": null,
+    "raw_bounds_size": [
+      853,
+      943
+    ],
+    "size": [
+      232,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "portrait_vovo.png",
+    "source": "Create_pixel_art_portrait_20261016143926.jpg",
+    "sha256": "9f31d4e58aff2d59723e6669732628f92e7a6251429f7fa450de98ba5cb5fe32",
+    "crop": null,
+    "raw_bounds_size": [
+      854,
+      979
+    ],
+    "size": [
+      223,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "portrait_netinho.png",
+    "source": "Pixel_art_portrait_of_Netinho_20261016144103.jpg",
+    "sha256": "882d6f6c3f6bd58b704f7de1cbbe9429076cddd3ccb40514af5383cd1b999b3a",
+    "crop": null,
+    "raw_bounds_size": [
+      745,
+      962
+    ],
+    "size": [
+      198,
+      256
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "char_fazendeiro.png",
+    "source": "Pixel_art_of_young_farmer_20261016143711.jpg",
+    "sha256": "d96e69e24287bbee647ef3823aa240bb318d362734a14709daec2775af482fe4",
+    "crop": null,
+    "raw_bounds_size": [
+      366,
+      782
+    ],
+    "size": [
+      90,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "char_vovo.png",
+    "source": "Creating_Resistant_Granny_sprite_20261016143859.jpg",
+    "sha256": "f5d8868fb816fb543552a7275cccaae0e4efc74012ce01d84083a8622393ebfe",
+    "crop": null,
+    "raw_bounds_size": [
+      454,
+      942
+    ],
+    "size": [
+      93,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "char_netinho.png",
+    "source": "Pixel_art_character_standing_20261016144218.jpg",
+    "sha256": "d868880dcdfd2097ea84b252473c3f841ea52aaa9b761d9031814c9f7560d8e1",
+    "crop": null,
+    "raw_bounds_size": [
+      539,
+      954
+    ],
+    "size": [
+      108,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "joystick_base.png",
+    "source": "Rural_joystick_circular_base_20261016145035.jpg",
+    "sha256": "971e166e9716df468fabbf08ad60c52bace5bc4b24c8de0876dae99b349e0de9",
+    "crop": null,
+    "raw_bounds_size": [
+      940,
+      940
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "joystick_knob.png",
+    "source": "Circular_joystick_ball_top_design_20261016145024.jpg",
+    "sha256": "a8a30e31a2744e0f115ccc5c7200f917c215c5e2f627bc3d856aede99817e817",
+    "crop": null,
+    "raw_bounds_size": [
+      960,
+      950
+    ],
+    "size": [
+      192,
+      190
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "currency_gold.png",
+    "source": "Pixel_art_coin_engraving_20261016145054.jpg",
+    "sha256": "912624c05c706874c3d156238efb7c9ceb453344761dae2b496091cf00498421",
+    "crop": null,
+    "raw_bounds_size": [
+      962,
+      950
+    ],
+    "size": [
+      192,
+      190
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_pause.png",
+    "source": "Pixel_art_pause_symbol_20261016145124.jpg",
+    "sha256": "ca366fadd24e8c267a6e1a105a674cbc56b8bbe3c2c6a6667557c7d511506752",
+    "crop": null,
+    "raw_bounds_size": [
+      572,
+      736
+    ],
+    "size": [
+      149,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_confirm.png",
+    "source": "Generate_pixel_art_checkmark_20261016145115.jpg",
+    "sha256": "2687a1ec718a9b4e4cf62d10262e4cd6db01a5dea38adba62871863ccf61669b",
+    "crop": null,
+    "raw_bounds_size": [
+      858,
+      756
+    ],
+    "size": [
+      192,
+      169
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_resume.png",
+    "source": "Generate_pixel_art_triangle_icon_20261016145153.jpg",
+    "sha256": "ad6640b8afd8a378a5e004af68cfb84e0967009ca2390e161991c9d6d9fea3b2",
+    "crop": null,
+    "raw_bounds_size": [
+      675,
+      837
+    ],
+    "size": [
+      155,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_close.png",
+    "source": "Generating_pixel_art_close_icon_20261016145031.jpg",
+    "sha256": "a688512c4460d92eb147c55eea0364c1559f9c73d19cd72a49d876753f60ddf3",
+    "crop": null,
+    "raw_bounds_size": [
+      961,
+      960
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_back.png",
+    "source": "Pixel_art_left_arrow_20261016145159.jpg",
+    "sha256": "1b9aa26a021233798bb5ca39028127c7815f69046a2fe54d83dd1072c565b887",
+    "crop": null,
+    "raw_bounds_size": [
+      899,
+      900
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_restart.png",
+    "source": "Generate_restart_symbol_pixel_art_20261016145018.jpg",
+    "sha256": "bcee65643ece34e353ad54eca09c084c89bb67b81da42d181498a1d178aadf61",
+    "crop": null,
+    "raw_bounds_size": [
+      962,
+      981
+    ],
+    "size": [
+      188,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_inventory.png",
+    "source": "Rural_backpack_pixel_art_icon_20261016145043.jpg",
+    "sha256": "d27d2bb96cfd1bcdd05049c5306cd6b160b63653d45dbff4699185a48158d172",
+    "crop": null,
+    "raw_bounds_size": [
+      838,
+      858
+    ],
+    "size": [
+      188,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "icon_settings.png",
+    "source": "Pixel_art_gear_settings_symbol_20261016145546.jpg",
+    "sha256": "358ddc0f8dbaf9a432291120005e5bcafa5b429de77050d3a6a5365d3146d3f7",
+    "crop": null,
+    "raw_bounds_size": [
+      960,
+      960
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "stat_health.png",
+    "source": "Red_heart_pixel_art_20261016144957.jpg",
+    "sha256": "a93a6351bee471aeb762445c5f1d5600b48f34ce43375ba88b1a546f59f76fae",
+    "crop": null,
+    "raw_bounds_size": [
+      653,
+      591
+    ],
+    "size": [
+      192,
+      174
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "stat_damage.png",
+    "source": "Tool_blade_damage_icon_20261016145551.jpg",
+    "sha256": "752e8625cd55e9900b824ce40bbd1792a10c76cf8daf3fb3287d80db2e09ab7f",
+    "crop": null,
+    "raw_bounds_size": [
+      858,
+      879
+    ],
+    "size": [
+      187,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "stat_defense.png",
+    "source": "Wooden_plank_shield_icon_20261016145110.jpg",
+    "sha256": "c8558614d23303bea216f1b2318f0f6941a9218a7cd6d2df059d415a41e34098",
+    "crop": null,
+    "raw_bounds_size": [
+      858,
+      992
+    ],
+    "size": [
+      166,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "stat_collection.png",
+    "source": "Horseshoe_magnet_collecting_seed_20261016145048.jpg",
+    "sha256": "594b79d65627f1792c2d533b9ae43b1098079fee63ada2b03701822fc185680e",
+    "crop": null,
+    "raw_bounds_size": [
+      736,
+      736
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "stat_speed.png",
+    "source": "Pixel_art_rustic_boot_icon_20261016145106.jpg",
+    "sha256": "aa5b2b43ebcb6932e1886fd7406016abaa458fc7e4fbd5db566e199352cb3345",
+    "crop": null,
+    "raw_bounds_size": [
+      890,
+      889
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "stat_interval.png",
+    "source": "Pixel_art_clock_icon_20261016145139.jpg",
+    "sha256": "475500dbc08c51d9bb7e3a94624a747084bcc198a69f3ab8a0151da3238823da",
+    "crop": null,
+    "raw_bounds_size": [
+      961,
+      961
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "victory_emblem.png",
+    "source": "Pixel_art_sprout_harvest_emblem_20261016145724.jpg",
+    "sha256": "38f0cf543af3f768594da77ba38b6b464c54051cfaadba77ef5b22138c53df3b",
+    "crop": null,
+    "raw_bounds_size": [
+      818,
+      817
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "defeat_emblem.png",
+    "source": "Farmer's_hat_and_rural_tool_20261016145742.jpg",
+    "sha256": "eae35aeb0889326cc4eb0189a3fa556072f68ef79a973840520ec03f5dc46ddc",
+    "crop": null,
+    "raw_bounds_size": [
+      797,
+      776
+    ],
+    "size": [
+      192,
+      187
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "boss_emblem.png",
+    "source": "Plague_face_wooden_medallion_20261016145702.jpg",
+    "sha256": "d3b15cc37972e24f15a244d21c12b6d9f6ba0b188913e72e0224ea3552eba37c",
+    "crop": null,
+    "raw_bounds_size": [
+      880,
+      880
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "save_seed.png",
+    "source": "Pixel_art_seed_engraving_20261016145100.jpg",
+    "sha256": "d5a9a06617fde63937ca6ab0b424a46d064c0d34e239a029fda4ba940afcba8f",
+    "crop": null,
+    "raw_bounds_size": [
+      900,
+      900
+    ],
+    "size": [
+      192,
+      192
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "slot.png",
+    "source": "Pixel_art_empty_equipment_slot_20261016145135.jpg",
+    "sha256": "0a90178cc5fcc8c302ea7f36f0e277c70bbae473bb8bc2dd69ff11adad775d13",
+    "crop": null,
+    "raw_bounds_size": [
+      858,
+      838
+    ],
+    "size": [
+      192,
+      188
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "cost_plate.png",
+    "source": "Pixel_art_parchment_sign_20261016145801.jpg",
+    "sha256": "1a1eba713e3cf4632cc5f253ec07efc9d6fcd6827227ab40d1db70444ef603de",
+    "crop": null,
+    "raw_bounds_size": [
+      868,
+      817
+    ],
+    "size": [
+      192,
+      181
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "health_frame.png",
+    "source": "Pixel_art_health_bar_frame_20261016145002.jpg",
+    "sha256": "00b7409b881942de98e3fa5fd93508ac5dbe79e069eba48c1be730a285aa8b29",
+    "crop": null,
+    "raw_bounds_size": [
+      940,
+      202
+    ],
+    "size": [
+      192,
+      41
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "xp_frame.png",
+    "source": "Pixel_art_wooden_XP_bar_20261016145129.jpg",
+    "sha256": "160ebc1c2e7a5a86c90c141d1d079a131d6727298065b7ccf720ff511023c519",
+    "crop": null,
+    "raw_bounds_size": [
+      971,
+      162
+    ],
+    "size": [
+      192,
+      32
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_forquilha_1.png",
+    "source": "Agricultural_pitchfork_pixel_art…_20261016150219.jpg",
+    "sha256": "7a3b1b5bc04cdde9164ee0cf98dfe30e8193144367fb1455c9ad5198396ed122",
+    "crop": null,
+    "raw_bounds_size": [
+      878,
+      878
+    ],
+    "size": [
+      80,
+      80
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_forquilha_2.png",
+    "source": "Level_2_Fork_Icon_20261016150223.jpg",
+    "sha256": "af08ef823e45586ec5efe72c7054008fa4654a62c63b1d8b9969b7eb22ec56f2",
+    "crop": null,
+    "raw_bounds_size": [
+      902,
+      910
+    ],
+    "size": [
+      79,
+      80
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_milho_1.png",
+    "source": "Pixel_art_machine_gun_corn_20261016144744.jpg",
+    "sha256": "04ee65f90cbf989464bb9f90e0e043d6b8cbf46aa18dc3d15de5181f688b63b3",
+    "crop": null,
+    "raw_bounds_size": [
+      974,
+      534
+    ],
+    "size": [
+      80,
+      44
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_milho_2.png",
+    "source": "Pixel_art_Gatling_Pea_20261016144717.jpg",
+    "sha256": "150cfcc3102da26978df186d5a53187953078585373c8aa640735b54c0d6f4b5",
+    "crop": null,
+    "raw_bounds_size": [
+      974,
+      726
+    ],
+    "size": [
+      80,
+      60
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_milho_3.png",
+    "source": "Pixel_art_gun_body_20261016145919.jpg",
+    "sha256": "335a6db2547fb6bf25ae21230a11acd9e57ff488a89fb800da828175c84858e8",
+    "crop": null,
+    "raw_bounds_size": [
+      974,
+      792
+    ],
+    "size": [
+      80,
+      65
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_batata_1.png",
+    "source": "Potato_cannon_icon_pixel_art_20261016144711.jpg",
+    "sha256": "e4666bd79a93c4a98817279cdb26b376ed7cd6abfb32acc6b9f6281d79b4fa91",
+    "crop": null,
+    "raw_bounds_size": [
+      862,
+      766
+    ],
+    "size": [
+      80,
+      71
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_mamona_1.png",
+    "source": "Slingshot_icon_pixel_art_20261016144705.jpg",
+    "sha256": "1ab04d81d92d3cd879cfbf23f10f9684211b45eaa498cf896cfb23ec1164e5e5",
+    "crop": null,
+    "raw_bounds_size": [
+      787,
+      940
+    ],
+    "size": [
+      67,
+      80
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_mamona_2.png",
+    "source": "Pixel_slingshot_icon_design_20261016145848.jpg",
+    "sha256": "bf0579e6ea10dc14eaed629a8871ad9663ff9f66a02b9e625cc9ef7ad13d9c67",
+    "crop": null,
+    "raw_bounds_size": [
+      848,
+      940
+    ],
+    "size": [
+      72,
+      80
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_mamona_3.png",
+    "source": "Pixel_art_slingshot_weapon_20261016145940.jpg",
+    "sha256": "32fa2782895de1cc718753f76fc1c7f699dbce022dd9a2519a3de4f09c2f3560",
+    "crop": null,
+    "raw_bounds_size": [
+      925,
+      874
+    ],
+    "size": [
+      80,
+      76
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_motosserra_1.png",
+    "source": "Chainsaw_icon_pixel_art_20261016144730.jpg",
+    "sha256": "7159fd4c4576e59917db8488df8c142e8dcbf6a3fdcf5033081add6655ca3d4a",
+    "crop": null,
+    "raw_bounds_size": [
+      862,
+      366
+    ],
+    "size": [
+      80,
+      34
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_motosserra_2.png",
+    "source": "Chainsaw_weapon_body_icon_20261016145837.jpg",
+    "sha256": "1163eba115c4d5050a7e0efb56cfec36e7901a231fcdf64b78580aa166d2bec7",
+    "crop": null,
+    "raw_bounds_size": [
+      958,
+      382
+    ],
+    "size": [
+      80,
+      32
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_motosserra_3.png",
+    "source": "Gold_chainsaw_pixel_art_icon_20261016145844.jpg",
+    "sha256": "54673ff1cef74dd27d59c36f04bd2cfe3d6fb7925008dad74ccd0b44eb792e4a",
+    "crop": null,
+    "raw_bounds_size": [
+      974,
+      531
+    ],
+    "size": [
+      80,
+      44
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "weapon_foice_1.png",
+    "source": "foice-arma.jpg",
+    "sha256": "ff7245c274aead190acb5376767b692cfbc33bfe32bd7075a00cea289fe98903",
+    "crop": null,
+    "raw_bounds_size": [
+      701,
+      860
+    ],
+    "size": [
+      52,
+      64
+    ],
+    "mirror": false,
+    "checker_removed": true
+  },
+  {
+    "output": "trap_base.png",
+    "source": "icone-cercaeletrica.jpg",
+    "sha256": "d011c9284828d161f22c3e5e551f858505595e6b39fb59ca0af7f908a99d8e60",
+    "crop": null,
+    "raw_bounds_size": [
+      690,
+      729
+    ],
+    "size": [
+      42,
+      44
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "projectile_milho.png",
+    "source": "Corn_kernel_projectile_20261016144627.jpg",
+    "sha256": "715c039e7f5fd72f33302872204bfe995a30051b23a4c0a18081603ac0cb9808",
+    "crop": null,
+    "raw_bounds_size": [
+      542,
+      425
+    ],
+    "size": [
+      18,
+      14
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "projectile_batata.png",
+    "source": "Potato_projectile_facing_right_20261016144725.jpg",
+    "sha256": "3c12a496e0d25532f3d60f3e8b5a2a1a38c21d9f53e5b8a8b7a388996f3d5769",
+    "crop": null,
+    "raw_bounds_size": [
+      238,
+      174
+    ],
+    "size": [
+      24,
+      18
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "projectile_mamona.png",
+    "source": "Castor_bean_projectile_facing_right_20261016144738.jpg",
+    "sha256": "3482e0af4e600a4b6135be5abcd639be475b3a9a70a681626eb8d866db18591c",
+    "crop": null,
+    "raw_bounds_size": [
+      510,
+      326
+    ],
+    "size": [
+      18,
+      12
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "projectile_enemy.png",
+    "source": "Orange_slime_drop_projectile_20261016144808.jpg",
+    "sha256": "10c6f81d7f58e2520f8d447a53653204c29e8fe8203ec687c0cb8ab287d90642",
+    "crop": null,
+    "raw_bounds_size": [
+      449,
+      347
+    ],
+    "size": [
+      18,
+      14
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "pickup_xp.png",
+    "source": "Rural_pixel_art_seed_20261016144756.jpg",
+    "sha256": "5e5a3ecc31b36c606c746aebc3fd612dc818703edec85db3559654613a09a36f",
+    "crop": null,
+    "raw_bounds_size": [
+      377,
+      438
+    ],
+    "size": [
+      15,
+      18
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_impact_0.png",
+    "source": "Create_star_animation_sheet_20261016144827.jpg",
+    "sha256": "1270cea20c763e174bf34ffe6cf0fe7996e619c3c2fbd24bf5dcd03d145d05ab",
+    "crop": [
+      0.012,
+      0.01,
+      0.238,
+      0.48
+    ],
+    "raw_bounds_size": [
+      142,
+      141
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_impact_1.png",
+    "source": "Create_star_animation_sheet_20261016144827.jpg",
+    "sha256": "1270cea20c763e174bf34ffe6cf0fe7996e619c3c2fbd24bf5dcd03d145d05ab",
+    "crop": [
+      0.262,
+      0.01,
+      0.488,
+      0.48
+    ],
+    "raw_bounds_size": [
+      310,
+      340
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_impact_2.png",
+    "source": "Create_star_animation_sheet_20261016144827.jpg",
+    "sha256": "1270cea20c763e174bf34ffe6cf0fe7996e619c3c2fbd24bf5dcd03d145d05ab",
+    "crop": [
+      0.512,
+      0.01,
+      0.738,
+      0.48
+    ],
+    "raw_bounds_size": [
+      310,
+      340
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_impact_3.png",
+    "source": "Create_star_animation_sheet_20261016144827.jpg",
+    "sha256": "1270cea20c763e174bf34ffe6cf0fe7996e619c3c2fbd24bf5dcd03d145d05ab",
+    "crop": [
+      0.762,
+      0.01,
+      0.988,
+      0.48
+    ],
+    "raw_bounds_size": [
+      263,
+      256
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_electric_0.png",
+    "source": "Electric_effect_animation_sheet_…_20261016144815.jpg",
+    "sha256": "50e2ff564c83ee386e7669c82325846bbf3f2b9e488dac9de26a932f3a2d65d0",
+    "crop": [
+      0.014,
+      0.05,
+      0.236,
+      0.88
+    ],
+    "raw_bounds_size": [
+      127,
+      135
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_electric_1.png",
+    "source": "Electric_effect_animation_sheet_…_20261016144815.jpg",
+    "sha256": "50e2ff564c83ee386e7669c82325846bbf3f2b9e488dac9de26a932f3a2d65d0",
+    "crop": [
+      0.264,
+      0.05,
+      0.486,
+      0.88
+    ],
+    "raw_bounds_size": [
+      198,
+      400
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_electric_2.png",
+    "source": "Electric_effect_animation_sheet_…_20261016144815.jpg",
+    "sha256": "50e2ff564c83ee386e7669c82325846bbf3f2b9e488dac9de26a932f3a2d65d0",
+    "crop": [
+      0.514,
+      0.05,
+      0.736,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      542
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_electric_3.png",
+    "source": "Electric_effect_animation_sheet_…_20261016144815.jpg",
+    "sha256": "50e2ff564c83ee386e7669c82325846bbf3f2b9e488dac9de26a932f3a2d65d0",
+    "crop": [
+      0.764,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      243,
+      257
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_sawdust_0.png",
+    "source": "Chainsaw_hit_pixel_art_animation_20261016144802.jpg",
+    "sha256": "acc4ecadcff7aafffb94170f98e9a7fbc79124e4b64c22404772119c58df0063",
+    "crop": [
+      0.014,
+      0.05,
+      0.236,
+      0.88
+    ],
+    "raw_bounds_size": [
+      166,
+      198
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_sawdust_1.png",
+    "source": "Chainsaw_hit_pixel_art_animation_20261016144802.jpg",
+    "sha256": "acc4ecadcff7aafffb94170f98e9a7fbc79124e4b64c22404772119c58df0063",
+    "crop": [
+      0.264,
+      0.05,
+      0.486,
+      0.88
+    ],
+    "raw_bounds_size": [
+      306,
+      483
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_sawdust_2.png",
+    "source": "Chainsaw_hit_pixel_art_animation_20261016144802.jpg",
+    "sha256": "acc4ecadcff7aafffb94170f98e9a7fbc79124e4b64c22404772119c58df0063",
+    "crop": [
+      0.514,
+      0.05,
+      0.736,
+      0.88
+    ],
+    "raw_bounds_size": [
+      287,
+      460
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_sawdust_3.png",
+    "source": "Chainsaw_hit_pixel_art_animation_20261016144802.jpg",
+    "sha256": "acc4ecadcff7aafffb94170f98e9a7fbc79124e4b64c22404772119c58df0063",
+    "crop": [
+      0.764,
+      0.05,
+      0.986,
+      0.88
+    ],
+    "raw_bounds_size": [
+      293,
+      401
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_death_0.png",
+    "source": "Plague_dispersion_animation_sheet_20261016144820.jpg",
+    "sha256": "61ad08586700917b5f62d1946e02c5de3eca198f6a733cb734a5ba52f3f86739",
+    "crop": [
+      0.23,
+      0.02,
+      0.53,
+      0.93
+    ],
+    "raw_bounds_size": [
+      405,
+      460
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_death_1.png",
+    "source": "Plague_dispersion_animation_sheet_20261016144820.jpg",
+    "sha256": "61ad08586700917b5f62d1946e02c5de3eca198f6a733cb734a5ba52f3f86739",
+    "crop": [
+      0.535,
+      0.02,
+      0.78,
+      0.93
+    ],
+    "raw_bounds_size": [
+      311,
+      428
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "fx_death_2.png",
+    "source": "Plague_dispersion_animation_sheet_20261016144820.jpg",
+    "sha256": "61ad08586700917b5f62d1946e02c5de3eca198f6a733cb734a5ba52f3f86739",
+    "crop": [
+      0.79,
+      0.02,
+      1,
+      0.93
+    ],
+    "raw_bounds_size": [
+      265,
+      343
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_horta_cerca.png",
+    "source": "Wooden_fence_pixel_art_20261016145620.jpg",
+    "sha256": "30a62ebcf3d9995b449a432cd8d6c3642e2c7d3df0acc63500bf314ee8fdcad9",
+    "crop": null,
+    "raw_bounds_size": [
+      833,
+      853
+    ],
+    "size": [
+      47,
+      48
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_horta_canteiro.png",
+    "source": "Carrot_sprouts_pixel_art_patch_20261016145638.jpg",
+    "sha256": "cd26776234cdbfab67f20d32131b8612860b05f294a78d81172ca7a2ce486eb1",
+    "crop": null,
+    "raw_bounds_size": [
+      639,
+      408
+    ],
+    "size": [
+      48,
+      31
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_horta_espantalho.png",
+    "source": "Scarecrow_isolated_from_garden_f…_20261016145631.jpg",
+    "sha256": "75881aa115834aea6836a3e22d82fe06ab12701a52420946f14323382825b57b",
+    "crop": null,
+    "raw_bounds_size": [
+      515,
+      674
+    ],
+    "size": [
+      37,
+      48
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_celeiro_feno.png",
+    "source": "Hay_object_isolated_from_fence_20261016145655.jpg",
+    "sha256": "88956a9ad777925e21b62410c04bce4026ca1ace9b40b2cb9214ecdb100df049",
+    "crop": null,
+    "raw_bounds_size": [
+      592,
+      500
+    ],
+    "size": [
+      48,
+      41
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_celeiro_barril.png",
+    "source": "Wooden_barrel_isolated_20261016145806.jpg",
+    "sha256": "382f94d22e2aea928468d22217f4e95fcb8d34959237e2274d377d7464e21a3d",
+    "crop": null,
+    "raw_bounds_size": [
+      658,
+      909
+    ],
+    "size": [
+      35,
+      48
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_celeiro_caixa.png",
+    "source": "Wooden_crate_isolated_20261016145748.jpg",
+    "sha256": "12497df11234bd15c5113922f5b2f0b4a073f65848c69d0e040de57f516d9eb7",
+    "crop": null,
+    "raw_bounds_size": [
+      918,
+      960
+    ],
+    "size": [
+      46,
+      48
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_celeiro_roda.png",
+    "source": "Wagon_wheel_pixel_art_20261016145612.jpg",
+    "sha256": "66b40ad53a5b0ef3e0fe50ad1acddce9ea694304a4591d0de717a697cf82ba08",
+    "crop": null,
+    "raw_bounds_size": [
+      754,
+      865
+    ],
+    "size": [
+      42,
+      48
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_pomar_arvore.png",
+    "source": "Apple_tree_pixel_art_20261016145603.jpg",
+    "sha256": "ee21f377b894b3082b7e6535a5dc2607b4a214e6cabf19ffe39893ca75b53be1",
+    "crop": null,
+    "raw_bounds_size": [
+      706,
+      840
+    ],
+    "size": [
+      114,
+      136
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_pomar_cesto.png",
+    "source": "Fruit_basket_isolated_20261016145557.jpg",
+    "sha256": "89f37c92ee30ac47a66c178c77a634ebf83b4d4ac1b3de68d2f3eaa0a3cf5a30",
+    "crop": null,
+    "raw_bounds_size": [
+      739,
+      792
+    ],
+    "size": [
+      45,
+      48
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_pomar_folhas.png",
+    "source": "Pixel_art_pile_of_leaves_20261016145719.jpg",
+    "sha256": "c509bc5cdc7b5f52f90d28d7c7c3cb0907a6bb261946005770f0956c5620d850",
+    "crop": null,
+    "raw_bounds_size": [
+      613,
+      388
+    ],
+    "size": [
+      48,
+      30
+    ],
+    "mirror": false,
+    "checker_removed": false
+  },
+  {
+    "output": "prop_pomar_escada.png",
+    "source": "Wooden_ladder_pixel_art_20261016145926.jpg",
+    "sha256": "7f34f271b1ba96d38b24b0be25a5670ca1e0c07eeafbdcc67e4e4bb3ce935221",
+    "crop": null,
+    "raw_bounds_size": [
+      391,
+      763
+    ],
+    "size": [
+      25,
+      48
+    ],
+    "mirror": false,
+    "checker_removed": false
+  }
+]

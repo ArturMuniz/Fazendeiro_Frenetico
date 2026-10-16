@@ -13,10 +13,11 @@ config_version=5
 config/name="fazendeiro_caotico"
 run/main_scene="res://hub.tscn"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://art/polished/app_icon.png"
 
 [autoload]
 
+PauseManager="*res://pause_manager.gd"
 Pool="*res://pool.gd"
 AudioManager="*res://audio_manager.gd"
 WeaponDB="*res://weapon_db.gd"
