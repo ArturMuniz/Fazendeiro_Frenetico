@@ -27,13 +27,24 @@ const WEAPON_SCENES: Dictionary = {
 @onready var joystick: TouchJoystick = get_node(joystick_path)
 @onready var anim_timer: Timer = $AnimTimer
 
-const IDLE_TEXTURE: Texture2D = preload("res://art/polished/fazendeiro_idle_00.png")
+const IDLE_TEXTURE: Texture2D = preload("res://art/fazendeiro_fiel/fazendeiro_idle_00.png")
 const WALK_TEXTURES: Array = [
-	preload("res://art/polished/fazendeiro_walk_00.png"),
-	preload("res://art/polished/fazendeiro_walk_01.png"),
+	preload("res://art/fazendeiro_fiel/fazendeiro_walk_00.png"),
+	preload("res://art/fazendeiro_fiel/fazendeiro_walk_01.png"),
 ]
 var _walk_frame: int = 0
 var art_animator: SpriteAnimator
+var _idle_elapsed: float = 0.0
+var _idle_gesture_active: bool = false
+var _idle_gesture_index: int = 0
+var _idle_gesture_delay: float = 3.5
+var _visual_running: bool = false
+var _revive_grace: float = 0.0
+var _reviving: bool = false
+const IDLE_GESTURES: Dictionary = {
+	"fazendeiro": ["idle_hat", "idle_swat"],
+	"vovo": ["idle_plant"],
+}
 
 var health: float
 var xp: float = 0.0
@@ -324,6 +335,7 @@ func _enable_auto_collect() -> void:
 	auto_collect_orbs = true
 	if _auto_collect_timer == null:
 		_auto_collect_timer = Timer.new()
+		_auto_collect_timer.name = "AutoCollectTimer"
 		_auto_collect_timer.wait_time = 15.0
 		_auto_collect_timer.timeout.connect(_on_auto_collect_timeout)
 		add_child(_auto_collect_timer)
@@ -337,6 +349,7 @@ func _on_auto_collect_timeout() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	_revive_grace = maxf(0.0, _revive_grace - delta)
 	survival_time += delta
 	var move_vector: Vector2 = joystick.get_vector()
 
@@ -344,8 +357,53 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	_update_facing(move_vector)
-	art_animator.play("walk" if velocity.length() > 5.0 else "idle")
+	_update_visual_animation(move_vector, delta)
 	_update_weapon_orbit(delta)
+
+
+func _update_visual_animation(move_vector: Vector2, delta: float) -> void:
+	if _dead:
+		return
+	if velocity.length() > 5.0:
+		_idle_elapsed = 0.0
+		var interrupt_gesture := _idle_gesture_active
+		_idle_gesture_active = false
+		var strength := move_vector.length()
+		if strength >= 0.8:
+			_visual_running = true
+		elif strength <= 0.62:
+			_visual_running = false
+		var next := "run" if _visual_running and art_animator.animations.has("run") else "walk"
+		art_animator.play(next, interrupt_gesture)
+		if art_animator.animations.has("run"):
+			art_animator.playback_speed = clampf(velocity.length() / (120.0 if next == "run" else 65.0), 0.5, 1.8)
+		return
+	_visual_running = false
+	art_animator.playback_speed = 1.0
+	if _idle_gesture_active:
+		if not art_animator.finished:
+			return
+		_idle_gesture_active = false
+		_idle_elapsed = 0.0
+		_idle_gesture_delay = 5.0
+	art_animator.play("idle")
+	_idle_elapsed += delta
+	var gestures: Array = IDLE_GESTURES.get(art_animator.entity_id, [])
+	if not gestures.is_empty() and _idle_elapsed >= _idle_gesture_delay:
+		var gesture: String = gestures[_idle_gesture_index % gestures.size()]
+		if art_animator.animations.has(gesture):
+			art_animator.once(gesture)
+			_idle_gesture_active = true
+			_idle_gesture_index += 1
+		_idle_elapsed = 0.0
+
+
+func _interrupt_idle_gesture() -> void:
+	_idle_elapsed = 0.0
+	if _idle_gesture_active:
+		_idle_gesture_active = false
+		art_animator.play("idle", true)
+		art_animator.playback_speed = 1.0
 
 
 func _update_facing(move_vector: Vector2) -> void:
@@ -388,8 +446,9 @@ var _dead: bool = false
 
 
 func take_damage(amount: float) -> void:
-	if _dead or get_tree().paused:
+	if _dead or _revive_grace > 0.0 or get_tree().paused:
 		return
+	_interrupt_idle_gesture()
 	var reduced_amount: float = amount * (1.0 - defense_percent)
 	health -= reduced_amount
 	art_animator.flash()
@@ -404,7 +463,11 @@ const RUN_END_UI_SCENE: PackedScene = preload("res://run_end_ui.tscn")
 func _die() -> void:
 	if _dead:
 		return
+	var checkpoint: Node = get_tree().current_scene.get_node_or_null("RunCheckpoint")
+	if checkpoint != null:
+		checkpoint.prepare_death()
 	AudioManager.play_sfx("game_over")
+	art_animator.playback_speed = 1.0
 	art_animator.once("death")
 	# Death is a short presentation state; simulation and reward settlement
 	# stop immediately, while this one animator finishes before revealing UI.
@@ -435,7 +498,7 @@ func _finish_run(victory: bool, next_map: String = "") -> void:
 func _settle_and_show_results() -> void:
 	# Preserva o bônus preexistente de derrota após chefe, além da vitória já salva.
 	var death_bonus := 20 if boss_defeated and not _pending_victory else 0
-	var result := SaveManager.settle_run(_run_id, int(survival_time / 5.0) + level * 3 + death_bonus)
+	var result := SaveManager.settle_run_progress(_run_id, int(survival_time / 5.0) + level * 3 + death_bonus)
 	if result["ok"] and _pending_next_map != "":
 		SaveManager.selected_map = _pending_next_map
 		PauseManager.change_scene("res://main.tscn")
@@ -446,6 +509,9 @@ func _settle_and_show_results() -> void:
 		_result_ui.save_retry_requested.connect(_settle_and_show_results)
 	_result_ui.show_results({
 		"victory": _pending_victory,
+		"run_id": _run_id,
+		"can_revive": can_revive(),
+		"checkpoint_label": get_tree().current_scene.checkpoint.description(),
 		"survival_time": survival_time,
 		"level": level,
 		"kills": kills,
@@ -453,6 +519,44 @@ func _settle_and_show_results() -> void:
 		"gold_earned": _boss_gold_paid + int(result["amount"]),
 		"gold_already_paid": _boss_gold_paid,
 		"death_bonus": death_bonus,
-		"gold_paid_now": result["amount"],
+		"gold_paid_now": result["paid_now"],
 		"save_failed": not result["ok"],
 	})
+
+
+func can_revive() -> bool:
+	var receipt: Dictionary = SaveManager.reward_receipts.get(_run_id, {})
+	return _dead and not _pending_victory and not _reviving and not receipt.has("revive") and not receipt.has("double")
+
+
+func revive_checkpoint() -> bool:
+	if not can_revive(): return false
+	var checkpoint: Node = get_tree().current_scene.get_node_or_null("RunCheckpoint")
+	if checkpoint == null or checkpoint.snapshot.is_empty(): return false
+	if not SaveManager.claim_run_revive(_run_id): return false
+	_reviving = true
+	var restored: bool = await checkpoint.restore()
+	if not restored:
+		_reviving = false
+		return false
+	_dead = false
+	_reviving = false
+	_pending_victory = false
+	_pending_next_map = ""
+	_boss_gold_paid = int(SaveManager.reward_receipts.get(_run_id, {}).get("boss", 0))
+	velocity = Vector2.ZERO
+	joystick.reset_input()
+	_idle_elapsed = 0.0
+	_idle_gesture_active = false
+	_visual_running = false
+	_revive_grace = 2.0
+	art_animator.process_mode = Node.PROCESS_MODE_INHERIT
+	art_animator.playback_speed = 1.0
+	art_animator.play("idle", true)
+	set_physics_process(true)
+	var result := _result_ui
+	_result_ui = null
+	if is_instance_valid(result):
+		result.queue_free()
+	AudioManager.play_music(MapDB.MAPS[SaveManager.selected_map].get("music_id", "gameplay"))
+	return true

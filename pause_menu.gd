@@ -32,6 +32,13 @@ func _populate_inventory() -> void:
 	var player: Node = get_tree().get_first_node_in_group("player")
 	if player != null:
 		_view.subtitle.text = "%s · Nível %d · Ouro salvo: %d" % [MapDB.MAPS[SaveManager.selected_map].name, player.level, SaveManager.gold]
+		var summary := RuralUI.card(_view.body)
+		var row := HBoxContainer.new()
+		summary.add_child(row)
+		RuralUI.actor_preview(row, SaveManager.selected_character, "", Vector2(116, 128))
+		var text := RuralUI.label("%s\nVida %d / %d · %d abates\n%s" % [CharacterDB.CHARACTERS[SaveManager.selected_character].name, ceili(player.health), int(player.max_health), player.kills, SkinCatalog.SKINS[SaveManager.get_equipped_skin(SaveManager.selected_character)].name], 23)
+		text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row.add_child(text)
 		var tabs := HBoxContainer.new()
 		_view.body.add_child(tabs)
 		for tab in ["Equipamento", "Atributos"]:
@@ -79,6 +86,7 @@ func open() -> void:
 	AudioManager.play_sfx("button")
 	_populate_inventory()
 	PauseManager.acquire(self, &"pause")
+	RuralUI.present(_view.root)
 
 
 func _on_resume_pressed() -> void:

@@ -1,0 +1,40 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS idle tem tempos por quadro
+PASS idle tem loop correto
+PASS walk tem tempos por quadro
+PASS walk tem loop correto
+PASS run tem tempos por quadro
+PASS run tem loop correto
+PASS idle_plant tem tempos por quadro
+PASS idle_plant tem loop correto
+PASS death tem tempos por quadro
+PASS death tem loop correto
+PASS catálogo contém 32 quadros da Vovó
+PASS seleção usa a arte nova
+PASS morte permanece ativa antes de 840 ms
+PASS morte finaliza uma vez na pose com alma
+PASS morte segura o último quadro
+PASS partida configura a família da Vovó
+PASS joystick parcial move com caminhada
+PASS movimento analógico preservado
+PASS joystick cheio seleciona corrida
+PASS corrida não concede velocidade extra
+PASS histerese mantém corrida na fronteira
+PASS redução do joystick volta a andar
+PASS soltar controle entra em descanso
+PASS inatividade inicia plantio visual
+PASS pausa congela o plantio
+PASS plantio retoma após pausa
+PASS movimento interrompe plantio
+PASS dano cancela plantio sem imunidade
+PASS plantio retorna ao descanso
+PASS arte mantém atributos e colisão
+PASS morte bloqueia combate antes do resultado
+PASS resultado aparece após a morte
+PASS alma fica na pose final do mundo
+PASS nova partida 0 limpa estados
+PASS nova partida 1 limpa estados
+PASS nova partida 2 limpa estados
+PASS Netinho não recebe gesto da Vovó
+VOVO RESULT checks=37 failures=0

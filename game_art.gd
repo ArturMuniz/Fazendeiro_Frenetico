@@ -3,6 +3,9 @@ extends RefCounted
 
 ## Immutable visual catalog, shared textures; no combat data lives here.
 const DATA: Dictionary = preload("res://polished_art_data.gd").DATA
+const FARMER: Dictionary = preload("res://farmer_art_data.gd").DATA
+const GRANDMA: Dictionary = preload("res://vovo_art_data.gd").DATA
+const REFINED: Dictionary = preload("res://actor_polish_data.gd").DATA
 static var _textures: Dictionary = {}
 
 static func texture(path: String) -> Texture2D:
@@ -13,6 +16,12 @@ static func texture(path: String) -> Texture2D:
 	return _textures[path]
 
 static func ui(id: String) -> Texture2D:
+	if id == "char_fazendeiro":
+		return texture(FARMER.idle.frames[0])
+	if id == "char_vovo":
+		return texture(GRANDMA.idle.frames[0])
+	if id == "char_netinho":
+		return texture(REFINED.netinho.idle.frames[0])
 	return texture(DATA.ui.get(id, ""))
 
 static func weapon(id: String, level: int) -> Texture2D:
@@ -37,4 +46,10 @@ static func equip(sprite: Sprite2D, id: String, level: int) -> void:
 		sprite.scale = Vector2.ONE * minf(1.0, 40.0 / image.get_size().length())
 
 static func actor(id: String) -> Dictionary:
+	if id == "fazendeiro":
+		return FARMER
+	if id == "vovo":
+		return GRANDMA
+	if REFINED.has(id):
+		return REFINED[id]
 	return DATA.actors.get(id, {})

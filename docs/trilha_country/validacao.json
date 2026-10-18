@@ -1,0 +1,247 @@
+{
+  "checks": 60,
+  "failures": 0,
+  "results": [
+    {
+      "passed": true,
+      "description": "Original preservado: Harvest_of_Thorns.mp3"
+    },
+    {
+      "passed": true,
+      "description": "Original preservado: Sunday_Morning_Porch_Swing__1_.mp3"
+    },
+    {
+      "passed": true,
+      "description": "Original preservado: music_gameplay.ogg"
+    },
+    {
+      "passed": true,
+      "description": "Original preservado: music_map_celeiro.ogg"
+    },
+    {
+      "passed": true,
+      "description": "Original preservado: music_hub.wav"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: MIDI sem notas presas"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: composição completa e duração MIDI"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: integridade .mid"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: integridade .mp3"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: integridade .ogg"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: OGG estéreo e comprimento do loop"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: amostras válidas sem clipping"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: descontinuidade de emenda 0.000419"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: pico verdadeiro e loudness"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: compatibilidade mono"
+    },
+    {
+      "passed": true,
+      "description": "01_varanda_de_domingo: prévia MP3 decodifica inteira"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: MIDI sem notas presas"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: composição completa e duração MIDI"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: integridade .mid"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: integridade .mp3"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: integridade .ogg"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: OGG estéreo e comprimento do loop"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: amostras válidas sem clipping"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: descontinuidade de emenda 0.002509"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: pico verdadeiro e loudness"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: compatibilidade mono"
+    },
+    {
+      "passed": true,
+      "description": "02_mutirao_na_horta: prévia MP3 decodifica inteira"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: MIDI sem notas presas"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: composição completa e duração MIDI"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: integridade .mid"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: integridade .mp3"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: integridade .ogg"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: OGG estéreo e comprimento do loop"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: amostras válidas sem clipping"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: descontinuidade de emenda 0.001710"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: pico verdadeiro e loudness"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: compatibilidade mono"
+    },
+    {
+      "passed": true,
+      "description": "03_catira_do_celeiro: prévia MP3 decodifica inteira"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: MIDI sem notas presas"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: composição completa e duração MIDI"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: integridade .mid"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: integridade .mp3"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: integridade .ogg"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: OGG estéreo e comprimento do loop"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: amostras válidas sem clipping"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: descontinuidade de emenda 0.000023"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: pico verdadeiro e loudness"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: compatibilidade mono"
+    },
+    {
+      "passed": true,
+      "description": "04_estrada_do_pomar: prévia MP3 decodifica inteira"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: MIDI sem notas presas"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: composição completa e duração MIDI"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: integridade .mid"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: integridade .mp3"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: integridade .ogg"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: OGG estéreo e comprimento do loop"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: amostras válidas sem clipping"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: descontinuidade de emenda 0.000208"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: pico verdadeiro e loudness"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: compatibilidade mono"
+    },
+    {
+      "passed": true,
+      "description": "05_colheita_bravia: prévia MP3 decodifica inteira"
+    }
+  ],
+  "limitation": "Technical validation only; no listening approval, Android playback test, or musical quality rating."
+}

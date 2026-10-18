@@ -15,8 +15,11 @@ func _ready() -> void:
 	_view = RuralUI.shell(self, "Sua próxima colheita", "Escolha um destino. Sobreviva às pragas.", false)
 	var tabs := HBoxContainer.new()
 	_view.footer.add_child(tabs)
-	for tab in ["Mapas", "Personagens", "Fazenda"]:
-		tabs.add_child(RuralUI.button(tab, _select_tab.bind(tab)))
+	for tab in ["Mapas", "Personagens", "Roupas", "Fazenda"]:
+		var button := RuralUI.button(tab, _select_tab.bind(tab))
+		if tab == "Personagens": button.text = "Heróis"
+		button.add_theme_font_size_override("font_size", 22)
+		tabs.add_child(button)
 	gold_label = RuralUI.label("", 24, RuralUI.GREEN)
 	gold_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	gold_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
@@ -30,6 +33,7 @@ func _ready() -> void:
 	start_button.custom_minimum_size.y = 88
 	_view.footer.add_child(start_button)
 	_refresh()
+	RuralUI.present(_view.root)
 
 func _select_tab(tab: String) -> void:
 	_tab = tab
@@ -39,7 +43,7 @@ func _select_tab(tab: String) -> void:
 func _refresh() -> void:
 	RuralUI.clear(_view.body)
 	_view.title.text = "Sua próxima colheita" if _tab == "Mapas" else _tab
-	_view.subtitle.text = {"Mapas": "Escolha um destino. Sobreviva às pragas.", "Personagens": "Escolha quem vai defender a fazenda.", "Fazenda": "Melhorias permanentes para as próximas partidas."}[_tab]
+	_view.subtitle.text = {"Mapas": "Escolha um destino. Sobreviva às pragas.", "Personagens": "Escolha quem vai defender a fazenda.", "Roupas": "Seu estilo, sem alterar os atributos. Compre com ouro do jogo.", "Fazenda": "Melhorias permanentes para as próximas partidas."}[_tab]
 	gold_label.text = "OURO SALVO  %d" % SaveManager.gold
 	_summary.text = "%s · %s\nCada mapa inicia uma nova build.%s" % [MapDB.MAPS[SaveManager.selected_map].name, CharacterDB.CHARACTERS[SaveManager.selected_character].name, "\n" + _notice if _notice != "" else ""]
 	start_button.text = "Jogar — %s" % MapDB.MAPS[SaveManager.selected_map].name
@@ -47,11 +51,20 @@ func _refresh() -> void:
 		"Mapas": _populate_maps()
 		"Personagens": _populate_characters()
 		"Fazenda": _populate_upgrades()
+		"Roupas": _populate_skins()
 
 func _populate_maps() -> void:
+	var banner := RuralUI.card(_view.body)
+	var header := HBoxContainer.new()
+	banner.add_child(header)
+	RuralUI.actor_preview(header, SaveManager.selected_character)
+	var hero: Dictionary = CharacterDB.CHARACTERS[SaveManager.selected_character]
+	var invitation := RuralUI.label("%s\n%s\nPronto para defender a colheita." % [hero.name, SkinCatalog.SKINS[SaveManager.get_equipped_skin(SaveManager.selected_character)].name], 24)
+	invitation.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	header.add_child(invitation)
 	var map := Control.new()
 	map.name = "CampaignMap"
-	map.custom_minimum_size.y = 620
+	map.custom_minimum_size.y = 500
 	_view.body.add_child(map)
 	var art := RuralUI.picture("campaign", Vector2.ZERO)
 	map.add_child(art)
@@ -69,12 +82,13 @@ func _populate_maps() -> void:
 		node.add_theme_stylebox_override("normal", RuralUI.flat(Color(0.1, 0.15, 0.1, 0.8), Color("dfc58b") if SaveManager.selected_map == id else Color.TRANSPARENT))
 		node.pressed.connect(_on_select_map.bind(id))
 		map.add_child(node)
-		var caption := RuralUI.label(MapDB.MAPS[id].name + (" · Selecionado" if SaveManager.selected_map == id else ""), 22, Color.WHITE)
+		var caption := RuralUI.label({"horta": "Horta", "celeiro": "Celeiro", "pomar": "Pomar"}[id], 18, Color.WHITE)
+		caption.autowrap_mode = TextServer.AUTOWRAP_OFF
 		caption.add_theme_color_override("font_shadow_color", Color.BLACK)
 		caption.add_theme_constant_override("shadow_offset_x", 2)
 		caption.add_theme_constant_override("shadow_offset_y", 2)
 		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		caption.size = Vector2(220, 54)
+		caption.size = Vector2(220, 26)
 		map.add_child(caption)
 		var reposition := func() -> void:
 			var draw_size := Vector2(768, 1376) * minf(map.size.x / 768.0, map.size.y / 1376.0)
@@ -102,7 +116,7 @@ func _populate_characters() -> void:
 		var entry := RuralUI.card(_view.body)
 		var row := HBoxContainer.new()
 		entry.add_child(row)
-		row.add_child(RuralUI.picture("portrait_" + id, Vector2(96, 112)))
+		RuralUI.actor_preview(row, id)
 		var text := RuralUI.label("%s\n%s\nArma inicial: %s" % [data.name, data.desc, WeaponDB.WEAPONS[data.starting_weapon].name], 24)
 		text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		row.add_child(text)
@@ -165,6 +179,38 @@ func _on_buy_upgrade(id: String) -> void:
 		SaveManager.gold += cost
 		SaveManager.farm_upgrades = old_upgrades
 		_notice = "Não foi possível salvar a compra. Tente novamente."
+	_refresh()
+
+func _populate_skins() -> void:
+	var character := SaveManager.selected_character
+	_view.body.add_child(RuralUI.label("VESTIÁRIO · %s" % CharacterDB.CHARACTERS[character].name, 25, RuralUI.GREEN))
+	_view.body.add_child(RuralUI.label("Escolha outro personagem na aba Personagens para ver as roupas dele. As primeiras roupas variam a paleta do traje original.", 21))
+	for id in SkinCatalog.SKINS:
+		var data: Dictionary = SkinCatalog.SKINS[id]
+		var entry := RuralUI.card(_view.body)
+		var row := HBoxContainer.new()
+		entry.add_child(row)
+		RuralUI.actor_preview(row, character, id)
+		var owned: bool = SaveManager.owns_skin(character, id)
+		var selected: bool = SaveManager.get_equipped_skin(character) == id
+		var text := RuralUI.label("%s\n%s\nApenas visual · acompanha todas as animações" % [data.name, "Na sua coleção" if owned else "%d ouro" % int(data.cost)], 23)
+		text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row.add_child(text)
+		var action := RuralUI.button("Equipada" if selected else ("Vestir" if owned else "Comprar · %d ouro" % int(data.cost)), _on_skin_action.bind(character, id))
+		action.disabled = selected or (not owned and SaveManager.gold < int(data.cost))
+		entry.add_child(action)
+	if is_instance_valid(RewardedAds.provider) and RewardedAds.provider.has_method("show_privacy_options"):
+		_view.body.add_child(RuralUI.button("Preferências de privacidade dos anúncios", RewardedAds.provider.show_privacy_options))
+
+func _on_skin_action(character: String, skin_id: String) -> void:
+	var owned: bool = SaveManager.owns_skin(character, skin_id)
+	if not owned and not SaveManager.buy_skin(character, skin_id):
+		_notice = "Compra não concluída. Confira seu ouro ou tente salvar novamente."
+	elif not SaveManager.equip_skin(character, skin_id):
+		_notice = "Roupa adquirida. Não foi possível salvar a seleção; tente vestir novamente."
+	else:
+		_notice = "%s equipada." % SkinCatalog.SKINS[skin_id].name
+		AudioManager.play_sfx("button" if owned else "purchase")
 	_refresh()
 
 func _on_start_pressed() -> void:

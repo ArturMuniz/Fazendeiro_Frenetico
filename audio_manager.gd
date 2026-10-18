@@ -61,6 +61,7 @@ var _sfx_players: Array = []
 var _sfx_player_priority: Array = []
 var _music_player: AudioStreamPlayer
 var _current_music_id: String = ""
+var _ad_suspended: bool = false
 
 
 func _ready() -> void:
@@ -93,7 +94,7 @@ func _ready() -> void:
 ## pitch a cada toque pra não soar robótico quando repete muito rápido
 ## (essencial pra hit/pickup, que tocam dezenas de vezes por sessão).
 func play_sfx(id: String, pitch_variation: float = 0.08) -> void:
-	if not _sfx_streams.has(id):
+	if _ad_suspended or not _sfx_streams.has(id):
 		return
 
 	var priority: int = SFX_PRIORITY.get(id, 1)
@@ -138,6 +139,16 @@ func play_music(id: String) -> void:
 	_music_player.stream = _music_streams[id]
 	_music_player.volume_db = music_volume_db
 	_music_player.play()
+	_music_player.stream_paused = _ad_suspended
+
+
+func suspend_for_ad(suspended: bool) -> void:
+	_ad_suspended = suspended
+	if is_instance_valid(_music_player):
+		_music_player.stream_paused = suspended
+	for player in _sfx_players:
+		if is_instance_valid(player):
+			player.stream_paused = suspended
 
 
 func stop_music() -> void:

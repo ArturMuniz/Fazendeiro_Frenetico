@@ -1,0 +1,678 @@
+{
+  "findings": [
+    {
+      "severity": "warning",
+      "frame": 1,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 2,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 3,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 4,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 5,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 6,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 7,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 8,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 9,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 10,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 11,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 12,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 13,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 14,
+      "layer": "torso",
+      "check": "outline",
+      "at": {
+        "x": 57,
+        "y": 74
+      },
+      "message": "Outline is 91% '#281d22' but 6 edge pixel(s) use a different colour on 'torso'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 1,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 2,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 3,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 4,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 5,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 6,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 7,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 8,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 9,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 10,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 11,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 12,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 13,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 14,
+      "layer": "head",
+      "check": "outline",
+      "at": {
+        "x": 62,
+        "y": 58
+      },
+      "message": "Outline is 89% '#281d22' but 6 edge pixel(s) use a different colour on 'head'. A broken outline reads as a hole in the silhouette.",
+      "count": 6
+    },
+    {
+      "severity": "warning",
+      "frame": 1,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 2,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 3,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 4,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 5,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 6,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 7,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 8,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 9,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 10,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 11,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 12,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 13,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 14,
+      "layer": "hat",
+      "check": "outline",
+      "at": {
+        "x": 74,
+        "y": 37
+      },
+      "message": "Outline is 99% '#281d22' but 1 edge pixel(s) use a different colour on 'hat'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 4,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 81,
+        "y": 61
+      },
+      "message": "Outline is 97% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 5,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 82,
+        "y": 51
+      },
+      "message": "Outline is 98% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 6,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 76,
+        "y": 45
+      },
+      "message": "Outline is 98% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 7,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 83,
+        "y": 51
+      },
+      "message": "Outline is 98% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 8,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 86,
+        "y": 59
+      },
+      "message": "Outline is 98% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 9,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 78,
+        "y": 52
+      },
+      "message": "Outline is 98% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 10,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 75,
+        "y": 47
+      },
+      "message": "Outline is 98% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "warning",
+      "frame": 11,
+      "layer": "arm-near",
+      "check": "outline",
+      "at": {
+        "x": 81,
+        "y": 60
+      },
+      "message": "Outline is 97% '#281d22' but 1 edge pixel(s) use a different colour on 'arm-near'. A broken outline reads as a hole in the silhouette.",
+      "count": 1
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 2,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 3,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 4,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 5,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 6,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 7,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 8,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 9,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 10,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    },
+    {
+      "severity": "note",
+      "check": "outline",
+      "frame": 11,
+      "message": "No single colour owns the silhouette edge on 'effects', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "layer": "effects"
+    }
+  ],
+  "sprite": "fazendeiro_idle_swat.aseprite",
+  "passed": true,
+  "score": 0,
+  "summary": "Clean (50 style note(s))."
+}

@@ -3,7 +3,7 @@ extends Node
 ## Único escritor de SceneTree.paused. Cada modal possui seu bloqueio.
 signal state_changed(state: int)
 enum State { RUNNING, MODAL, TRANSITION }
-const PRIORITY := {&"pause": 40, &"level_up": 60, &"victory": 80, &"results": 100, &"focus": 200}
+const PRIORITY := {&"pause": 40, &"level_up": 60, &"victory": 80, &"results": 100, &"advertisement": 150, &"focus": 200}
 
 var state: int = State.RUNNING
 var _owners: Dictionary = {}

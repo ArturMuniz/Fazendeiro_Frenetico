@@ -1,0 +1,372 @@
+{
+  "soundfont": {
+    "url": "https://github.com/mrbumpy409/GeneralUser-GS",
+    "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe"
+  },
+  "renderer": "FluidSynth 2.6.1 official Windows x64 build",
+  "sample_rate": 44100,
+  "source_audio_fragments_used": false,
+  "human_listening_pending": true,
+  "tracks": [
+    {
+      "id": "01_varanda_de_domingo",
+      "name": "Varanda de Domingo",
+      "role": "Lobby",
+      "bpm": 104,
+      "key": "C maior",
+      "tonic": 60,
+      "scale": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "style": "porch",
+      "chords": [
+        "C",
+        "C",
+        "F",
+        "C",
+        "Am",
+        "F",
+        "G",
+        "G"
+      ],
+      "bridge": [
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "C",
+        "G",
+        "G"
+      ],
+      "sections": "AABA",
+      "phrases": [
+        "4:1 2:.5 1:.5 0:1 R:1",
+        "0:.5 2:.5 4:1 5:.5 4:.5 2:1",
+        "3:1 5:.5 4:.5 3:1 2:1",
+        "2:.5 1:.5 0:2 R:1",
+        "5:1 4:.5 2:.5 0:1 2:1",
+        "3:.5 5:.5 4:1 3:.5 2:.5 0:1",
+        "1:1 2:.5 4:.5 3:1 1:1",
+        "1:.5 2:.5 1:1 4:1 R:1"
+      ],
+      "bars": 32,
+      "duration_seconds": 73.846,
+      "frames": 3256615,
+      "loudness_lufs": -18.0,
+      "true_peak_dbtp": -3.68,
+      "stereo_correlation": 0.99,
+      "seam_step": 0.000419,
+      "checks": {
+        "stereo_44100": true,
+        "loop_length_exact": true,
+        "finite": true,
+        "no_clipping": true,
+        "true_peak_below_minus_1_5": true,
+        "audible_level": true,
+        "seam_step_below_0_02": true,
+        "no_empty_seconds": true
+      },
+      "files": {
+        "midi\\01_varanda_de_domingo.mid": "3cd29e464c44adcc162e60be91eedf8ea0ce85987c57144a4f6ea3eb1128f6d1",
+        "previas\\01_varanda_de_domingo.mp3": "012ce02f627bd6ead3bfe86864acc8d6db493916c916e1670098145d54b4d326",
+        "loops\\01_varanda_de_domingo.ogg": "d3b63239eb7403a9e48c63183003d0cc05e61781f19328651dfb7c478f955482"
+      },
+      "production_status": "Sampled MIDI arrangement demo. Not approved as final game music; no critical listening by the agent."
+    },
+    {
+      "id": "02_mutirao_na_horta",
+      "name": "Mutirão na Horta",
+      "role": "Horta",
+      "bpm": 150,
+      "key": "G maior",
+      "tonic": 67,
+      "scale": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "style": "drive",
+      "chords": [
+        "G",
+        "G",
+        "C",
+        "G",
+        "Em",
+        "C",
+        "D",
+        "D"
+      ],
+      "bridge": [
+        "C",
+        "C",
+        "G",
+        "G",
+        "Em",
+        "C",
+        "D",
+        "D"
+      ],
+      "sections": "AABACA",
+      "phrases": [
+        "0:.5 2:.5 4:.5 2:.5 1:.5 0:.5 2:1",
+        "4:.5 5:.5 4:1 2:.5 1:.5 0:1",
+        "3:.5 5:.5 7:1 5:.5 4:.5 3:1",
+        "4:.5 2:.5 1:.5 0:.5 2:1 R:1",
+        "5:.5 4:.5 2:1 0:.5 2:.5 4:1",
+        "3:.5 4:.5 5:.5 3:.5 2:1 0:1",
+        "1:.5 3:.5 4:1 6:.5 4:.5 3:1",
+        "1:1 4:.5 3:.5 1:1 R:1"
+      ],
+      "bars": 48,
+      "duration_seconds": 76.8,
+      "frames": 3386880,
+      "loudness_lufs": -18.0,
+      "true_peak_dbtp": -3.82,
+      "stereo_correlation": 0.992,
+      "seam_step": 0.002509,
+      "checks": {
+        "stereo_44100": true,
+        "loop_length_exact": true,
+        "finite": true,
+        "no_clipping": true,
+        "true_peak_below_minus_1_5": true,
+        "audible_level": true,
+        "seam_step_below_0_02": true,
+        "no_empty_seconds": true
+      },
+      "files": {
+        "midi\\02_mutirao_na_horta.mid": "fa6e6f76949c4bbd9acb5ca18a65136159923e0c03a76d8563b135ac0a19ac26",
+        "previas\\02_mutirao_na_horta.mp3": "4f52b02955e660314b7bb1ea0f640208132438c283979629764e6891203d6438",
+        "loops\\02_mutirao_na_horta.ogg": "785afeded62870c6d31d65c1deaedafaa5ae4c3e917a0e2618f82deab73c45e0"
+      },
+      "production_status": "Sampled MIDI arrangement demo. Not approved as final game music; no critical listening by the agent."
+    },
+    {
+      "id": "03_catira_do_celeiro",
+      "name": "Catira do Celeiro",
+      "role": "Celeiro",
+      "bpm": 104,
+      "key": "C maior",
+      "tonic": 60,
+      "scale": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "style": "shuffle",
+      "chords": [
+        "C",
+        "F",
+        "C",
+        "G",
+        "Am",
+        "F",
+        "G",
+        "G"
+      ],
+      "bridge": [
+        "F",
+        "F",
+        "C",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "G"
+      ],
+      "sections": "AABA",
+      "phrases": [
+        "0:.5 2:.5 4:1 R:.5 2:.5 0:1",
+        "3:.5 5:.5 7:1 5:.5 4:.5 3:1",
+        "4:1 2:.5 0:.5 2:1 R:1",
+        "1:.5 2:.5 4:1 3:.5 1:.5 -1:1",
+        "0:1 2:.5 5:.5 4:1 2:1",
+        "3:.5 5:.5 4:.5 3:.5 2:1 0:1",
+        "1:.5 3:.5 4:1 3:.5 1:.5 -1:1",
+        "1:1 4:1 1:1 R:1"
+      ],
+      "bars": 32,
+      "duration_seconds": 73.846,
+      "frames": 3256615,
+      "loudness_lufs": -18.49,
+      "true_peak_dbtp": -2.23,
+      "stereo_correlation": 0.993,
+      "seam_step": 0.00171,
+      "checks": {
+        "stereo_44100": true,
+        "loop_length_exact": true,
+        "finite": true,
+        "no_clipping": true,
+        "true_peak_below_minus_1_5": true,
+        "audible_level": true,
+        "seam_step_below_0_02": true,
+        "no_empty_seconds": true
+      },
+      "files": {
+        "midi\\03_catira_do_celeiro.mid": "7173cb47d89e89fd5947bdbe41b37b483343ad450b1698e661e78677a42f14fd",
+        "previas\\03_catira_do_celeiro.mp3": "59e1226c2a26cc2884cab197570b953f3a001e95f6d951638044386937c11c6e",
+        "loops\\03_catira_do_celeiro.ogg": "ee37b6bb8c51694d42d507280b4579de6421bc4af1ce850cada0d9dc6bbeb7f6"
+      },
+      "production_status": "Sampled MIDI arrangement demo. Not approved as final game music; no critical listening by the agent."
+    },
+    {
+      "id": "04_estrada_do_pomar",
+      "name": "Estrada do Pomar",
+      "role": "Pomar",
+      "bpm": 124,
+      "key": "D maior / B menor",
+      "tonic": 62,
+      "scale": [
+        0,
+        2,
+        4,
+        6,
+        7,
+        9,
+        11
+      ],
+      "style": "orchard",
+      "chords": [
+        "D",
+        "A",
+        "Bm",
+        "G",
+        "D",
+        "G",
+        "A",
+        "A"
+      ],
+      "bridge": [
+        "Bm",
+        "G",
+        "D",
+        "A",
+        "Bm",
+        "G",
+        "A",
+        "A"
+      ],
+      "sections": "AABACA",
+      "phrases": [
+        "4:1 2:.5 1:.5 0:1 2:1",
+        "1:1 -1:.5 1:.5 4:1 R:1",
+        "5:1 4:.5 2:.5 0:1 2:1",
+        "3:1 2:.5 0:.5 -2:1 R:1",
+        "0:.5 2:.5 4:1 5:.5 4:.5 2:1",
+        "3:.5 5:.5 4:1 3:1 0:1",
+        "1:.5 3:.5 4:1 6:.5 4:.5 3:1",
+        "1:1 -1:1 1:1 R:1"
+      ],
+      "bars": 48,
+      "duration_seconds": 92.903,
+      "frames": 4097033,
+      "loudness_lufs": -18.0,
+      "true_peak_dbtp": -2.96,
+      "stereo_correlation": 0.994,
+      "seam_step": 2.3e-05,
+      "checks": {
+        "stereo_44100": true,
+        "loop_length_exact": true,
+        "finite": true,
+        "no_clipping": true,
+        "true_peak_below_minus_1_5": true,
+        "audible_level": true,
+        "seam_step_below_0_02": true,
+        "no_empty_seconds": true
+      },
+      "files": {
+        "midi\\04_estrada_do_pomar.mid": "fd064ed125e3a36802827051d7e522c027d639efc2bf6542e46ed961deaff99e",
+        "previas\\04_estrada_do_pomar.mp3": "8bed06e965868df02ba9a125eff568e6ec924a3e686e9dfc9e0c8ed543b77a90",
+        "loops\\04_estrada_do_pomar.ogg": "ae1730e887c5604191cf24667511c65fcb787620746323d3fa59aceb68dc6b5a"
+      },
+      "production_status": "Sampled MIDI arrangement demo. Not approved as final game music; no critical listening by the agent."
+    },
+    {
+      "id": "05_colheita_bravia",
+      "name": "Colheita Bravia",
+      "role": "Chefe",
+      "bpm": 156,
+      "key": "E menor",
+      "tonic": 64,
+      "scale": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10
+      ],
+      "style": "boss",
+      "chords": [
+        "Em",
+        "Em",
+        "C",
+        "G",
+        "Am",
+        "C",
+        "B7",
+        "B7"
+      ],
+      "bridge": [
+        "Am",
+        "C",
+        "Em",
+        "Em",
+        "C",
+        "Am",
+        "B7",
+        "B7"
+      ],
+      "sections": "AABACA",
+      "phrases": [
+        "0:.5 0:.5 2:.5 4:.5 3:1 2:1",
+        "0:.5 2:.5 4:1 6:.5 4:.5 2:1",
+        "5:.5 4:.5 2:1 0:.5 2:.5 4:1",
+        "2:1 4:.5 6:.5 4:1 R:1",
+        "3:.5 3:.5 5:1 4:.5 3:.5 2:1",
+        "5:.5 4:.5 2:1 0:1 2:1",
+        "1:.5 3:.5 4:1 6:.5 4:.5 3:1",
+        "1:1 4:.5 3:.5 1:1 R:1"
+      ],
+      "bars": 48,
+      "duration_seconds": 73.846,
+      "frames": 3256612,
+      "loudness_lufs": -18.0,
+      "true_peak_dbtp": -3.43,
+      "stereo_correlation": 0.991,
+      "seam_step": 0.000208,
+      "checks": {
+        "stereo_44100": true,
+        "loop_length_exact": true,
+        "finite": true,
+        "no_clipping": true,
+        "true_peak_below_minus_1_5": true,
+        "audible_level": true,
+        "seam_step_below_0_02": true,
+        "no_empty_seconds": true
+      },
+      "files": {
+        "midi\\05_colheita_bravia.mid": "2a1fed921ba63725668d0db8700b4520fd15e310623d8a66447c5e8128a40a03",
+        "previas\\05_colheita_bravia.mp3": "3ce8fb709193c6b734a2f34692b78bec71aa1aa1307ddf40f36f3232af00dd04",
+        "loops\\05_colheita_bravia.ogg": "c3b05450462fc4518c27095097872abc7ef60bf1f00a42b550896ea0b9680a82"
+      },
+      "production_status": "Sampled MIDI arrangement demo. Not approved as final game music; no critical listening by the agent."
+    }
+  ]
+}

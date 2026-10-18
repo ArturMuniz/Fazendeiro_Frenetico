@@ -9,6 +9,7 @@
 /text_editor_themes/
 /builds/
 *.log
+!/docs/polimento_atores/testes/*.log
 *.apk
 *.aab
 .env
@@ -16,3 +17,4 @@
 !.env.example
 export_credentials.cfg
 /tests/.tmp/
+__pycache__/

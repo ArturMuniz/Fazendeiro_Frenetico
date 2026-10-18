@@ -1,0 +1,38 @@
+[
+  {
+    "output": "garden_sheet.jpg",
+    "source": "C:\\Users\\artur\\Downloads\\.exe\\fazendeiro_caotico_sripites\\Pixel_art_garden_props_grid_20261015081152.jpg",
+    "sha256": "38410fc174c6cd766e28e61cfee5a2e853a94b3fe0f386871991f83c92bf2bc7",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "output": "barn_sheet.jpg",
+    "source": "C:\\Users\\artur\\Downloads\\.exe\\fazendeiro_caotico_sripites\\Pixel_art_barn_props_layout_20261015081208.jpg",
+    "sha256": "82f54dd6430f74cb8712f33f7bfeec5cfd709cc414127ef9576c60e2bfd396cd",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "output": "orchard_sheet.jpg",
+    "source": "C:\\Users\\artur\\Downloads\\.exe\\fazendeiro_caotico_sripites\\Orchard_props_in_pixel_art_20261015081131.jpg",
+    "sha256": "4ef2b34125820502b78b9307789469087ed65526daf5971ca0deae212f8c7481",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "output": "cabbage_sheet.jpg",
+    "source": "C:\\Users\\artur\\Downloads\\.exe\\Novos Sprites ChatGpt\\Cabbage_isolated_pixel_art_20261016145754.jpg",
+    "sha256": "a3c7780dba03015dea6dc60fc477530893892ad11958dec125aa22682d2e1a11",
+    "size": [
+      1024,
+      1024
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS idle tem duração para cada quadro
+PASS idle usa o loop correto
+PASS walk tem duração para cada quadro
+PASS walk usa o loop correto
+PASS run tem duração para cada quadro
+PASS run usa o loop correto
+PASS idle_hat tem duração para cada quadro
+PASS idle_hat usa o loop correto
+PASS idle_swat tem duração para cada quadro
+PASS idle_swat usa o loop correto
+PASS death tem duração para cada quadro
+PASS death usa o loop correto
+PASS sessenta e quatro quadros no catálogo integrado
+PASS primeiro quadro de repouso segura 220 ms
+PASS duração por quadro respeitada
+PASS cadência acompanha playback_speed
+PASS configure limpa cadência e quadro
+PASS morte preserva duração até o último instante
+PASS morte termina uma única vez em 840 ms
+PASS morte segura último quadro sem repetir sinal
+PASS animações antigas continuam usando FPS
+PASS meio joystick move e anima caminhada real
+PASS caminhada não altera velocidade analógica
+PASS joystick cheio seleciona corrida
+PASS corrida mantém velocidade máxima existente
+PASS histerese evita oscilar na fronteira da corrida
+PASS reduzir joystick volta à caminhada
+PASS soltar joystick retorna ao repouso
+PASS repouso prolongado inicia gesto do chapéu
+PASS gesto congela na pausa
+PASS gesto retoma depois da pausa
+PASS movimento cancela gesto imediatamente
+PASS gestos alternam para espantar a mosquinha
+PASS dano interrompe gesto sem imunidade
+PASS gesto concluído retorna ao repouso
+PASS arte preserva velocidade e colisão
+PASS morte bloqueia gameplay e antecede resultados
+PASS morte revela resultados no fim
+PASS última pose aparece no mundo
+PASS apresentação não reativa combate
+PASS nova partida 0 limpa os estados
+PASS nova partida 1 limpa os estados
+PASS nova partida 2 limpa os estados
+PASS vovo preserva animação própria
+PASS vovo não recebe gestos inexistentes
+PASS netinho preserva animação própria
+PASS netinho não recebe gestos inexistentes
+FARMER RESULT checks=47 failures=0

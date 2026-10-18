@@ -1,0 +1,46 @@
+{
+  "images": [
+    {
+      "state": "idle",
+      "path": "C:\\Users\\artur\\.codex\\generated_images\\01a1401c-965c-7631-8742-65b3e24de5ab\\exec-ad52bc38-022b-4dc2-9738-04d519c54999.png"
+    },
+    {
+      "state": "walk",
+      "path": "C:\\Users\\artur\\.codex\\generated_images\\01a1401c-965c-7631-8742-65b3e24de5ab\\exec-062d5ea4-fcaf-4419-a5b5-9394ec59b08f.png"
+    },
+    {
+      "state": "run",
+      "path": "C:\\Users\\artur\\.codex\\generated_images\\01a1401c-965c-7631-8742-65b3e24de5ab\\exec-6ea24e52-2638-4e54-a721-0a409dd7a0d0.png"
+    },
+    {
+      "state": "idle_plant",
+      "path": "C:\\Users\\artur\\.codex\\generated_images\\01a1401c-965c-7631-8742-65b3e24de5ab\\exec-3fa3353b-4e72-49d4-8cbe-0bb9f46f21c1.png"
+    },
+    {
+      "state": "death",
+      "path": "C:\\Users\\artur\\.codex\\generated_images\\01a1401c-965c-7631-8742-65b3e24de5ab\\exec-be6181b9-2ee6-4891-8ee4-bb7599b5f27d.png"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "idle",
+      "prompt": "Use case: identity-preserve. Create a production game IDLE sprite sheet based exactly on the attached walking model, not a redesign. Faithfully match this exact elderly Brazilian rural grandma: round black glasses, expressive aged face and white brows, white hair tied back, wide straw-yellow hat with red band, mustard-yellow rolled-sleeve dress/shirt, dark brown gardening gloves, green apron with small yellow flower/cross pattern, brown leggings and green rubber boots. Preserve chunky crisp pixel clusters and strong dark brown outlines, warm limited-looking colors, original stout body proportions and three-quarter view facing right. No younger face, no beard, no different outfit. Exactly FOUR frames in a regular 2 columns by 2 rows grid: relaxed neutral, gentle breath in, small blink/breath out, return neutral. Feet planted. Empty gloved hands rest beside apron, no shovel in this idle. Tiny motion only, identical facial design and apron pattern. Full body sprites, consistent size in all cells, shared foot baseline, generous fully transparent gutters around every pose, no clipped hat or boots. REAL transparent RGBA background. Remove all magenta and any shadow/ground line; no white, gray or checkerboard backdrop, no text, labels, borders or watermark. Frame order is left to right then next row. "
+    },
+    {
+      "name": "walk",
+      "prompt": "Use case: identity-preserve. Recreate the attached grandma as a clean animated WALK sprite sheet, preserving her exact appearance. Faithfully match this exact elderly Brazilian rural grandma: round black glasses, expressive aged face and white brows, white hair tied back, wide straw-yellow hat with red band, mustard-yellow rolled-sleeve dress/shirt, dark brown gardening gloves, green apron with small yellow flower/cross pattern, brown leggings and green rubber boots. Preserve chunky crisp pixel clusters and strong dark brown outlines, warm limited-looking colors, original stout body proportions and three-quarter view facing right. No younger face, no beard, no different outfit. Exactly SIX distinct full body frames in a 3-column by 2-row regular grid: left foot contact, left support/right foot passing, right foot reaching; right foot contact, right support/left foot passing, left foot reaching. Both halves of gait must be visible, alternating leading boots rather than repeating one stride. Gentle opposite arm swing, no tools, upright determined grandmother posture. Seamless cyclic gait. Full body sprites, consistent size in all cells, shared foot baseline, generous fully transparent gutters around every pose, no clipped hat or boots. REAL transparent RGBA background. Remove all magenta and any shadow/ground line; no white, gray or checkerboard backdrop, no text, labels, borders or watermark. Frame order is left to right then next row. "
+    },
+    {
+      "name": "death",
+      "prompt": "Use case: identity-preserve. Faithfully restore the SIX original death poses in the FIRST reference, same reading order, on a regular 3-column by 2-row sheet. Faithfully match this exact elderly Brazilian rural grandma: round black glasses, expressive aged face and white brows, white hair tied back, wide straw-yellow hat with red band, mustard-yellow rolled-sleeve dress/shirt, dark brown gardening gloves, green apron with small yellow flower/cross pattern, brown leggings and green rubber boots. Preserve chunky crisp pixel clusters and strong dark brown outlines, warm limited-looking colors, original stout body proportions and three-quarter view facing right. No younger face, no beard, no different outfit. Poses: startled upright with hand on chest; stumble/crouch with hat lifting; falling back with airborne hat; lying on back with hat beside head and tiny dust; lying still eyes closed; lying still with the original small pale blue-white ghost with spectacles floating above. Keep the ghost whimsical and non-gory. Preserve full detached hat and ghost inside their respective cells. Body size consistent, never shrink the prone body to match standing height. The second attachment reinforces her model identity. Full body sprites, consistent size in all cells, shared foot baseline, generous fully transparent gutters around every pose, no clipped hat or boots. REAL transparent RGBA background. Remove all magenta and any shadow/ground line; no white, gray or checkerboard backdrop, no text, labels, borders or watermark. Frame order is left to right then next row. "
+    },
+    {
+      "name": "run",
+      "prompt": "Create a clean production sprite sheet for a humorous determined grandma RUNNING, identity-preserving, based on attached model. Match the specific elderly grandma in the references: white tied-back hair, round black spectacles, warm wrinkled face, straw-yellow broad hat/red band, mustard yellow dress, green apron with yellow flower-crosses, brown gardening gloves, brown leggings, green rubber boots. Stout elderly proportions, crisp chunky shaded pixel art, brown dark outlines, three-quarter view facing right. TRUE TRANSPARENT ALPHA, no background color or halo or vignette or checkerboard, no shadows, no text or grid borders. All complete figures and props contained with transparent gutters. Regular 4 columns by 2 rows grid of exactly EIGHT poses, same body scale, same baseline. Eight-frame complete in-place run cycle. Both halves: right foot forward contact, compression, passing, airborne; left foot forward contact, compression, passing, airborne. Distinct alternating forward boot. Stronger boot stride than walk but sturdy elderly anatomy, gently bent pumping gloved arms, slight forward lean; apron swings slightly and never changes pattern. No tools, no duplicate leading-leg poses."
+    },
+    {
+      "name": "idle_plant",
+      "prompt": "Faithfully remake the gardening animation in the FIRST attached reference as a transparent production sprite sheet, not a redesign. Match the specific elderly grandma in the references: white tied-back hair, round black spectacles, warm wrinkled face, straw-yellow broad hat/red band, mustard yellow dress, green apron with yellow flower-crosses, brown gardening gloves, brown leggings, green rubber boots. Stout elderly proportions, crisp chunky shaded pixel art, brown dark outlines, three-quarter view facing right. TRUE TRANSPARENT ALPHA, no background color or halo or vignette or checkerboard, no shadows, no text or grid borders. All complete figures and props contained with transparent gutters. Regular 4 columns by 2 rows grid of exactly EIGHT poses, same body scale, same baseline. Exactly follow original eight-pose reading order: standing with shovel; pushes shovel into small soil mound; lifts shovel with soil; tips soil off shovel; crouches and levels soil with shovel; scatters a few seeds by hand; holds small two-leaf seedling above hole with shovel standing alongside; gently sets seedling into soil. Keep shovel, small soil mound, all seedlings and detached dirt particles inside each cell. She is the same character as second reference. All soil belongs only beneath the gardening pose, no big oval cast shadow. Last pose must be ready to transition back to standing idle without leaving permanent gameplay objects."
+    }
+  ]
+}

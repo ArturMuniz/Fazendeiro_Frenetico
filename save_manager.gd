@@ -14,6 +14,8 @@ var gold: int = 0
 var unlocked_characters: Array = ["fazendeiro"]
 var farm_upgrades: Dictionary = {}  # id -> nível comprado
 var maps_cleared: Array = []  # ids dos mapas cujo boss já foi derrotado
+var owned_skins: Dictionary = {}
+var equipped_skins: Dictionary = {}
 
 ## Escolhido no Hub, lido pelo player.gd ao iniciar a run.
 var selected_character: String = "fazendeiro"
@@ -45,6 +47,8 @@ func load_data() -> void:
 	farm_upgrades = parsed.get("farm_upgrades", {})
 	maps_cleared = parsed.get("maps_cleared", [])
 	reward_receipts = parsed.get("reward_receipts", {})
+	owned_skins = parsed.get("owned_skins", {}) if parsed.get("owned_skins", {}) is Dictionary else {}
+	equipped_skins = parsed.get("equipped_skins", {}) if parsed.get("equipped_skins", {}) is Dictionary else {}
 
 
 func save_data() -> bool:
@@ -54,6 +58,8 @@ func save_data() -> bool:
 		"farm_upgrades": farm_upgrades,
 		"maps_cleared": maps_cleared,
 		"reward_receipts": reward_receipts,
+		"owned_skins": owned_skins,
+		"equipped_skins": equipped_skins,
 	}
 	# Escreve primeiro um arquivo completo; uma falha não trunca o save anterior.
 	var temporary_path := save_path + ".tmp"
@@ -117,6 +123,100 @@ func settle_run(run_id: String, amount: int) -> Dictionary:
 func _trim_receipts() -> void:
 	while reward_receipts.size() > MAX_RECEIPTS:
 		reward_receipts.erase(reward_receipts.keys()[0])
+
+
+## A rewind never removes saved gold. Only a higher final total adds a delta.
+func settle_run_progress(run_id: String, amount: int) -> Dictionary:
+	var receipt: Dictionary = reward_receipts.get(run_id, {})
+	var paid := int(receipt.get("base", 0))
+	if receipt.has("double"):
+		return {"ok": true, "amount": paid, "paid_now": 0}
+	var total := maxi(paid, maxi(amount, 0))
+	if receipt.has("base") and total == paid:
+		return {"ok": true, "amount": paid, "paid_now": 0}
+	var old_gold := gold
+	var old_receipts := reward_receipts.duplicate(true)
+	gold += total - paid
+	receipt["base"] = total
+	reward_receipts[run_id] = receipt
+	_trim_receipts()
+	if not save_data():
+		gold = old_gold
+		reward_receipts = old_receipts
+		return {"ok": false, "amount": paid, "paid_now": 0}
+	return {"ok": true, "amount": total, "paid_now": total - paid}
+
+
+func double_run_reward(run_id: String) -> Dictionary:
+	if not reward_receipts.has(run_id) or not reward_receipts[run_id].has("base"):
+		return {"ok": false, "amount": 0}
+	var receipt: Dictionary = reward_receipts[run_id]
+	if receipt.has("double"):
+		return {"ok": true, "amount": int(receipt.double), "paid_now": 0}
+	var amount := int(receipt.base) + int(receipt.get("boss", 0))
+	var old_receipts := reward_receipts.duplicate(true)
+	var old_gold := gold
+	receipt["double"] = amount
+	gold += amount
+	if not save_data():
+		gold = old_gold
+		reward_receipts = old_receipts
+		return {"ok": false, "amount": 0}
+	return {"ok": true, "amount": amount, "paid_now": amount}
+
+
+func claim_run_revive(run_id: String) -> bool:
+	var receipt: Dictionary = reward_receipts.get(run_id, {})
+	if receipt.has("revive") or receipt.has("double"):
+		return false
+	var old_receipts := reward_receipts.duplicate(true)
+	receipt["revive"] = true
+	reward_receipts[run_id] = receipt
+	if not save_data():
+		reward_receipts = old_receipts
+		return false
+	return true
+
+
+func owns_skin(character_id: String, skin_id: String) -> bool:
+	return SkinCatalog.valid(character_id, skin_id) and (skin_id == "original" or owned_skins.get(character_id, []).has(skin_id))
+
+
+func get_equipped_skin(character_id: String) -> String:
+	var id: String = str(equipped_skins.get(character_id, "original"))
+	return id if owns_skin(character_id, id) else "original"
+
+
+func buy_skin(character_id: String, skin_id: String) -> bool:
+	if not SkinCatalog.valid(character_id, skin_id) or not is_character_unlocked(character_id):
+		return false
+	if owns_skin(character_id, skin_id):
+		return true
+	var price: int = SkinCatalog.SKINS[skin_id].cost
+	if gold < price:
+		return false
+	var old_gold := gold
+	var old_owned := owned_skins.duplicate(true)
+	var owned: Array = owned_skins.get(character_id, []).duplicate()
+	owned.append(skin_id)
+	owned_skins[character_id] = owned
+	gold -= price
+	if not save_data():
+		gold = old_gold
+		owned_skins = old_owned
+		return false
+	return true
+
+
+func equip_skin(character_id: String, skin_id: String) -> bool:
+	if not owns_skin(character_id, skin_id):
+		return false
+	var old_equipped := equipped_skins.duplicate()
+	equipped_skins[character_id] = skin_id
+	if not save_data():
+		equipped_skins = old_equipped
+		return false
+	return true
 
 
 func add_gold(amount: int) -> void:

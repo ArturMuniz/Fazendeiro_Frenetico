@@ -1,0 +1,297 @@
+{
+  "files": [
+    {
+      "file": "C:\\Users\\artur\\Downloads\\Harvest_of_Thorns.mp3",
+      "sha256": "331711a51b06570badddf0efa4f4de7e8c23b3b42b669834d49052849df0ea63",
+      "duration_seconds": 180.976,
+      "tempo_candidates_not_confirmed": [
+        {
+          "bpm": 74.9,
+          "autocorrelation": 0.722
+        },
+        {
+          "bpm": 152.0,
+          "autocorrelation": 0.708
+        },
+        {
+          "bpm": 99.4,
+          "autocorrelation": 0.608
+        },
+        {
+          "bpm": 120.2,
+          "autocorrelation": 0.337
+        }
+      ],
+      "key_candidates_not_confirmed": [
+        {
+          "key": "G maior",
+          "correlation": 0.753
+        },
+        {
+          "key": "G menor",
+          "correlation": 0.644
+        },
+        {
+          "key": "D maior",
+          "correlation": 0.562
+        }
+      ],
+      "loudness": {
+        "input_i": "-11.66",
+        "input_tp": "0.42",
+        "input_lra": "5.70",
+        "input_thresh": "-21.83",
+        "output_i": "-17.79",
+        "output_tp": "-4.65",
+        "output_lra": "5.80",
+        "output_thresh": "-27.90",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.21"
+      },
+      "rms_1s_percentiles": [
+        0.17593,
+        0.27899,
+        0.30524
+      ],
+      "analysis_limit": "Technical measurements only. Tempo can be half/double; key is uncertain. No automatic instrument or vocal identification."
+    },
+    {
+      "file": "C:\\Users\\artur\\Downloads\\Sunday_Morning_Porch_Swing__1_.mp3",
+      "sha256": "3698b1d0b8ae72b6b1a29a6a6932487cbdf75cafe428895d9a38ab5e6e37604e",
+      "duration_seconds": 179.357,
+      "tempo_candidates_not_confirmed": [
+        {
+          "bpm": 103.4,
+          "autocorrelation": 0.606
+        },
+        {
+          "bpm": 178.2,
+          "autocorrelation": 0.413
+        },
+        {
+          "bpm": 73.8,
+          "autocorrelation": 0.383
+        }
+      ],
+      "key_candidates_not_confirmed": [
+        {
+          "key": "C maior",
+          "correlation": 0.888
+        },
+        {
+          "key": "G maior",
+          "correlation": 0.82
+        },
+        {
+          "key": "E menor",
+          "correlation": 0.739
+        }
+      ],
+      "loudness": {
+        "input_i": "-11.70",
+        "input_tp": "0.15",
+        "input_lra": "8.90",
+        "input_thresh": "-21.99",
+        "output_i": "-17.35",
+        "output_tp": "-2.53",
+        "output_lra": "8.10",
+        "output_thresh": "-27.55",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.65"
+      },
+      "rms_1s_percentiles": [
+        0.12382,
+        0.25605,
+        0.35498
+      ],
+      "analysis_limit": "Technical measurements only. Tempo can be half/double; key is uncertain. No automatic instrument or vocal identification."
+    },
+    {
+      "file": "C:\\Users\\artur\\.vscode\\fazendeiro-caotico-v24\\fazendeiro-caotico\\audio\\music_gameplay.ogg",
+      "sha256": "b8a5d534cfe825c0591e9a3b06b9028640fc22fd790f5974c7b8abb516c77676",
+      "duration_seconds": 178.944,
+      "tempo_candidates_not_confirmed": [
+        {
+          "bpm": 74.9,
+          "autocorrelation": 0.718
+        },
+        {
+          "bpm": 152.0,
+          "autocorrelation": 0.708
+        },
+        {
+          "bpm": 99.4,
+          "autocorrelation": 0.605
+        },
+        {
+          "bpm": 120.2,
+          "autocorrelation": 0.331
+        }
+      ],
+      "key_candidates_not_confirmed": [
+        {
+          "key": "G maior",
+          "correlation": 0.753
+        },
+        {
+          "key": "G menor",
+          "correlation": 0.643
+        },
+        {
+          "key": "D maior",
+          "correlation": 0.562
+        }
+      ],
+      "loudness": {
+        "input_i": "-18.19",
+        "input_tp": "-2.87",
+        "input_lra": "5.30",
+        "input_thresh": "-28.39",
+        "output_i": "-17.68",
+        "output_tp": "-2.00",
+        "output_lra": "5.50",
+        "output_thresh": "-27.79",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.32"
+      },
+      "rms_1s_percentiles": [
+        0.08924,
+        0.13939,
+        0.1526
+      ],
+      "analysis_limit": "Technical measurements only. Tempo can be half/double; key is uncertain. No automatic instrument or vocal identification."
+    },
+    {
+      "file": "C:\\Users\\artur\\.vscode\\fazendeiro-caotico-v24\\fazendeiro-caotico\\audio\\music_map_celeiro.ogg",
+      "sha256": "8f9ce743a71b17970926bd75fb9190e0bd0512fa32017d87282c28ffbde8dd10",
+      "duration_seconds": 177.306,
+      "tempo_candidates_not_confirmed": [
+        {
+          "bpm": 103.4,
+          "autocorrelation": 0.604
+        },
+        {
+          "bpm": 178.2,
+          "autocorrelation": 0.412
+        },
+        {
+          "bpm": 73.8,
+          "autocorrelation": 0.382
+        }
+      ],
+      "key_candidates_not_confirmed": [
+        {
+          "key": "C maior",
+          "correlation": 0.887
+        },
+        {
+          "key": "G maior",
+          "correlation": 0.818
+        },
+        {
+          "key": "E menor",
+          "correlation": 0.738
+        }
+      ],
+      "loudness": {
+        "input_i": "-18.09",
+        "input_tp": "-2.53",
+        "input_lra": "8.80",
+        "input_thresh": "-28.35",
+        "output_i": "-17.38",
+        "output_tp": "-2.00",
+        "output_lra": "7.90",
+        "output_thresh": "-27.56",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.62"
+      },
+      "rms_1s_percentiles": [
+        0.06533,
+        0.12892,
+        0.18097
+      ],
+      "analysis_limit": "Technical measurements only. Tempo can be half/double; key is uncertain. No automatic instrument or vocal identification."
+    },
+    {
+      "file": "C:\\Users\\artur\\.vscode\\fazendeiro-caotico-v24\\fazendeiro-caotico\\audio\\music_hub.wav",
+      "sha256": "7317de5055aaee3065bd4037a5662ad380dee739e946b89ad678782532ac49b4",
+      "duration_seconds": 5.3,
+      "tempo_candidates_not_confirmed": [
+        {
+          "bpm": 166.7,
+          "autocorrelation": 0.198
+        },
+        {
+          "bpm": 82.0,
+          "autocorrelation": -0.008
+        },
+        {
+          "bpm": 117.5,
+          "autocorrelation": -0.078
+        },
+        {
+          "bpm": 71.8,
+          "autocorrelation": -0.079
+        }
+      ],
+      "key_candidates_not_confirmed": [
+        {
+          "key": "C maior",
+          "correlation": 0.8
+        },
+        {
+          "key": "A menor",
+          "correlation": 0.779
+        },
+        {
+          "key": "F maior",
+          "correlation": 0.668
+        }
+      ],
+      "loudness": {
+        "input_i": "-15.60",
+        "input_tp": "-3.00",
+        "input_lra": "0.40",
+        "input_thresh": "-25.60",
+        "output_i": "-18.12",
+        "output_tp": "-5.60",
+        "output_lra": "0.30",
+        "output_thresh": "-28.12",
+        "normalization_type": "dynamic",
+        "target_offset": "0.12"
+      },
+      "rms_1s_percentiles": [
+        0.19854,
+        0.20469,
+        0.20612
+      ],
+      "analysis_limit": "Technical measurements only. Tempo can be half/double; key is uncertain. No automatic instrument or vocal identification."
+    }
+  ],
+  "correspondence": [
+    {
+      "reference": "Harvest_of_Thorns.mp3",
+      "game": "music_gameplay.ogg",
+      "best_pcm_correlation": 0.9959,
+      "reference_lag_seconds": 0.0325
+    },
+    {
+      "reference": "Harvest_of_Thorns.mp3",
+      "game": "music_map_celeiro.ogg",
+      "best_pcm_correlation": 0.20208,
+      "reference_lag_seconds": 0.052
+    },
+    {
+      "reference": "Sunday_Morning_Porch_Swing__1_.mp3",
+      "game": "music_gameplay.ogg",
+      "best_pcm_correlation": 0.20529,
+      "reference_lag_seconds": 0.0325
+    },
+    {
+      "reference": "Sunday_Morning_Porch_Swing__1_.mp3",
+      "game": "music_map_celeiro.ogg",
+      "best_pcm_correlation": 0.98357,
+      "reference_lag_seconds": 0.052
+    }
+  ]
+}

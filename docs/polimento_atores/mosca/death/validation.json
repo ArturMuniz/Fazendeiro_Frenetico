@@ -1,0 +1,106 @@
+{
+  "sprite": "mosca_death.aseprite",
+  "findings": [
+    {
+      "message": "254 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
+      "count": 254,
+      "check": "palette",
+      "severity": "note"
+    },
+    {
+      "message": "1 isolated pixel(s) with no neighbour on 'corpo-original' frame 2. These read as noise at 1x.",
+      "at": {
+        "y": 62,
+        "x": 37
+      },
+      "severity": "warning",
+      "layer": "corpo-original",
+      "count": 1,
+      "check": "strays",
+      "frame": 2
+    },
+    {
+      "message": "4 isolated pixel(s) with no neighbour on 'corpo-original' frame 3. These read as noise at 1x.",
+      "at": {
+        "y": 60,
+        "x": 38
+      },
+      "severity": "error",
+      "layer": "corpo-original",
+      "count": 4,
+      "check": "strays",
+      "frame": 3
+    },
+    {
+      "message": "1 isolated pixel(s) with no neighbour on 'partes-secundarias' frame 4. These read as noise at 1x.",
+      "at": {
+        "y": 53,
+        "x": 35
+      },
+      "severity": "warning",
+      "layer": "partes-secundarias",
+      "count": 1,
+      "check": "strays",
+      "frame": 4
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'corpo-original', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "corpo-original",
+      "check": "outline",
+      "frame": 1
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'corpo-original', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "corpo-original",
+      "check": "outline",
+      "frame": 2
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'corpo-original', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "corpo-original",
+      "check": "outline",
+      "frame": 3
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'corpo-original', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "corpo-original",
+      "check": "outline",
+      "frame": 4
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'partes-secundarias', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "partes-secundarias",
+      "check": "outline",
+      "frame": 1
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'partes-secundarias', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "partes-secundarias",
+      "check": "outline",
+      "frame": 2
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'partes-secundarias', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "partes-secundarias",
+      "check": "outline",
+      "frame": 3
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'partes-secundarias', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "severity": "note",
+      "layer": "partes-secundarias",
+      "check": "outline",
+      "frame": 4
+    }
+  ],
+  "passed": false,
+  "score": 75,
+  "summary": "1 error(s), 2 warning(s). Fix the errors before calling this done."
+}

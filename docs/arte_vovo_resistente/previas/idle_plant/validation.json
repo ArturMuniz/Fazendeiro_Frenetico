@@ -1,0 +1,94 @@
+{
+  "findings": [
+    {
+      "message": "8553 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
+      "count": 8553,
+      "severity": "note",
+      "check": "palette"
+    },
+    {
+      "message": "1 isolated pixel(s) with no neighbour on 'Vovó — arte baseada nos anexos' frame 5. These read as noise at 1x.",
+      "at": {
+        "y": 87,
+        "x": 80
+      },
+      "frame": 5,
+      "layer": "Vovó — arte baseada nos anexos",
+      "count": 1,
+      "severity": "warning",
+      "check": "strays"
+    },
+    {
+      "message": "3 isolated pixel(s) with no neighbour on 'Vovó — arte baseada nos anexos' frame 6. These read as noise at 1x.",
+      "at": {
+        "y": 73,
+        "x": 75
+      },
+      "frame": 6,
+      "layer": "Vovó — arte baseada nos anexos",
+      "count": 3,
+      "severity": "warning",
+      "check": "strays"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 1,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 2,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 3,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 4,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 5,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 6,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 7,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    },
+    {
+      "message": "No single colour owns the silhouette edge on 'Vovó — arte baseada nos anexos', so this sprite is not outlined. That is a valid style — just keep it consistent.",
+      "frame": 8,
+      "layer": "Vovó — arte baseada nos anexos",
+      "severity": "note",
+      "check": "outline"
+    }
+  ],
+  "sprite": "vovo_idle_plant.aseprite",
+  "passed": true,
+  "score": 90,
+  "summary": "Clean (2 style note(s))."
+}

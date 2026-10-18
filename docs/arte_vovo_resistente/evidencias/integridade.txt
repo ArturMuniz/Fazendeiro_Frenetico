@@ -1,0 +1,6 @@
+idle: 4 PNGs; 1400 ms; alpha and margins OK; GIF OK
+walk: 6 PNGs; 840 ms; alpha and margins OK; GIF OK
+run: 8 PNGs; 600 ms; alpha and margins OK; GIF OK
+idle_plant: 8 PNGs; 1740 ms; alpha and margins OK; GIF OK
+death: 6 PNGs; 840 ms; alpha and margins OK; GIF OK
+PASS: 32 frames; 5 sequences; import checked no saturated magenta

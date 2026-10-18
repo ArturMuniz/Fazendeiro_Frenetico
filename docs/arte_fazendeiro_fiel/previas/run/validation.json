@@ -1,0 +1,70 @@
+{
+  "findings": [
+    {
+      "severity": "note",
+      "count": 8050,
+      "check": "palette",
+      "message": "8050 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 1,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 2,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 3,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 4,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 5,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 6,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 7,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    },
+    {
+      "severity": "note",
+      "layer": "Arte fiel às referências",
+      "frame": 8,
+      "check": "outline",
+      "message": "No single colour owns the silhouette edge on 'Arte fiel às referências', so this sprite is not outlined. That is a valid style — just keep it consistent."
+    }
+  ],
+  "sprite": "fazendeiro_run.aseprite",
+  "passed": true,
+  "score": 100,
+  "summary": "Clean."
+}

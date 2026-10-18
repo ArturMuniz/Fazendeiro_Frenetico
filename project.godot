@@ -8,6 +8,10 @@
 
 config_version=5
 
+[admob]
+
+general/ios/enabled=false
+
 [application]
 
 config/name="fazendeiro_caotico"
@@ -27,6 +31,7 @@ MapDB="*res://map_db.gd"
 SaveManager="*res://save_manager.gd"
 CharacterDB="*res://character_db.gd"
 FarmUpgradeDB="*res://farm_upgrade_db.gd"
+RewardedAds="*res://rewarded_ads.gd"
 
 [display]
 
@@ -34,6 +39,15 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
+
+[game_ads]
+
+test_mode=true
+rewarded_unit_id=""
 
 [input_devices]
 

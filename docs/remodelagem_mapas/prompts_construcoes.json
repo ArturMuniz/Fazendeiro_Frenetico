@@ -1,0 +1,23 @@
+{
+  "mode": "Built-in image_gen",
+  "images": [
+    {
+      "name": "barn_building",
+      "prompt": "Use case: stylized-concept. Production pixel-art game environment asset: ONE complete rustic red wooden rural BARN, isolated on real transparent alpha. First image is layout/architecture reference, second is style reference for the existing game's props. Reproduce a believable barn like the first reference, slightly elevated three-quarter top-down RPG view, front entrance facing down/right, clear pixel clusters at an equivalent native 128x128 to 160x160 resolution, strong dark brown outlines and restrained rural palette matching the provided hay, barrels and crates. Broad weathered gray corrugated/gabled roof, red-brown vertical wooden siding, pale aged-wood X braces on TWO open barn doors, small square loft window above, dark entrance with a little golden hay visible inside. Full roof and both side edges inside image, generous transparent margins. Muted olive/golden daylight, simple stepped shadows ON the building only; no ground plane, no cast oval shadow, no external props, no fence, no trees, NO ANIMALS OR PEOPLE. Do not make an illustration of an entire scene. No text, numbers, watermark, backdrop, white, checkerboard, vignette or halo. This is a single reusable game building sprite, not a map screenshot.",
+      "refs": [
+        "C:\\Users\\artur\\OneDrive\\Imagens\\refe4.jpg",
+        "C:\\Users\\artur\\Downloads\\.exe\\fazendeiro_caotico_sripites\\Pixel_art_barn_props_layout_20261015081208.jpg"
+      ],
+      "path": "C:\\Users\\artur\\.codex\\generated_images\\01a1401c-965c-7631-8742-65b3e24de5ab\\exec-12400b03-a20c-46a5-8fbc-50b0ddc65de7.png"
+    },
+    {
+      "name": "garden_shed",
+      "prompt": "Use case: stylized-concept. ONE isolated rustic small gardening TOOL SHED sprite on REAL transparent alpha for a rural pixel-art top-down survival game. First attachment is architecture reference: its small shed. Second attachment sets the game's existing prop style. Slight elevated three-quarter top-down RPG view, entrance faces downward/right. Weathered olive-brown timber walls, patched muted gray sheet-metal sloping roof with a few rust-brown panels, open dark doorway, tiny window, a shovel and rake resting vertically along side wall as part of building silhouette. Kind welcoming farm appearance, worn but not horror or abandoned ruin. Deliberate crisp chunky pixel clusters, dark brown outlines, restrained olive, tan, gray and warm brown colors; equivalent native 128x128 art, not painterly rendering or smooth gradients. Full roof, eaves, tools and walls within generous transparent margin. No ground tile, no soil, no grass, no background, no cast shadow, no loose props, no humans or animals. No text, signs, labels, watermark, white or checkerboard, vignette or halo. Asset only, not a scene or farm screenshot.",
+      "refs": [
+        "C:\\Users\\artur\\OneDrive\\Imagens\\refe3.jpg",
+        "C:\\Users\\artur\\Downloads\\.exe\\fazendeiro_caotico_sripites\\Pixel_art_garden_props_grid_20261015081152.jpg"
+      ],
+      "path": "C:\\Users\\artur\\.codex\\generated_images\\01a1401c-965c-7631-8742-65b3e24de5ab\\exec-41571b67-c1f5-4446-9173-d4187c75ecf4.png"
+    }
+  ]
+}

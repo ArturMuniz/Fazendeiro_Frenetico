@@ -1,0 +1,126 @@
+{
+  "idle": {
+    "frames": [
+      "res://art/vovo_resistente/vovo_idle_00.png",
+      "res://art/vovo_resistente/vovo_idle_01.png",
+      "res://art/vovo_resistente/vovo_idle_02.png",
+      "res://art/vovo_resistente/vovo_idle_03.png"
+    ],
+    "fps": 2.857142857142857,
+    "durations_ms": [
+      220,
+      420,
+      100,
+      660
+    ],
+    "loop": true,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "walk": {
+    "frames": [
+      "res://art/vovo_resistente/vovo_walk_00.png",
+      "res://art/vovo_resistente/vovo_walk_01.png",
+      "res://art/vovo_resistente/vovo_walk_02.png",
+      "res://art/vovo_resistente/vovo_walk_03.png",
+      "res://art/vovo_resistente/vovo_walk_04.png",
+      "res://art/vovo_resistente/vovo_walk_05.png"
+    ],
+    "fps": 7.142857142857143,
+    "durations_ms": [
+      150,
+      130,
+      140,
+      150,
+      130,
+      140
+    ],
+    "loop": true,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "run": {
+    "frames": [
+      "res://art/vovo_resistente/vovo_run_00.png",
+      "res://art/vovo_resistente/vovo_run_01.png",
+      "res://art/vovo_resistente/vovo_run_02.png",
+      "res://art/vovo_resistente/vovo_run_03.png",
+      "res://art/vovo_resistente/vovo_run_04.png",
+      "res://art/vovo_resistente/vovo_run_05.png",
+      "res://art/vovo_resistente/vovo_run_06.png",
+      "res://art/vovo_resistente/vovo_run_07.png"
+    ],
+    "fps": 13.333333333333334,
+    "durations_ms": [
+      90,
+      75,
+      65,
+      70,
+      90,
+      75,
+      65,
+      70
+    ],
+    "loop": true,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "idle_plant": {
+    "frames": [
+      "res://art/vovo_resistente/vovo_idle_plant_00.png",
+      "res://art/vovo_resistente/vovo_idle_plant_01.png",
+      "res://art/vovo_resistente/vovo_idle_plant_02.png",
+      "res://art/vovo_resistente/vovo_idle_plant_03.png",
+      "res://art/vovo_resistente/vovo_idle_plant_04.png",
+      "res://art/vovo_resistente/vovo_idle_plant_05.png",
+      "res://art/vovo_resistente/vovo_idle_plant_06.png",
+      "res://art/vovo_resistente/vovo_idle_plant_07.png"
+    ],
+    "fps": 4.597701149425287,
+    "durations_ms": [
+      180,
+      220,
+      180,
+      200,
+      180,
+      200,
+      240,
+      340
+    ],
+    "loop": false,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "death": {
+    "frames": [
+      "res://art/vovo_resistente/vovo_death_00.png",
+      "res://art/vovo_resistente/vovo_death_01.png",
+      "res://art/vovo_resistente/vovo_death_02.png",
+      "res://art/vovo_resistente/vovo_death_03.png",
+      "res://art/vovo_resistente/vovo_death_04.png",
+      "res://art/vovo_resistente/vovo_death_05.png"
+    ],
+    "fps": 7.142857142857143,
+    "durations_ms": [
+      80,
+      100,
+      120,
+      140,
+      180,
+      220
+    ],
+    "loop": false,
+    "offset": [
+      0,
+      -16
+    ]
+  }
+}

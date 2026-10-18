@@ -6,6 +6,7 @@ const INK := Color("30291f")
 const CREAM := Color("f4e7c9")
 const GREEN := Color("345743")
 static var _theme: Theme
+static var _actor_bounds: Dictionary = {}
 
 static func texture(id: String) -> Texture2D:
 	if GameArt.DATA.ui.has(id):
@@ -98,6 +99,41 @@ static func card(parent: Node) -> VBoxContainer:
 	panel.add_child(column)
 	return column
 
+static func actor_preview(parent: Node, id: String, skin_id: String = "", dimensions: Vector2 = Vector2(124, 140)) -> Control:
+	var preview := Control.new()
+	preview.name = "Animated_" + id
+	preview.custom_minimum_size = dimensions
+	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	preview.clip_contents = true
+	parent.add_child(preview)
+	var figure := Sprite2D.new()
+	preview.add_child(figure)
+	var animator := SpriteAnimator.new()
+	preview.add_child(animator)
+	animator.configure(id, figure)
+	SkinCatalog.apply(figure, id, SaveManager.get_equipped_skin(id) if skin_id == "" else skin_id)
+	if not _actor_bounds.has(id):
+		var bounds := Rect2()
+		for path in GameArt.actor(id).idle.frames:
+			var texture := GameArt.texture(path)
+			var used := Rect2(texture.get_image().get_used_rect())
+			used.position -= texture.get_size() / 2.0
+			used.position += figure.offset
+			bounds = used if bounds.size == Vector2.ZERO else bounds.merge(used)
+		_actor_bounds[id] = bounds
+	var arrange := func() -> void:
+		var bounds: Rect2 = _actor_bounds[id]
+		var zoom := minf(1.65, minf((preview.size.x - 12) / bounds.size.x, (preview.size.y - 12) / bounds.size.y))
+		figure.scale = Vector2.ONE * zoom
+		figure.position = Vector2(preview.size.x / 2.0, preview.size.y - 6) - Vector2(bounds.get_center().x, bounds.end.y) * zoom
+	preview.resized.connect(arrange)
+	arrange.call()
+	return preview
+
+static func present(root: Control) -> void:
+	root.modulate.a = 0.0
+	root.create_tween().tween_property(root, "modulate:a", 1.0, 0.16)
+
 static func shell(owner: Node, title: String, subtitle: String, modal: bool = true) -> Dictionary:
 	var root := Control.new()
 	root.name = "RuralInterface"
@@ -139,6 +175,9 @@ static func shell(owner: Node, title: String, subtitle: String, modal: bool = tr
 	brand.add_child(brand_title)
 	var heading := label(title, 38)
 	column.add_child(heading)
+	var divider := HSeparator.new()
+	divider.modulate = Color("b79c65")
+	column.add_child(divider)
 	var sub := label(subtitle, 22)
 	column.add_child(sub)
 	var scroll := ScrollContainer.new()
@@ -167,12 +206,13 @@ static func inventory(parent: Node, player: Node) -> void:
 		for entry in entries:
 			var is_passive: bool = category == "passives"
 			var data: Dictionary = PassiveDB.PASSIVES[entry.id] if is_passive else WeaponDB.WEAPONS[entry.id]
+			var column := card(parent)
 			var row := HBoxContainer.new()
-			parent.add_child(row)
+			column.add_child(row)
 			var icon := item_icon(entry.id, entry.level, is_passive)
 			if icon != "":
 				row.add_child(picture(icon, Vector2(56, 56)))
-			var text := label("%s · Nível %d\n%s" % [data.name, entry.level, UIData.item_details(player, entry.id, entry.level, is_passive)], 22)
+			var text := label("%s · Nível %d\n%s" % [data.name, entry.level, UIData.item_details(player, entry.id, entry.level, is_passive)], 21)
 			text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			row.add_child(text)
 

@@ -39,6 +39,7 @@ var _landing_timer: Timer
 var _frames: Array = []
 var _frame_index: int = 0
 var art_animator: SpriteAnimator
+var _visual_origin: Vector2 = Vector2.ZERO
 
 # Estado usado por "jumper" e pelo boss "boss_leaper"
 var _jump_speed: float = 250.0
@@ -66,6 +67,7 @@ func _ready() -> void:
 	body_shape.shape = body_shape.shape.duplicate()
 	hitbox_shape.shape = hitbox_shape.shape.duplicate()
 	_landing_timer = Timer.new()
+	_landing_timer.name = "LandingTimer"
 	_landing_timer.one_shot = true
 	add_child(_landing_timer)
 	_landing_timer.timeout.connect(_on_jump_landed)
@@ -85,6 +87,7 @@ func configure(id: String, difficulty_multiplier: float = 1.0, target: Node2D = 
 	_frames.clear()
 	_frame_index = 0
 	sprite.flip_h = false
+	sprite.position = _visual_origin
 	_burst_count = 0
 	_landing_timer.stop()
 	frame_timer.stop()
@@ -145,7 +148,15 @@ func _physics_process(_delta: float) -> void:
 			_process_shooter()
 		_:
 			_move_toward_player()
-	art_animator.play("jump" if _jumping else ("walk" if velocity.length() > 1 else "idle"))
+	var next := "walk" if velocity.length() > 1 else "idle"
+	if _jumping:
+		next = "jump"
+	elif behavior in ["jumper", "boss_leaper"] and $JumpTimer.time_left > 0 and $JumpTimer.time_left < 0.2:
+		next = "anticipate"
+	art_animator.play(next)
+	# Arc is visual only: physics, contact damage and the landing instant stay intact.
+	var progress := clampf(1.0 - _landing_timer.time_left / _jump_duration, 0.0, 1.0) if _jumping else 0.0
+	sprite.position = _visual_origin + Vector2(0, -sin(progress * PI) * (22.0 if behavior == "boss_leaper" else 9.0))
 
 
 func _move_toward_player() -> void:
@@ -183,6 +194,7 @@ func _on_jump_timer_timeout() -> void:
 	if _despawning or not is_instance_valid(_player) or get_tree().paused:
 		return
 	_jumping = true
+	art_animator.play("jump", true)
 	_jump_direction = (_player.global_position - global_position).normalized()
 	_update_facing(_jump_direction)
 	_landing_timer.start(_jump_duration)
@@ -192,6 +204,7 @@ func _on_jump_landed() -> void:
 	if _despawning or not is_instance_valid(_player):
 		return
 	_jumping = false
+	sprite.position = _visual_origin
 	art_animator.once("land")
 	# Só o boss "Gafanhoto Gigante" causa dano de área ao pousar.
 	if behavior == "boss_leaper":

@@ -1,0 +1,202 @@
+{
+  "idle": {
+    "frames": [
+      "res://art/fazendeiro_animado/fazendeiro_idle_00.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_01.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_02.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_03.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_04.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_05.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_06.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_07.png"
+    ],
+    "fps": 5.714285714285714,
+    "durations_ms": [
+      220,
+      180,
+      180,
+      200,
+      180,
+      90,
+      100,
+      250
+    ],
+    "loop": true,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "walk": {
+    "frames": [
+      "res://art/fazendeiro_animado/fazendeiro_walk_00.png",
+      "res://art/fazendeiro_animado/fazendeiro_walk_01.png",
+      "res://art/fazendeiro_animado/fazendeiro_walk_02.png",
+      "res://art/fazendeiro_animado/fazendeiro_walk_03.png",
+      "res://art/fazendeiro_animado/fazendeiro_walk_04.png",
+      "res://art/fazendeiro_animado/fazendeiro_walk_05.png",
+      "res://art/fazendeiro_animado/fazendeiro_walk_06.png",
+      "res://art/fazendeiro_animado/fazendeiro_walk_07.png"
+    ],
+    "fps": 10.95890410958904,
+    "durations_ms": [
+      100,
+      90,
+      85,
+      90,
+      100,
+      90,
+      85,
+      90
+    ],
+    "loop": true,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "run": {
+    "frames": [
+      "res://art/fazendeiro_animado/fazendeiro_run_00.png",
+      "res://art/fazendeiro_animado/fazendeiro_run_01.png",
+      "res://art/fazendeiro_animado/fazendeiro_run_02.png",
+      "res://art/fazendeiro_animado/fazendeiro_run_03.png",
+      "res://art/fazendeiro_animado/fazendeiro_run_04.png",
+      "res://art/fazendeiro_animado/fazendeiro_run_05.png",
+      "res://art/fazendeiro_animado/fazendeiro_run_06.png",
+      "res://art/fazendeiro_animado/fazendeiro_run_07.png"
+    ],
+    "fps": 15.09433962264151,
+    "durations_ms": [
+      75,
+      65,
+      60,
+      65,
+      75,
+      65,
+      60,
+      65
+    ],
+    "loop": true,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "idle_hat": {
+    "frames": [
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_00.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_01.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_02.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_03.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_04.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_05.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_06.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_07.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_08.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_09.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_10.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_11.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_12.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_hat_13.png"
+    ],
+    "fps": 11.666666666666668,
+    "durations_ms": [
+      90,
+      80,
+      70,
+      70,
+      80,
+      100,
+      110,
+      110,
+      100,
+      80,
+      70,
+      70,
+      80,
+      90
+    ],
+    "loop": false,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "idle_swat": {
+    "frames": [
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_00.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_01.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_02.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_03.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_04.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_05.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_06.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_07.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_08.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_09.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_10.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_11.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_12.png",
+      "res://art/fazendeiro_animado/fazendeiro_idle_swat_13.png"
+    ],
+    "fps": 12.844036697247706,
+    "durations_ms": [
+      90,
+      100,
+      80,
+      75,
+      70,
+      65,
+      65,
+      70,
+      65,
+      65,
+      75,
+      80,
+      90,
+      100
+    ],
+    "loop": false,
+    "offset": [
+      0,
+      -16
+    ]
+  },
+  "death": {
+    "frames": [
+      "res://art/fazendeiro_animado/fazendeiro_death_00.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_01.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_02.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_03.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_04.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_05.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_06.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_07.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_08.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_09.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_10.png",
+      "res://art/fazendeiro_animado/fazendeiro_death_11.png"
+    ],
+    "fps": 14.285714285714286,
+    "durations_ms": [
+      60,
+      60,
+      60,
+      70,
+      60,
+      70,
+      60,
+      80,
+      80,
+      70,
+      80,
+      90
+    ],
+    "loop": false,
+    "offset": [
+      0,
+      -16
+    ]
+  }
+}

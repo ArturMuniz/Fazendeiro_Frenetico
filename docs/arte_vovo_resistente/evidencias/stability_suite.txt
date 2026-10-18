@@ -1,0 +1,81 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS joystick inteiramente dentro da viewport
+PASS indicador centralizado
+PASS toque real produz movimento
+PASS jogador se desloca com joystick
+PASS pausa limpa vetor de movimento
+PASS soltar durante pausa não prende o controle
+PASS perda de foco limpa entrada
+PASS joystick dentro da tela (360, 640)
+PASS joystick dentro da tela (1080, 2400)
+PASS joystick dentro da tela (1280, 720)
+PASS prioridade modal e aquisição idempotente
+PASS fechar uma tela preserva outra pausa
+PASS saída da árvore libera bloqueio
+PASS pausa manual não atravessa cartas
+PASS clique duplicado não consome segunda carta
+PASS última carta retoma gameplay
+PASS perda de foco pausa gameplay
+PASS retorno de foco libera apenas seu bloqueio
+PASS chefe não altera raio do pulgão
+PASS hitboxes independentes
+PASS inimigo morto sai imediatamente dos alvos
+PASS inimigo desativado não causa dano
+PASS pool limpa referência do jogador
+PASS pool reutiliza com alvo atual
+PASS projéteis de ambos os lados congelam durante pausa
+PASS tempo restante preservado
+PASS foice e salto congelam durante pausa
+PASS projéteis expiram após retomar
+PASS foice e salto terminam após retomar
+PASS salto antigo cancelado na reutilização
+PASS run consecutiva 1: alvo novo e pausa limpa
+PASS run consecutiva 2: alvo novo e pausa limpa
+PASS run consecutiva 3: alvo novo e pausa limpa
+PASS run consecutiva 4: alvo novo e pausa limpa
+PASS run consecutiva 5: alvo novo e pausa limpa
+PASS run consecutiva 6: alvo novo e pausa limpa
+PASS run consecutiva 7: alvo novo e pausa limpa
+PASS run consecutiva 8: alvo novo e pausa limpa
+PASS run consecutiva 9: alvo novo e pausa limpa
+PASS run consecutiva 10: alvo novo e pausa limpa
+PASS vitória tem prioridade sobre carta pendente
+PASS primeira vitória paga 150 imediatamente
+PASS prêmio e conclusão persistidos juntos
+PASS vitória duplicada não paga novamente
+PASS endless restaura carta pendente
+PASS endless e morte preservam vitória, bônus antigo de 20 e base
+PASS liquidação repetida idempotente
+PASS vitória repetida paga apenas 50
+PASS encerrar vitória abre resultado
+PASS falha de save reverte moeda e desbloqueio
+PASS erro de save mantém vitória pausada com retry
+PASS retry persiste prêmio uma vez
+PASS falha de liquidação oferece retry sem sair
+PASS retry da liquidação recupera resultado
+PASS horta fase 1 concede carta pausada
+PASS horta fase 2 concede carta pausada
+PASS horta fase 3 concede carta pausada
+PASS horta cria chefe após três fases
+PASS horta vitória real do chefe desbloqueia progresso
+PASS horta encerra com resultado pausado
+PASS celeiro fase 1 concede carta pausada
+PASS celeiro fase 2 concede carta pausada
+PASS celeiro fase 3 concede carta pausada
+PASS celeiro cria chefe após três fases
+PASS celeiro vitória real do chefe desbloqueia progresso
+PASS celeiro encerra com resultado pausado
+PASS pomar fase 1 concede carta pausada
+PASS pomar fase 2 concede carta pausada
+PASS pomar fase 3 concede carta pausada
+PASS pomar cria chefe após três fases
+PASS pomar vitória real do chefe desbloqueia progresso
+PASS pomar encerra com resultado pausado
+PASS próximo mapa inicia sem bloqueio residual
+PASS avanço paga base uma vez e reinicia build
+PASS retorno ao hub limpa pausa
+PASS hub inicia nova partida
+PASS derrota abre resultado
+PASS retry da derrota reinicia partida
+RESULT checks=78 failures=0

@@ -1,0 +1,10 @@
+{
+  "frames": 64,
+  "canvas": [
+    128,
+    128
+  ],
+  "binary_alpha": true,
+  "transparent_margins": true,
+  "visible_palette_colors": 28
+}

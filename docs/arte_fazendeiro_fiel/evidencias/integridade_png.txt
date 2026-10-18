@@ -1,0 +1,7 @@
+idle: 4 frames, 1400 ms, RGBA and margins OK
+walk: 6 frames, 730 ms, RGBA and margins OK
+run: 8 frames, 530 ms, RGBA and margins OK
+idle_hat: 8 frames, 1200 ms, RGBA and margins OK
+idle_swat: 8 frames, 1090 ms, RGBA and margins OK
+death: 4 frames, 840 ms, RGBA and margins OK
+PASS: 38 installed frames; 6 GIF previews; 6 Aseprite validations

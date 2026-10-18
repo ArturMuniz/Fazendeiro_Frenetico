@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+D3D12 12_0 - Forward Mobile - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4050 Laptop GPU
+
+MAP CAPTURE map_before_horta
+MAP CAPTURE map_before_celeiro
+MAP CAPTURE map_before_pomar
