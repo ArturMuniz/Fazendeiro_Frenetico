@@ -1,0 +1,53 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS adaptador real AdMob compila com o SDK instalado
+PASS provedor de teste sinaliza disponibilidade
+PASS save anterior tem roupa original por padrão
+PASS roupa não adquirida não pode ser equipada
+PASS compra desconta apenas ouro do jogo
+PASS compra repetida não cobra duas vezes
+PASS roupa comprada pode ser equipada
+PASS roupa é vinculada ao personagem correto
+PASS compra e seleção sobrevivem ao reload
+PASS falha de save reverte compra e saldo
+PASS falha de save reverte seleção
+PASS roupa usa material próprio sem bônus de atributos
+PASS retorno à roupa original salvo
+PASS roupa original restaura as cores nativas
+PASS metade inclui os três intervalos antes do chefe: 171 segundos
+PASS checkpoint registra build no meio da campanha
+PASS derrota oferece retorno sem liberar gameplay
+PASS anúncio segura pausa e bloqueia cliques repetidos
+PASS clique duplicado não abre segundo anúncio
+PASS fechar sem recompensa não revive nem consome tentativa
+PASS recompensa confirmada retorna ao jogo
+PASS checkpoint restaura nível, XP e atributos
+PASS checkpoint restaura armas, níveis e passivos
+PASS checkpoint não reaplica meta nem passivos em duplicidade
+PASS checkpoint preserva tempo restante e intervalo da coleta automática
+PASS checkpoint restaura posição e relógio
+PASS checkpoint restaura fase e progresso interno
+PASS checkpoint restaura inimigos e vida sem duplicá-los
+PASS retorno não repete pagamento e tem limite de uma vez
+PASS retorno concede janela breve contra morte instantânea
+PASS callback antigo não concede prêmio novamente
+PASS segunda morte não oferece outro retorno
+PASS anúncio dobra total da run sem repetir a parcela já paga
+PASS moedas dobradas encerram ofertas consumidas
+PASS recibo bloqueia duplicação de moedas
+PASS morte antes da metade volta ao próprio momento e inventário
+PASS retorno antes da metade restaura vida
+PASS falha ao salvar anúncio não altera saldo e preserva autorização
+PASS recompensa pendente oferece recuperação sem perder pagamento
+PASS retry salva recompensa sem exigir outro anúncio
+PASS run com moedas dobradas não pode ser reaberta para pagamento
+PASS liquidação retomada paga apenas o delta acima do valor já salvo
+PASS troca de cena cancela solicitação e ignora callback tardio
+PASS timeout não concede recompensa nem libera a pausa de resultados
+PASS anúncio suspende áudio do jogo
+PASS falha do provedor restaura áudio e mantém resultado pausado
+PASS recompensa após fechamento aceita retorno sem liberar pausa de foco
+PASS retorno só libera gameplay quando foco também foi restaurado
+PASS consumo do retorno persiste após recarregar save
+PASS dobro inclui bônus do chefe já computado na run
+MONETIZATION RESULT checks=50 failures=0

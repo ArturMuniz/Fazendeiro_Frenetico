@@ -119,7 +119,7 @@ func test_checkpoint() -> void:
 	actor = await new_run()
 	var checkpoint: Node = current_scene.checkpoint
 	var spawner: Node = current_scene.spawner
-	check(is_equal_approx(checkpoint.midpoint, 169.0), "metade inclui fases e intervalos: 169 segundos")
+	check(is_equal_approx(checkpoint.midpoint, 171.0), "metade inclui os três intervalos antes do chefe: 171 segundos")
 	actor.level = 7
 	actor.xp = 3.0
 	actor.max_health = 160.0
@@ -167,7 +167,7 @@ func test_checkpoint() -> void:
 	check(actor.weapons.size() == 2 and actor.weapons[1].level == 2 and actor.passives.size() == 1, "checkpoint restaura armas, níveis e passivos")
 	check(actor.max_health == expected.player.max_health and actor.health == expected.player.health, "checkpoint não reaplica meta nem passivos em duplicidade")
 	check(actor.auto_collect_orbs and actor._auto_collect_timer.time_left > 4.5 and is_equal_approx(actor._auto_collect_timer.wait_time,15.0), "checkpoint preserva tempo restante e intervalo da coleta automática")
-	check(actor.global_position == Vector2(800, -300) and abs(actor.survival_time-169)<0.5, "checkpoint restaura posição e relógio")
+	check(actor.global_position == Vector2(800, -300) and abs(actor.survival_time-checkpoint.midpoint)<0.5, "checkpoint restaura posição e relógio")
 	check(spawner._phase_index == 1 and is_equal_approx(spawner._phase_elapsed,65.0), "checkpoint restaura fase e progresso interno")
 	check(get_nodes_in_group("enemies").size() == 1 and is_equal_approx(get_nodes_in_group("enemies")[0].health,17.0), "checkpoint restaura inimigos e vida sem duplicá-los")
 	check(save.gold == balance and not actor.can_revive(), "retorno não repete pagamento e tem limite de uma vez")

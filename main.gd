@@ -40,6 +40,7 @@ func _ready() -> void:
 
 	pause_button.pressed.connect(pause_menu.open)
 	spawner.phase_changed.connect(hud.show_phase)
+	spawner.encounter_announced.connect(hud.announce)
 	spawner.setup_campaign(current_map_id)
 	checkpoint = RunCheckpoint.new()
 	checkpoint.name = "RunCheckpoint"

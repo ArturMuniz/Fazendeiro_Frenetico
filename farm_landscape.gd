@@ -1,7 +1,7 @@
 class_name FarmLandscape
 extends Node2D
 
-## Presentation only: no physics, navigation, spawn rules or global RNG calls.
+## Low decoration streams; unique, solid landmarks stay at the farm's edges.
 ## Static draw lists live in bounded chunks; scrolling never reaches bare scenery.
 const CHUNK_SIZE := 1024
 const CHUNK_SCRIPT = preload("res://farm_landscape_chunk.gd")
@@ -10,12 +10,20 @@ var target: Node2D
 var chunks: Dictionary = {}
 var _last_center := Vector2i(2147483647, 2147483647)
 var _last_radius := Vector2i.ZERO
+var landmarks: Node2D
+var obstacles := FarmObstacles.new()
 
 func configure(id: String, player: Node2D) -> void:
 	map_id = id
 	target = player
 	z_index = -8
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	landmarks = preload("res://farm_landmarks.gd").new()
+	landmarks.name = "Landmarks"
+	landmarks.z_index = 1
+	add_child(landmarks)
+	landmarks.build(id)
+	obstacles.build(landmarks.bounds)
 	refresh()
 
 func _process(_delta: float) -> void:

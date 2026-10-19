@@ -37,6 +37,10 @@ func _stroke(from: Vector2, to: Vector2, color: Color, width: float = 2) -> void
 	floor_commands.append({"kind":"line", "from":from, "to":to, "color":color, "width":width})
 
 func _prop(id: String, foot: Vector2, width: float, tint := Color(0.82, 0.84, 0.75)) -> void:
+	# Architecture belongs to unique edge landmarks, never repeating floor tiles.
+	if id in ["garden_shed", "barn_building", "horta_cerca"]: return
+	if id in ["apple_tree", "orange_tree", "hay_stack", "horta_espantalho"]:
+		if absf((position + foot).x) < 400 and absf((position + foot).y) < 600: return
 	# Keep the initial attack/readability area clear. This never tests physics.
 	if (position + foot).length() < 150:
 		return

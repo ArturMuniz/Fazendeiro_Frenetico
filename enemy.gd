@@ -22,6 +22,15 @@ var speed: float = 60.0
 var max_health: float = 10.0
 var contact_damage: float = 5.0
 var xp_value: int = 1
+var is_leader: bool = false
+var leader_title: String = ""
+var difficulty: float = 1.0
+var _landscape: FarmLandscape
+var _route_left: float = 0.0
+var _waypoint := Vector2.ZERO
+var _route_goal := Vector2.INF
+var _leader_pulse: float = 0.0
+var _leader_top: float = -28.0
 
 var health: float
 var _player: Node2D
@@ -79,7 +88,14 @@ func _ready() -> void:
 ## Também serve como "reset" quando o inimigo vem reaproveitado do
 ## Pool — por isso reconfigura estado transitório e alvo a cada utilização.
 ## O grupo é removido explicitamente na desativação.
-func configure(id: String, difficulty_multiplier: float = 1.0, target: Node2D = null) -> void:
+func configure(id: String, difficulty_multiplier: float = 1.0, target: Node2D = null, leader: bool = false) -> void:
+	is_leader = leader and not id.begins_with("boss_")
+	difficulty = difficulty_multiplier
+	leader_title = ""
+	_route_left = 0.0
+	_route_goal = Vector2.INF
+	_leader_pulse = 0.0
+	_landscape = get_tree().current_scene.get_node_or_null("FarmLandscape") as FarmLandscape
 	_player = target if is_instance_valid(target) else get_tree().get_first_node_in_group("player")
 	velocity = Vector2.ZERO
 	_jump_direction = Vector2.ZERO
@@ -110,9 +126,20 @@ func configure(id: String, difficulty_multiplier: float = 1.0, target: Node2D = 
 	health = max_health
 	contact_damage = data["contact_damage"] * difficulty_multiplier
 	xp_value = data["xp_value"]
+	if is_leader:
+		leader_title = "Líder · " + data.get("name", id)
+		max_health = maxf(float(data["health"]) * 5.0, 50.0) * difficulty_multiplier
+		health = max_health
+		contact_damage *= 1.15
+		speed *= 1.08
+		xp_value = xp_value * 5 + 5
 
 	var visual_scale: float = data.get("scale", 0.5)
 	art_animator.configure(id, sprite)
+	if is_leader:
+		sprite.scale = Vector2.ONE * 1.25
+		visual_scale *= 1.25
+		_leader_top = (sprite.get_rect().position.y + sprite.texture.get_image().get_used_rect().position.y) * sprite.scale.y - 8
 
 	(body_shape.shape as CircleShape2D).radius = 14.0 * visual_scale
 	(hitbox_shape.shape as CircleShape2D).radius = 16.0 * visual_scale
@@ -134,9 +161,14 @@ func configure(id: String, difficulty_multiplier: float = 1.0, target: Node2D = 
 			_setup_boss(data, difficulty_multiplier)
 		"boss_brute":
 			_setup_boss(data, difficulty_multiplier)
+	queue_redraw()
 
 
 func _physics_process(_delta: float) -> void:
+	_route_left -= _delta
+	if is_leader:
+		_leader_pulse += _delta
+		queue_redraw()
 	if _despawning or not is_instance_valid(_player):
 		velocity = Vector2.ZERO
 		return
@@ -160,10 +192,25 @@ func _physics_process(_delta: float) -> void:
 
 
 func _move_toward_player() -> void:
-	var direction: Vector2 = (_player.global_position - global_position).normalized()
+	var direction := _toward(_player.global_position)
 	velocity = direction * speed
 	move_and_slide()
 	_update_facing(direction)
+
+func _toward(destination: Vector2) -> Vector2:
+	if not is_instance_valid(_landscape): return (destination - global_position).normalized()
+	if _route_left <= 0.0 or global_position.distance_to(_waypoint) < 12.0 or _route_goal.distance_to(destination) > 60:
+		_waypoint = _landscape.obstacles.next_waypoint(global_position, destination)
+		_route_goal = destination
+		_route_left = 0.35
+	return (_waypoint - global_position).normalized()
+
+func _draw() -> void:
+	if not is_leader or _despawning: return
+	var radius: float = (body_shape.shape as CircleShape2D).radius + 8
+	draw_arc(Vector2.ZERO, radius + sin(_leader_pulse * 4) * 2, 0, TAU, 32, Color("edb95b"), 2)
+	var top := _leader_top + sprite.position.y
+	draw_colored_polygon(PackedVector2Array([Vector2(-8, top), Vector2(-6, top - 9), Vector2(-1, top - 4), Vector2(3, top - 12), Vector2(7, top - 4), Vector2(12, top - 9), Vector2(10, top)]), Color("f6cd71"))
 
 
 ## Vira o sprite pra encarar a direção pra onde o inimigo está indo
@@ -195,7 +242,7 @@ func _on_jump_timer_timeout() -> void:
 		return
 	_jumping = true
 	art_animator.play("jump", true)
-	_jump_direction = (_player.global_position - global_position).normalized()
+	_jump_direction = _toward(_player.global_position)
 	_update_facing(_jump_direction)
 	_landing_timer.start(_jump_duration)
 
@@ -240,10 +287,11 @@ func _process_shooter() -> void:
 
 	_update_facing(to_player)
 
-	if dist > _preferred_range + 20.0:
-		velocity = to_player.normalized() * speed
+	var obstructed := is_instance_valid(_landscape) and _landscape.obstacles.blocked(global_position, _player.global_position, 0)
+	if dist > _preferred_range + 20.0 or obstructed:
+		velocity = _toward(_player.global_position) * speed
 	elif dist < _preferred_range - 20.0:
-		velocity = -to_player.normalized() * speed
+		velocity = _toward(global_position - to_player.normalized() * 100) * speed
 	else:
 		velocity = Vector2.ZERO
 	move_and_slide()
@@ -321,6 +369,8 @@ func die() -> void:
 
 	if is_instance_valid(_player) and _player.has_method("register_kill"):
 		_player.register_kill(is_boss)
+		if is_leader:
+			_player.call_deferred("grant_free_level_up")
 
 	var orb: XPOrb = XP_ORB_SCENE.instantiate()
 	orb.global_position = global_position

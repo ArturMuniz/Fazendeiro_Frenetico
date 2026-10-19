@@ -94,7 +94,7 @@ func test_joystick() -> void:
 	var touch := InputEventScreenTouch.new()
 	touch.index = 0
 	touch.pressed = true
-	touch.position = rect.get_center() + Vector2(30, 0)
+	touch.position = rect.get_center() + Vector2(joystick.joystick_radius * 0.6, 0)
 	root.push_input(touch, true)
 	await process_frame
 	check(joystick.get_vector().x > 0.4, "toque real produz movimento")

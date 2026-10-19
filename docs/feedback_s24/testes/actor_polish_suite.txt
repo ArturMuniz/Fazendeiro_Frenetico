@@ -1,0 +1,21 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS boss_gafanhoto_gigante tem duração por quadro, offset válido e margens livres
+PASS boss_lagarta tem duração por quadro, offset válido e margens livres
+PASS boss_rainha_moscas tem duração por quadro, offset válido e margens livres
+PASS gafanhoto tem duração por quadro, offset válido e margens livres
+PASS lesma tem duração por quadro, offset válido e margens livres
+PASS mosca tem duração por quadro, offset válido e margens livres
+PASS netinho tem duração por quadro, offset válido e margens livres
+PASS pulgao tem duração por quadro, offset válido e margens livres
+PASS gafanhoto desenha arco sem mover a origem da colisão
+PASS gafanhoto mantém collider e balanceamento durante salto
+PASS gafanhoto congela pouso e arco junto com a pausa
+PASS gafanhoto pousa no instante original e restaura posição visual
+PASS gafanhoto limpa deslocamento ao reutilizar inimigo
+PASS boss_gafanhoto_gigante desenha arco sem mover a origem da colisão
+PASS boss_gafanhoto_gigante mantém collider e balanceamento durante salto
+PASS boss_gafanhoto_gigante congela pouso e arco junto com a pausa
+PASS boss_gafanhoto_gigante pousa no instante original e restaura posição visual
+PASS boss_gafanhoto_gigante limpa deslocamento ao reutilizar inimigo
+ACTOR POLISH RESULT checks=18 failures=0

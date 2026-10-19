@@ -15,6 +15,7 @@ class_name EnemySpawner
 ## Os dados de cada mapa vêm do MapDB.
 
 signal phase_changed(label: String, phase_number: int, total_phases: int)
+signal encounter_announced(label: String)
 
 @export var spawn_radius: float = 400.0
 @export var max_active_enemies: int = 100
@@ -56,6 +57,11 @@ var _free_elapsed: float = 0.0
 var _boss_interval: float = 2.0
 var _current_archetypes: Array = ["pulgao"]
 var _player: Node2D
+var _leader_phases: Array = []
+var _leader_warning_left: float = 0.0
+var _leader_position := Vector2.ZERO
+var _leader_id: String = ""
+const LEADER_WARNING := 1.8
 
 
 func _ready() -> void:
@@ -66,6 +72,8 @@ func _ready() -> void:
 
 ## Chamado pelo main.gd depois de sortear/escolher o mapa.
 func setup_campaign(map_id: String) -> void:
+	_leader_phases.clear()
+	_cancel_leader_warning()
 	_map_data = MapDB.MAPS[map_id]
 	_phases = _map_data["phases"]
 	_mode = Mode.CAMPAIGN
@@ -76,6 +84,7 @@ func start_free_mode() -> void:
 	if _mode == Mode.FREE:
 		return
 	_mode = Mode.FREE
+	_cancel_leader_warning()
 	_free_elapsed = 0.0
 	_in_breather = false
 	_current_archetypes = FREE_MODE_ARCHETYPES
@@ -103,12 +112,56 @@ func _process_campaign(delta: float) -> void:
 		return
 
 	_phase_elapsed += delta
+	_process_encounter(delta)
 	if _phase_elapsed >= _phase_duration(_phase_index):
 		_end_phase()
 
 
 func _phase_duration(index: int) -> float:
 	return float(_phases[index]["duration"]) * phase_duration_scale
+
+func campaign_duration() -> float:
+	var duration := _phases.size() * breather_duration
+	for i in range(_phases.size()): duration += _phase_duration(i)
+	return duration
+
+func _process_encounter(delta: float) -> void:
+	if not _leader_id.is_empty():
+		_leader_warning_left = maxf(0.0, _leader_warning_left - delta)
+		queue_redraw()
+		if _leader_warning_left > 0 or get_tree().get_nodes_in_group("enemies").size() >= max_active_enemies: return
+		var leader := _spawn_enemy(_leader_id, true, _leader_position)
+		if leader == null: return
+		_cancel_leader_warning()
+		# A small escort, spread around its leader, still respects the total cap.
+		for i in range(4):
+			if get_tree().get_nodes_in_group("enemies").size() >= max_active_enemies: break
+			_spawn_enemy(_current_archetypes[i % _current_archetypes.size()], false, leader.global_position + Vector2.from_angle(i * TAU / 4) * 70)
+		return
+	if _leader_phases.has(_phase_index) or _phase_elapsed < _phase_duration(_phase_index) * 0.6: return
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		if enemy.is_leader: return
+	_leader_phases.append(_phase_index)
+	_leader_id = str(_current_archetypes[-1])
+	_leader_position = _spawn_point()
+	_leader_warning_left = LEADER_WARNING
+	encounter_announced.emit("Líder de horda chegando!\nDerrote-o para ganhar uma melhoria.")
+	AudioManager.play_sfx("boss_spawn")
+	queue_redraw()
+
+func _cancel_leader_warning() -> void:
+	_leader_id = ""
+	_leader_warning_left = 0
+	queue_redraw()
+
+func _draw() -> void:
+	if _leader_id.is_empty(): return
+	var point := to_local(_leader_position)
+	var fraction := 1.0 - _leader_warning_left / LEADER_WARNING
+	draw_circle(point, 38, Color(0.8, 0.24, 0.12, 0.18))
+	draw_arc(point, 38, -PI / 2, -PI / 2 + TAU * maxf(fraction, 0.01), 40, Color("f3bc64"), 4)
+	draw_line(point + Vector2(-12, 0), point + Vector2(12, 0), Color("f3bc64"), 3)
+	draw_line(point + Vector2(0, -12), point + Vector2(0, 12), Color("f3bc64"), 3)
 
 
 func _begin_phase(index: int) -> void:
@@ -127,6 +180,7 @@ func _begin_phase(index: int) -> void:
 
 ## Fim de uma fase: para de spawnar, cura um pouco e dá uma carta grátis.
 func _end_phase() -> void:
+	_cancel_leader_warning()
 	spawn_timer.stop()
 	_in_breather = true
 	_breather_left = breather_duration
@@ -140,6 +194,7 @@ func _end_phase() -> void:
 
 
 func _begin_boss_phase() -> void:
+	_cancel_leader_warning()
 	_mode = Mode.BOSS
 	var boss_phase: Dictionary = _map_data["boss_phase"]
 	_current_archetypes = boss_phase["archetypes"]
@@ -172,16 +227,28 @@ func _on_spawn_timer_timeout() -> void:
 	_spawn_enemy(_current_archetypes[randi() % _current_archetypes.size()])
 
 
-func _spawn_enemy(id: String) -> void:
+func _spawn_point() -> Vector2:
+	var landscape := get_tree().current_scene.get_node_or_null("FarmLandscape") as FarmLandscape
+	for attempt in range(16):
+		var point := _player.global_position + Vector2.from_angle(randf() * TAU) * spawn_radius
+		if landscape == null or landscape.obstacles.is_clear(point, 40): return point
+	var fallback := _player.global_position + Vector2.RIGHT * spawn_radius
+	if landscape != null:
+		while not landscape.obstacles.is_clear(fallback, 40): fallback.x += 512
+	return fallback
+
+func _spawn_enemy(id: String, leader: bool = false, point: Vector2 = Vector2.INF) -> Enemy:
 	if not is_instance_valid(_player):
 		_player = get_tree().get_first_node_in_group("player")
 	if not is_instance_valid(_player):
-		return
+		return null
 
-	var angle: float = randf() * TAU
-	var offset: Vector2 = Vector2(cos(angle), sin(angle)) * spawn_radius
+	var destination := _spawn_point() if point == Vector2.INF else point
+	var landscape := get_tree().current_scene.get_node_or_null("FarmLandscape") as FarmLandscape
+	if landscape != null and not landscape.obstacles.is_clear(destination, 40): destination = _spawn_point()
 
 	var enemy: Enemy = Pool.acquire(ENEMY_SCENE)
 	get_tree().current_scene.add_child(enemy)
-	enemy.global_position = _player.global_position + offset
-	enemy.configure(id, _current_difficulty_multiplier(), _player)
+	enemy.global_position = destination
+	enemy.configure(id, _current_difficulty_multiplier(), _player, leader)
+	return enemy

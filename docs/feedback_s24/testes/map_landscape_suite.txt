@@ -1,0 +1,83 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS horta escolhe a paisagem correta
+PASS horta remove o piso antigo da apresentação
+PASS horta parcelas decorativas não possuem física, navegação ou timers
+PASS horta construções e cercas únicas têm colisões próprias
+PASS horta cenário fica atrás dos atores e ataques
+PASS horta cache cobre somente a região necessária
+PASS horta viewport inicial tem chão em todos os cantos
+PASS horta parcela preenche a superfície inteira
+PASS horta mantém variedade rural na clareira, sem exigir densidade de obstáculos
+PASS horta área inicial livre de objetos altos
+PASS horta geração não altera RNG global do combate
+PASS horta mantém cobertura em (520.0, 520.0)
+PASS horta cache não cresce com distância percorrida
+PASS horta mantém cobertura em (-520.0, -520.0)
+PASS horta cache não cresce com distância percorrida
+PASS horta mantém cobertura em (15400.0, -20100.0)
+PASS horta cache não cresce com distância percorrida
+PASS horta mantém cobertura em (-22100.0, 18000.0)
+PASS horta cache não cresce com distância percorrida
+PASS horta retorno recompõe o mesmo cenário
+PASS horta cobertura acompanha zoom e viewport
+PASS horta pausa congela a atualização do cenário
+PASS horta streaming retoma após pausa
+PASS horta cenário não bloqueia nem desacelera movimento
+PASS horta arte preserva atributos e hitbox
+PASS horta parcelas antigas são removidas; marcos são únicos
+PASS celeiro escolhe a paisagem correta
+PASS celeiro remove o piso antigo da apresentação
+PASS celeiro parcelas decorativas não possuem física, navegação ou timers
+PASS celeiro construções e cercas únicas têm colisões próprias
+PASS celeiro cenário fica atrás dos atores e ataques
+PASS celeiro cache cobre somente a região necessária
+PASS celeiro viewport inicial tem chão em todos os cantos
+PASS celeiro parcela preenche a superfície inteira
+PASS celeiro mantém variedade rural na clareira, sem exigir densidade de obstáculos
+PASS celeiro área inicial livre de objetos altos
+PASS celeiro geração não altera RNG global do combate
+PASS celeiro mantém cobertura em (520.0, 520.0)
+PASS celeiro cache não cresce com distância percorrida
+PASS celeiro mantém cobertura em (-520.0, -520.0)
+PASS celeiro cache não cresce com distância percorrida
+PASS celeiro mantém cobertura em (15400.0, -20100.0)
+PASS celeiro cache não cresce com distância percorrida
+PASS celeiro mantém cobertura em (-22100.0, 18000.0)
+PASS celeiro cache não cresce com distância percorrida
+PASS celeiro retorno recompõe o mesmo cenário
+PASS celeiro cobertura acompanha zoom e viewport
+PASS celeiro pausa congela a atualização do cenário
+PASS celeiro streaming retoma após pausa
+PASS celeiro cenário não bloqueia nem desacelera movimento
+PASS celeiro arte preserva atributos e hitbox
+PASS celeiro parcelas antigas são removidas; marcos são únicos
+PASS pomar escolhe a paisagem correta
+PASS pomar remove o piso antigo da apresentação
+PASS pomar parcelas decorativas não possuem física, navegação ou timers
+PASS pomar construções e cercas únicas têm colisões próprias
+PASS pomar cenário fica atrás dos atores e ataques
+PASS pomar cache cobre somente a região necessária
+PASS pomar viewport inicial tem chão em todos os cantos
+PASS pomar parcela preenche a superfície inteira
+PASS pomar mantém variedade rural na clareira, sem exigir densidade de obstáculos
+PASS pomar área inicial livre de objetos altos
+PASS pomar geração não altera RNG global do combate
+PASS pomar mantém cobertura em (520.0, 520.0)
+PASS pomar cache não cresce com distância percorrida
+PASS pomar mantém cobertura em (-520.0, -520.0)
+PASS pomar cache não cresce com distância percorrida
+PASS pomar mantém cobertura em (15400.0, -20100.0)
+PASS pomar cache não cresce com distância percorrida
+PASS pomar mantém cobertura em (-22100.0, 18000.0)
+PASS pomar cache não cresce com distância percorrida
+PASS pomar retorno recompõe o mesmo cenário
+PASS pomar cobertura acompanha zoom e viewport
+PASS pomar pausa congela a atualização do cenário
+PASS pomar streaming retoma após pausa
+PASS pomar cenário não bloqueia nem desacelera movimento
+PASS pomar arte preserva atributos e hitbox
+PASS pomar parcelas antigas são removidas; marcos são únicos
+PASS três mapas possuem composições distintas
+PASS dados de campanha, chefes e balanceamento permanecem intactos
+MAP RESULT checks=80 failures=0

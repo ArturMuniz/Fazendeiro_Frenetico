@@ -6,7 +6,7 @@ class_name Player
 
 signal leveled_up
 
-const MAX_WEAPONS: int = 6
+const MAX_WEAPONS: int = 3
 const WEAPON_SCENES: Dictionary = {
 	"ranged": preload("res://weapon.tscn"),
 	"melee_aura": preload("res://melee_aura_weapon.tscn"),
@@ -80,6 +80,8 @@ var passives: Array = []
 var defense_percent: float = 0.0
 var bonus_max_health: float = 0.0
 var auto_collect_orbs: bool = false
+var regeneration: float = 0.0
+var xp_bonus: float = 0.0
 var _auto_collect_timer: Timer
 
 
@@ -124,7 +126,7 @@ func _apply_meta_progression() -> void:
 func add_xp(amount: float) -> void:
 	if _dead:
 		return
-	xp += amount
+	xp += amount * (1.0 + xp_bonus)
 	while xp >= xp_to_next:
 		xp -= xp_to_next
 		level += 1
@@ -295,7 +297,7 @@ func _apply_passive_tier(id: String, tier: int) -> void:
 
 	match stat:
 		"defense_percent":
-			defense_percent += increment
+			defense_percent = minf(0.75, defense_percent + increment)
 		"bonus_max_health":
 			bonus_max_health += increment
 			max_health += increment
@@ -308,6 +310,12 @@ func _apply_passive_tier(id: String, tier: int) -> void:
 			speed *= (1.0 + increment)
 		"magnet_percent":
 			magnet_radius *= (1.0 + increment)
+		"regeneration":
+			regeneration += increment
+		"xp_bonus":
+			xp_bonus += increment
+		"damage_bonus":
+			damage_bonus += increment
 
 	if data.get("special_level3") == "auto_collect" and tier == 3:
 		_enable_auto_collect()
@@ -351,6 +359,8 @@ func _on_auto_collect_timeout() -> void:
 func _physics_process(delta: float) -> void:
 	_revive_grace = maxf(0.0, _revive_grace - delta)
 	survival_time += delta
+	if not _dead:
+		health = minf(max_health, health + regeneration * delta)
 	var move_vector: Vector2 = joystick.get_vector()
 
 	velocity = move_vector * speed

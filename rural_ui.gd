@@ -192,6 +192,8 @@ static func shell(owner: Node, title: String, subtitle: String, modal: bool = tr
 	return {"root": root, "body": body, "footer": footer, "title": heading, "subtitle": sub, "scroll": scroll}
 
 static func item_icon(id: String, level: int, passive: bool = false) -> String:
+	if passive and PassiveDB.PASSIVES.get(id, {}).has("icon"):
+		return PassiveDB.PASSIVES[id].icon
 	var key := "passive_%s" % id if passive else "weapon_%s_%d" % [id, level]
 	if not passive and GameArt.DATA.weapons.has("%s_%d" % [id, level]):
 		return key
@@ -200,7 +202,8 @@ static func item_icon(id: String, level: int, passive: bool = false) -> String:
 static func inventory(parent: Node, player: Node) -> void:
 	for category in ["weapons", "passives"]:
 		var entries: Array = player.get(category)
-		parent.add_child(label(("ARMAS" if category == "weapons" else "PASSIVOS") + "  %d / 6" % entries.size(), 22, GREEN))
+		var capacity: int = Player.MAX_WEAPONS if category == "weapons" else Player.MAX_PASSIVES
+		parent.add_child(label(("ARMAS" if category == "weapons" else "PASSIVOS") + "  %d / %d" % [entries.size(), capacity], 22, GREEN))
 		if entries.is_empty():
 			parent.add_child(label("Nenhum item equipado", 22))
 		for entry in entries:
@@ -224,7 +227,9 @@ static func attributes(parent: Node, player: Node) -> void:
 		["stat_damage", "Dano adicional: +%s" % UIData.number(player.damage_bonus)],
 		["stat_interval", "Intervalo das armas compatíveis: ×%s" % UIData.number(clampf(player.cooldown_multiplier, 0.25, 1.0))],
 		["stat_defense", "Defesa: %s%%" % UIData.number(player.defense_percent * 100)],
-		["stat_collection", "Coleta de XP: %s px" % UIData.number(player.magnet_radius)]
+		["stat_collection", "Coleta de XP: %s px" % UIData.number(player.magnet_radius)],
+		["stat_health", "Regeneração: %s vida/s" % UIData.number(player.regeneration)],
+		["stat_collection", "XP adicional: +%s%%" % UIData.number(player.xp_bonus * 100)]
 	]
 	for entry in entries:
 		var row := HBoxContainer.new()

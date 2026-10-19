@@ -1,0 +1,80 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Inicialização do Projeto (5 steps)
+[   0% ] first_scan_filesystem | Escaneando estrutura de arquivos...
+[  16% ] first_scan_filesystem | Carregando nomes de classe globais...
+[  33% ] first_scan_filesystem | Verificando GDExtensions...
+[  50% ] first_scan_filesystem | Criando scripts autoload...
+[  66% ] first_scan_filesystem | Inicializando plugins...
+[  83% ] first_scan_filesystem | Iniciando escaneamento de arquivos...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registrando classes globais... (9 steps)
+[   0% ] update_scripts_classes |
+[  10% ] update_scripts_classes |
+[  20% ] update_scripts_classes |
+[  30% ] update_scripts_classes | Companion
+[  40% ] update_scripts_classes | Enemy
+[  50% ] update_scripts_classes | EnemySpawner
+[  60% ] update_scripts_classes | FarmObstacles
+[  70% ] update_scripts_classes | HUD
+[  80% ] update_scripts_classes |
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started Escaneando ações... (12 steps)
+[   0% ] _update_scan_actions | cartas.png
+[   7% ] _update_scan_actions | celeiro_bordas.png
+[  15% ] _update_scan_actions | celeiro_clareira.png
+[  23% ] _update_scan_actions | celeiro_construcao.png
+[  30% ] _update_scan_actions | horta_bordas.png
+[  38% ] _update_scan_actions | horta_clareira.png
+[  46% ] _update_scan_actions | horta_construcao.png
+[  53% ] _update_scan_actions | lider_e_tres_armas.png
+[  61% ] _update_scan_actions | pausa.png
+[  69% ] _update_scan_actions | pomar_bordas.png
+[  76% ] _update_scan_actions | pomar_clareira.png
+[  84% ] _update_scan_actions | pomar_construcao.png
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started (Re)Importando Recursos (12 steps)
+[   0% ] reimport | Preparando arquivos para reimportação...
+[   7% ] reimport | Preparando arquivos para reimportação...
+[  15% ] reimport | Preparando arquivos para reimportação...
+[  23% ] reimport | Preparando arquivos para reimportação...
+[  30% ] reimport | Preparando arquivos para reimportação...
+[  38% ] reimport | Preparando arquivos para reimportação...
+[  46% ] reimport | Preparando arquivos para reimportação...
+[  53% ] reimport | Preparando arquivos para reimportação...
+[  61% ] reimport | Preparando arquivos para reimportação...
+[  69% ] reimport | Preparando arquivos para reimportação...
+[  76% ] reimport | Preparando arquivos para reimportação...
+[  84% ] reimport | Preparando arquivos para reimportação...
+[   0% ] reimport | Executando operações pré-reimportação...
+[   0% ] reimport | cartas.png
+[   7% ] reimport | celeiro_bordas.png
+[  15% ] reimport | celeiro_clareira.png
+[  23% ] reimport | celeiro_construcao.png
+[  30% ] reimport | horta_bordas.png
+[  38% ] reimport | horta_clareira.png
+[  46% ] reimport | horta_construcao.png
+[  53% ] reimport | lider_e_tres_armas.png
+[  61% ] reimport | pausa.png
+[  69% ] reimport | pomar_bordas.png
+[  76% ] reimport | pomar_clareira.png
+[  84% ] reimport | pomar_construcao.png
+[  92% ] reimport | Finalizando Importação de Recursos...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importando Recursos (12 steps)
+[   0% ] reimport | Executando operações pós-reimportação...
+[ DONE ] reimport
+
+Exporting Poing AdMob '.cfg' file
+[   0% ] export | Started Exportando para Android (105 steps)
+0 param: --xr_mode_regular
+1 param: --xr-mode
+2 param: off
+3 param: --fullscreen
+4 param: --background_color
+5 param: #000000
+[ DONE ] export

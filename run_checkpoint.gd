@@ -2,8 +2,8 @@ class_name RunCheckpoint
 extends Node
 
 ## One midpoint checkpoint in memory. Persistent currency is a separate ledger.
-const PLAYER_FIELDS := ["health", "max_health", "speed", "magnet_radius", "xp", "level", "xp_to_next", "survival_time", "kills", "boss_defeated", "damage_bonus", "cooldown_multiplier", "defense_percent", "bonus_max_health", "auto_collect_orbs", "_boss_victory_shown"]
-const SPAWNER_FIELDS := ["_mode", "_phase_index", "_phase_elapsed", "_breather_left", "_in_breather", "_free_elapsed", "_boss_interval", "_current_archetypes"]
+const PLAYER_FIELDS := ["health", "max_health", "speed", "magnet_radius", "xp", "level", "xp_to_next", "survival_time", "kills", "boss_defeated", "damage_bonus", "cooldown_multiplier", "defense_percent", "bonus_max_health", "auto_collect_orbs", "_boss_victory_shown", "regeneration", "xp_bonus"]
+const SPAWNER_FIELDS := ["_mode", "_phase_index", "_phase_elapsed", "_breather_left", "_in_breather", "_free_elapsed", "_boss_interval", "_current_archetypes", "_leader_phases", "_leader_warning_left", "_leader_position", "_leader_id"]
 var player: Node
 var spawner: Node
 var midpoint: float = 0.0
@@ -14,11 +14,7 @@ var restoring: bool = false
 func setup(actor: Node, enemy_spawner: Node) -> void:
 	player = actor
 	spawner = enemy_spawner
-	var duration := 0.0
-	for phase in spawner._phases:
-		duration += float(phase.duration) * spawner.phase_duration_scale
-	duration += max(0, spawner._phases.size() - 1) * spawner.breather_duration
-	midpoint = duration / 2.0
+	midpoint = spawner.campaign_duration() / 2.0
 
 func _process(_delta: float) -> void:
 	if restoring or reached_midpoint or not is_instance_valid(player) or player.is_dead():
@@ -50,7 +46,7 @@ func capture() -> Dictionary:
 	for enemy in get_tree().get_nodes_in_group("enemies"):
 		if enemy._despawning or enemy.is_queued_for_deletion(): continue
 		data.enemies.append({"id": enemy.enemy_id, "position": enemy.global_position, "health": enemy.health,
-			"difficulty": enemy.max_health / float(EnemyDB.ENEMIES[enemy.enemy_id].health), "timers": timers_of(enemy),
+			"difficulty": enemy.difficulty, "leader": enemy.is_leader, "timers": timers_of(enemy),
 			"jumping": enemy._jumping, "direction": enemy._jump_direction})
 	for orb in get_tree().get_nodes_in_group("xp_orbs"):
 		if not orb._collected and not orb.is_queued_for_deletion():
@@ -113,10 +109,11 @@ func restore() -> bool:
 		var value: Variant = snapshot.spawner[field]
 		spawner.set(field, value.duplicate(true) if value is Array else value)
 	restore_timers(spawner, snapshot.spawner.timers)
+	spawner.queue_redraw()
 	for entry in snapshot.enemies:
 		var enemy: Enemy = Pool.acquire(load("res://enemy.tscn"))
 		scene.add_child(enemy)
-		enemy.configure(entry.id, entry.difficulty, player)
+		enemy.configure(entry.id, entry.difficulty, player, entry.get("leader", false))
 		enemy.global_position = entry.position
 		enemy.health = entry.health
 		enemy._jumping = entry.jumping

@@ -13,6 +13,7 @@ var _boss: ProgressBar
 var _boss_label: Label
 var _player: Node
 var _banner_tween: Tween
+var _loadout: Label
 
 func _ready() -> void:
 	_player = get_node(player_path)
@@ -56,6 +57,8 @@ func _ready() -> void:
 	row.add_child(pause)
 	phase_label = RuralUI.label("", 22, RuralUI.CREAM)
 	column.add_child(phase_label)
+	_loadout = RuralUI.label("", 20, RuralUI.CREAM)
+	column.add_child(_loadout)
 	_boss = _bar(Color("ad5149"), 32)
 	column.add_child(_boss)
 	_boss_label = _bar_label(_boss)
@@ -63,7 +66,7 @@ func _ready() -> void:
 	banner_label = RuralUI.label("", 34, RuralUI.CREAM)
 	root.add_child(banner_label)
 	banner_label.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
-	banner_label.offset_top = 224
+	banner_label.offset_top = 300
 	banner_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	banner_label.add_theme_color_override("font_outline_color", Color("1a271e"))
 	banner_label.add_theme_constant_override("outline_size", 8)
@@ -110,17 +113,28 @@ func _process(_delta: float) -> void:
 	xp_bar.value = _player.xp
 	xp_label.text = "Nível %d" % _player.level
 	_time.text = "%02d:%02d\n%d abates" % [int(_player.survival_time) / 60, int(_player.survival_time) % 60, _player.kills]
+	var equipped: PackedStringArray = []
+	for entry in _player.weapons: equipped.append("%s Nv.%d" % [entry.id.capitalize(), entry.level])
+	_loadout.text = "Armas %d/%d · %s" % [_player.weapons.size(), Player.MAX_WEAPONS, " · ".join(equipped)]
 	_boss.hide()
+	var featured: Enemy
 	for enemy in get_tree().get_nodes_in_group("enemies"):
-		if enemy.enemy_id.begins_with("boss_") and enemy.health > 0:
-			_boss.show()
-			_boss.max_value = enemy.max_health
-			_boss.value = enemy.health
-			_boss_label.text = "%s · %d / %d" % [EnemyDB.ENEMIES[enemy.enemy_id].get("name", "Chefe"), ceili(enemy.health), ceili(enemy.max_health)]
+		if enemy.health <= 0: continue
+		if enemy.enemy_id.begins_with("boss_"):
+			featured = enemy
 			break
+		if enemy.is_leader: featured = enemy
+	if featured != null:
+		_boss.show()
+		_boss.max_value = featured.max_health
+		_boss.value = featured.health
+		_boss_label.text = "%s · %d / %d" % [featured.leader_title if featured.is_leader else EnemyDB.ENEMIES[featured.enemy_id].get("name", "Chefe"), ceili(featured.health), ceili(featured.max_health)]
 
 func show_phase(label: String, number: int, total: int) -> void:
 	phase_label.text = "%s · %s" % [MapDB.MAPS[SaveManager.selected_map].name, label if total <= 0 else "%s (%d/%d)" % [label, number, total]]
+	announce(label)
+
+func announce(label: String) -> void:
 	banner_label.text = label
 	banner_label.modulate.a = 1
 	if _banner_tween != null:

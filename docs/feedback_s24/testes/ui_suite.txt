@@ -1,0 +1,145 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS saldo com ícone permanece legível (360, 640)
+PASS saldo com ícone permanece legível (720, 1280)
+PASS saldo com ícone permanece legível (1080, 2400)
+PASS saldo com ícone permanece legível (1280, 720)
+PASS mapa bloqueado não pode ser selecionado
+PASS compra sem save não cobra nem desbloqueia
+PASS desbloqueio confirmado e duplicata ignorada
+PASS personagem e débito persistidos juntos
+PASS upgrade reverte na falha de gravação
+PASS upgrade usa preço atual e salva
+PASS foice nível 1: dano exibido confere com a entidade
+PASS foice nível 1: intervalo confere com o timer
+PASS foice nível 2: dano exibido confere com a entidade
+PASS foice nível 2: intervalo confere com o timer
+PASS foice nível 3: dano exibido confere com a entidade
+PASS foice nível 3: intervalo confere com o timer
+PASS foice máximo não entra nas cartas
+PASS milho nível 1: dano exibido confere com a entidade
+PASS milho nível 1: intervalo confere com o timer
+PASS milho nível 2: dano exibido confere com a entidade
+PASS milho nível 2: intervalo confere com o timer
+PASS milho nível 3: dano exibido confere com a entidade
+PASS milho nível 3: intervalo confere com o timer
+PASS milho máximo não entra nas cartas
+PASS forquilha nível 1: dano exibido confere com a entidade
+PASS forquilha nível 1: intervalo confere com o timer
+PASS forquilha nível 2: dano exibido confere com a entidade
+PASS forquilha nível 2: intervalo confere com o timer
+PASS forquilha nível 3: dano exibido confere com a entidade
+PASS forquilha nível 3: intervalo confere com o timer
+PASS forquilha máximo não entra nas cartas
+PASS batata nível 1: dano exibido confere com a entidade
+PASS batata nível 1: intervalo confere com o timer
+PASS explosão não recebe bônus flat que o código não aplica
+PASS batata nível 2: dano exibido confere com a entidade
+PASS batata nível 2: intervalo confere com o timer
+PASS explosão não recebe bônus flat que o código não aplica
+PASS batata nível 3: dano exibido confere com a entidade
+PASS batata nível 3: intervalo confere com o timer
+PASS explosão não recebe bônus flat que o código não aplica
+PASS batata máximo não entra nas cartas
+PASS mamona nível 1: dano exibido confere com a entidade
+PASS mamona nível 1: intervalo confere com o timer
+PASS mamona nível 2: dano exibido confere com a entidade
+PASS mamona nível 2: intervalo confere com o timer
+PASS mamona nível 3: dano exibido confere com a entidade
+PASS mamona nível 3: intervalo confere com o timer
+PASS mamona máximo não entra nas cartas
+PASS motosserra nível 1: dano exibido confere com a entidade
+PASS motosserra nível 1: intervalo confere com o timer
+PASS motosserra nível 2: dano exibido confere com a entidade
+PASS motosserra nível 2: intervalo confere com o timer
+PASS motosserra nível 3: dano exibido confere com a entidade
+PASS motosserra nível 3: intervalo confere com o timer
+PASS motosserra máximo não entra nas cartas
+PASS bezerro nível 1: dano exibido confere com a entidade
+PASS bezerro nível 1: intervalo confere com o timer
+PASS bezerro nível 2: dano exibido confere com a entidade
+PASS bezerro nível 2: intervalo confere com o timer
+PASS bezerro nível 3: dano exibido confere com a entidade
+PASS bezerro nível 3: intervalo confere com o timer
+PASS bezerro máximo não entra nas cartas
+PASS cerca nível 1: dano exibido confere com a entidade
+PASS cerca nível 1: intervalo confere com o timer
+PASS cerca nível 2: dano exibido confere com a entidade
+PASS cerca nível 2: intervalo confere com o timer
+PASS cerca nível 3: dano exibido confere com a entidade
+PASS cerca nível 3: intervalo confere com o timer
+PASS cerca máximo não entra nas cartas
+PASS preview respeita piso de intervalo
+PASS queijo nível 1: progressão correta
+PASS queijo nível 1: previsão confere após aplicar
+PASS queijo nível 2: progressão correta
+PASS queijo nível 2: previsão confere após aplicar
+PASS queijo nível 3: progressão correta
+PASS queijo nível 3: previsão confere após aplicar
+PASS queijo máximo indisponível
+PASS caderno nível 1: progressão correta
+PASS caderno nível 1: previsão confere após aplicar
+PASS caderno nível 2: progressão correta
+PASS caderno nível 2: previsão confere após aplicar
+PASS caderno nível 3: progressão correta
+PASS caderno nível 3: previsão confere após aplicar
+PASS caderno máximo indisponível
+PASS amolador nível 1: progressão correta
+PASS amolador nível 1: previsão confere após aplicar
+PASS amolador nível 2: progressão correta
+PASS amolador nível 2: previsão confere após aplicar
+PASS amolador nível 3: progressão correta
+PASS amolador nível 3: previsão confere após aplicar
+PASS amolador máximo indisponível
+PASS espantalho nível 1: progressão correta
+PASS espantalho nível 1: previsão confere após aplicar
+PASS espantalho nível 2: progressão correta
+PASS espantalho nível 2: previsão confere após aplicar
+PASS espantalho nível 3: progressão correta
+PASS espantalho nível 3: previsão confere após aplicar
+PASS espantalho máximo indisponível
+PASS sementes nível 1: progressão correta
+PASS sementes nível 1: previsão confere após aplicar
+PASS sementes nível 2: progressão correta
+PASS sementes nível 2: previsão confere após aplicar
+PASS sementes nível 3: progressão correta
+PASS sementes nível 3: previsão confere após aplicar
+PASS sementes máximo indisponível
+PASS termica nível 1: progressão correta
+PASS termica nível 1: previsão confere após aplicar
+PASS termica nível 2: progressão correta
+PASS termica nível 2: previsão confere após aplicar
+PASS termica nível 3: progressão correta
+PASS termica nível 3: previsão confere após aplicar
+PASS termica máximo indisponível
+PASS galochas nível 1: progressão correta
+PASS galochas nível 1: previsão confere após aplicar
+PASS galochas nível 2: progressão correta
+PASS galochas nível 2: previsão confere após aplicar
+PASS galochas nível 3: progressão correta
+PASS galochas nível 3: previsão confere após aplicar
+PASS galochas máximo indisponível
+PASS ima nível 1: progressão correta
+PASS ima nível 1: previsão confere após aplicar
+PASS ima nível 2: progressão correta
+PASS ima nível 2: previsão confere após aplicar
+PASS ima nível 3: progressão correta
+PASS ima nível 3: previsão confere após aplicar
+PASS ima máximo indisponível
+PASS í­mã nível 3 anuncia e ativa coleta automática
+PASS selecionar carta não gasta melhoria
+PASS confirmação consome uma escolha e limpa seleção
+PASS callback antigo e confirmação repetida não gastam próxima carta
+PASS geração da escolha foi renovada
+PASS última confirmação retoma o combate
+PASS reiniciar pede confirmação dentro da pausa
+PASS cancelar saída mantém pausa
+PASS ações de pausa dentro da tela (360, 640)
+PASS confirmação fixa e conteúdo rolável (360, 640)
+PASS ações de pausa dentro da tela (720, 1280)
+PASS confirmação fixa e conteúdo rolável (720, 1280)
+PASS ações de pausa dentro da tela (1080, 2400)
+PASS confirmação fixa e conteúdo rolável (1080, 2400)
+PASS ações de pausa dentro da tela (1280, 720)
+PASS confirmação fixa e conteúdo rolável (1280, 720)
+UI RESULT checks=142 failures=0

@@ -46,6 +46,9 @@ static func passive_total(id: String, level: int) -> String:
 		"attack_speed_percent": return "Intervalo pelo item: ×%s" % number(multiplier)
 		"move_speed_percent": return "Velocidade pelo item: ×%s" % number(multiplier)
 		"magnet_percent": return "Raio pelo item: ×%s%s" % [number(multiplier), " · Coleta automática: 15 s" if level == 3 else ""]
+		"regeneration": return "Regeneração do item: +%s vida/s" % number(value)
+		"xp_bonus": return "XP do item: +%s%%" % number(value * 100)
+		"damage_bonus": return "Dano do item: +%s por acerto" % number(value)
 	return ""
 
 static func item_details(player: Node, id: String, level: int, passive: bool) -> String:
@@ -82,11 +85,14 @@ static func preview(player: Node, upgrade: Dictionary) -> Dictionary:
 		title = data.name
 		kind = "PASSIVO · " + ("Novo → Nível 1" if old == 0 else "Nível %d → %d" % [old, next])
 		match data.stat:
-			"defense_percent": lines.append("Defesa: %s%% → %s%%" % [number(player.defense_percent * 100), number((player.defense_percent + inc) * 100)])
+			"defense_percent": lines.append("Defesa: %s%% → %s%%" % [number(player.defense_percent * 100), number(minf(0.75, player.defense_percent + inc) * 100)])
 			"bonus_max_health": lines.append("Vida máxima: %s → %s\nCura: +%s" % [number(player.max_health), number(player.max_health + inc), number(inc)])
 			"attack_speed_percent": lines.append("Intervalo das armas compatíveis: ×%s → ×%s" % [number(clampf(player.cooldown_multiplier, 0.25, 1)), number(clampf(player.cooldown_multiplier * (1.0 - inc), 0.25, 1))])
 			"move_speed_percent": lines.append("Velocidade: %s → %s px/s" % [number(player.speed), number(player.speed * (1.0 + inc))])
 			"magnet_percent": lines.append("Coleta: %s → %s px%s" % [number(player.magnet_radius), number(player.magnet_radius * (1.0 + inc)), "\nColeta automática da tela a cada 15 s" if next == 3 else ""])
+			"regeneration": lines.append("Regeneração: %s → %s vida/s" % [number(player.regeneration), number(player.regeneration + inc)])
+			"xp_bonus": lines.append("XP adicional: %s%% → %s%%" % [number(player.xp_bonus * 100), number((player.xp_bonus + inc) * 100)])
+			"damage_bonus": lines.append("Dano adicional: +%s → +%s" % [number(player.damage_bonus), number(player.damage_bonus + inc)])
 		lines.append(passive_total(id, next))
 		icon = RuralUI.item_icon(id, next, true)
 	else:
@@ -95,4 +101,8 @@ static func preview(player: Node, upgrade: Dictionary) -> Dictionary:
 			"cooldown": lines.append("Intervalo das armas compatíveis: ×%s → ×%s\nFoice, forquilha e projéteis; piso de ×0,25." % [number(clampf(player.cooldown_multiplier, 0.25, 1)), number(clampf(player.cooldown_multiplier * 0.9, 0.25, 1))])
 			"speed": lines.append("Velocidade: %s → %s px/s" % [number(player.speed), number(player.speed * 1.15)])
 			"health": lines.append("Vida máxima: %s → %s\nRestaura toda a vida." % [number(player.max_health), number(player.max_health + 20)])
+			"regeneration": lines.append("Regeneração: %s → %s vida/s" % [number(player.regeneration), number(player.regeneration + 0.25)])
+			"xp": lines.append("XP adicional: %s%% → %s%%" % [number(player.xp_bonus * 100), number((player.xp_bonus + 0.05) * 100)])
+			"defense": lines.append("Defesa: %s%% → %s%%\nLimite: 75%% de redução." % [number(player.defense_percent * 100), number(minf(0.75, player.defense_percent + 0.05) * 100)])
+			"magnet": lines.append("Coleta: %s → %s px" % [number(player.magnet_radius), number(player.magnet_radius + 20)])
 	return {"title": title, "kind": kind, "lines": lines, "icon": icon}

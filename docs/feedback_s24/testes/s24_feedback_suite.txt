@@ -1,0 +1,71 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS curso completo do polegar cabe na área segura (720.0, 1560.0)
+PASS curso completo do polegar cabe na área segura (360.0, 780.0)
+PASS curso completo do polegar cabe na área segura (1280.0, 720.0)
+PASS joystick de referência aumentou de 60 para 96 unidades
+PASS joystick alcança intensidade total na direção 0
+PASS joystick alcança intensidade total na direção 1
+PASS joystick alcança intensidade total na direção 2
+PASS joystick alcança intensidade total na direção 3
+PASS joystick alcança intensidade total na direção 4
+PASS joystick alcança intensidade total na direção 5
+PASS joystick alcança intensidade total na direção 6
+PASS joystick alcança intensidade total na direção 7
+PASS outro dedo não libera nem rouba o joystick
+PASS dedo proprietário libera o controle
+PASS quarta arma é rejeitada pela regra de inventário
+PASS inventário cheio permite evoluir uma arma equipada
+PASS 200 sorteios não oferecem quarta arma, duplicata ou evolução inválida
+PASS 200 sorteios oferecem arma, item e atributo quando disponíveis
+PASS três armas no máximo retiram armas da oferta
+PASS build completa continua oferecendo três melhorias úteis
+PASS ofertas no piso de intervalo e teto de defesa são filtradas
+PASS três itens novos aplicam os totais de nível 3
+PASS regeneração recupera vida proporcional ao tempo de gameplay
+PASS bônus de XP altera a coleta efetiva
+PASS regeneração congela durante pausa
+PASS regeneração respeita a vida máxima
+PASS 60% da fase anuncia líder com 1,8 s de antecedência
+PASS aviso não cria contato ou dano antes do líder
+PASS pausa congela a contagem do encontro
+PASS um líder chega com quatro integrantes da escolta
+PASS líder tem vida e sinalização visual próprias
+PASS líder mantém colisão individual
+PASS HUD mostra nome e vida do líder
+PASS morte do líder não dá vitória nem duplica abate
+PASS líder concede exatamente uma melhoria
+PASS encontro não repete na mesma fase
+PASS pool remove vida extra, marcação e escala do antigo líder
+PASS segunda fase oferece outro arquétipo de líder
+PASS segundo líder chega sem depender de matar o chefe final
+PASS encontro espera vaga no limite de inimigos
+PASS líder respeita limite sem adicionar escolta excedente
+PASS checkpoint restaura líder sem multiplicar vida novamente
+PASS checkpoint restaura atributos novos sem reaplicar itens
+PASS checkpoint preserva encontros consumidos e usa duração compartilhada
+PASS horta tem somente uma construção principal
+PASS horta mantém toda colisão arquitetônica fora da clareira central
+PASS horta não repete casas ou cercas no streaming
+PASS horta rota contorna prédio sem atravessar paredes
+PASS horta colisão real impede jogador de atravessar parede
+PASS horta 100 posições de surgimento ficam fora das construções
+PASS horta inimigo percorre desvio usando movimento e colisões reais
+PASS horta paredes interceptam projéteis
+PASS celeiro tem somente uma construção principal
+PASS celeiro mantém toda colisão arquitetônica fora da clareira central
+PASS celeiro não repete casas ou cercas no streaming
+PASS celeiro rota contorna prédio sem atravessar paredes
+PASS celeiro colisão real impede jogador de atravessar parede
+PASS celeiro 100 posições de surgimento ficam fora das construções
+PASS celeiro inimigo percorre desvio usando movimento e colisões reais
+PASS celeiro paredes interceptam projéteis
+PASS pomar tem somente uma construção principal
+PASS pomar mantém toda colisão arquitetônica fora da clareira central
+PASS pomar não repete casas ou cercas no streaming
+PASS pomar rota contorna prédio sem atravessar paredes
+PASS pomar colisão real impede jogador de atravessar parede
+PASS pomar 100 posições de surgimento ficam fora das construções
+PASS pomar inimigo percorre desvio usando movimento e colisões reais
+PASS pomar paredes interceptam projéteis
+S24 RESULT checks=68 failures=0

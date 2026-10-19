@@ -153,6 +153,9 @@ func test_passives() -> void:
 				"termica": actual = "×" + data.number(clampf(player.cooldown_multiplier, 0.25, 1.0))
 				"galochas": actual = data.number(player.speed) + " px/s"
 				"ima": actual = data.number(player.magnet_radius) + " px"
+				"queijo": actual = data.number(player.regeneration) + " vida/s"
+				"caderno": actual = data.number(player.xp_bonus * 100) + "%"
+				"amolador": actual = "+" + data.number(player.damage_bonus)
 			check(detail.contains("→ " + actual), "%s nível %d: previsão confere após aplicar" % [id, tier])
 		check(player.is_passive_unavailable(id), "%s máximo indisponível" % id)
 	check(player.auto_collect_orbs, "í­mã nível 3 anuncia e ativa coleta automática")

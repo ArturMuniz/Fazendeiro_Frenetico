@@ -15,6 +15,18 @@ extends Node
 ## "special_level3" (opcional): efeito extra só no nível 3.
 
 const PASSIVES: Dictionary = {
+	"queijo": {
+		"name": "Queijo Curado", "stat": "regeneration", "levels": [0.4, 0.4, 0.7],
+		"icon": "stat_health", "desc_levels": ["+0,4 de vida por segundo", "+0,4 de vida por segundo", "+0,7 de vida por segundo"],
+	},
+	"caderno": {
+		"name": "Caderno da Roça", "stat": "xp_bonus", "levels": [0.10, 0.10, 0.15],
+		"icon": "pickup_xp", "desc_levels": ["+10% de XP coletado", "+10% de XP coletado", "+15% de XP coletado"],
+	},
+	"amolador": {
+		"name": "Pedra de Amolar", "stat": "damage_bonus", "levels": [1.0, 2.0, 3.0],
+		"icon": "stat_damage", "desc_levels": ["+1 de dano por acerto", "+2 de dano por acerto", "+3 de dano por acerto"],
+	},
 	"espantalho": {
 		"name": "Espantalho de Bolso",
 		"stat": "defense_percent",

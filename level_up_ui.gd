@@ -26,6 +26,10 @@ var _stat_upgrades: Array = [
 	{"id": "cooldown", "name": "Café Mais Forte", "desc": "Todas as armas 10% mais rápidas"},
 	{"id": "speed", "name": "Botas Novas", "desc": "+15% de velocidade"},
 	{"id": "health", "name": "Marmita Caipira", "desc": "+20 de vida máxima e cura total"},
+	{"id": "regeneration", "name": "Descanso na Varanda", "desc": "+0,25 de vida por segundo"},
+	{"id": "xp", "name": "Aprendizado da Roça", "desc": "+5% de XP coletado"},
+	{"id": "defense", "name": "Couro Reforçado", "desc": "+5% de defesa"},
+	{"id": "magnet", "name": "Cesto Maior", "desc": "+20 de raio de coleta"},
 ]
 
 ## Armas: viram cópia nova se o jogador não tiver, ou fundem se já tiver
@@ -51,6 +55,10 @@ var _passive_upgrades: Array = [
 
 
 func _ready() -> void:
+	# Keep item offers in sync with the database instead of a second manual list.
+	_passive_upgrades.clear()
+	for id in PassiveDB.PASSIVES:
+		_passive_upgrades.append({"id": "passive_" + id, "passive_id": id, "name": PassiveDB.PASSIVES[id].name})
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 	$PanelContainer.hide()
@@ -78,24 +86,12 @@ func _populate_cards() -> void:
 	_choices.clear()
 	_confirm.disabled = true
 	_confirm.text = "Selecione uma melhoria"
-	_view.subtitle.text = "%d escolha(s) pendente(s) · Valores efetivos da sua build" % _player.pending_level_ups
+	_view.subtitle.text = "%d escolha(s) · Armas %d/%d · Ao completar três, apenas evoluções." % [_player.pending_level_ups, _player.weapons.size(), Player.MAX_WEAPONS]
 	for child in card_container.get_children():
 		card_container.remove_child(child)
 		child.queue_free()
 
-	var pool: Array = _stat_upgrades.duplicate()
-	for weapon_upgrade in _weapon_upgrades:
-		if not _player.is_weapon_unavailable(weapon_upgrade["weapon_id"]):
-			pool.append(weapon_upgrade)
-	for passive_upgrade in _passive_upgrades:
-		if not _player.is_passive_unavailable(passive_upgrade["passive_id"]):
-			pool.append(passive_upgrade)
-
-	pool.shuffle()
-	var choice_count: int = min(3, pool.size())
-
-	for i in range(choice_count):
-		var upgrade: Dictionary = pool[i]
+	for upgrade in roll_choices():
 		var info := UIData.preview(_player, upgrade)
 		var button := RuralUI.button("%s\n%s\n%s" % [info.title, info.kind, "\n".join(info.lines.slice(0, 3))])
 		button.custom_minimum_size.y = 168
@@ -124,6 +120,43 @@ func _populate_cards() -> void:
 	RuralUI.inventory(_build, _player)
 	RuralUI.attributes(_build, _player)
 	_build.hide()
+
+func available_upgrades() -> Array:
+	var pool: Array = []
+	for upgrade in _stat_upgrades:
+		if upgrade.id == "cooldown" and _player.cooldown_multiplier <= 0.25: continue
+		if upgrade.id == "defense" and _player.defense_percent >= 0.75: continue
+		pool.append(upgrade)
+	for upgrade in _weapon_upgrades:
+		if not _player.is_weapon_unavailable(upgrade.weapon_id): pool.append(upgrade)
+	for upgrade in _passive_upgrades:
+		if _player.is_passive_unavailable(upgrade.passive_id): continue
+		var stat: String = PassiveDB.PASSIVES[upgrade.passive_id].stat
+		if stat == "attack_speed_percent" and _player.cooldown_multiplier <= 0.25: continue
+		if stat == "defense_percent" and _player.defense_percent >= 0.75: continue
+		pool.append(upgrade)
+	return pool
+
+## One weapon, one passive and one attribute when each category is available.
+## Owned weapons get a 65% preference while new weapon slots remain open.
+## Once full, only owned, non-maxed weapons can enter this pool.
+func roll_choices() -> Array:
+	var pool := available_upgrades()
+	var weapons: Array = pool.filter(func(u: Dictionary) -> bool: return u.has("weapon_id"))
+	var owned: Array = weapons.filter(func(u: Dictionary) -> bool: return UIData.level_of(_player.weapons, u.weapon_id) > 0)
+	var passives: Array = pool.filter(func(u: Dictionary) -> bool: return u.has("passive_id"))
+	var stats: Array = pool.filter(func(u: Dictionary) -> bool: return not u.has("weapon_id") and not u.has("passive_id"))
+	var result: Array = []
+	if not owned.is_empty() and randf() < 0.65: weapons = owned
+	for category in [weapons, passives, stats]:
+		if not category.is_empty():
+			var choice: Dictionary = category.pick_random()
+			result.append(choice)
+			pool.erase(choice)
+	pool.shuffle()
+	while result.size() < 3 and not pool.is_empty(): result.append(pool.pop_back())
+	result.shuffle()
+	return result
 
 func _toggle_build() -> void:
 	_build.visible = not _build.visible
@@ -183,3 +216,7 @@ func _apply_upgrade(upgrade: Dictionary) -> void:
 		"health":
 			_player.max_health += 20.0
 			_player.health = _player.max_health
+		"regeneration": _player.regeneration += 0.25
+		"xp": _player.xp_bonus += 0.05
+		"defense": _player.defense_percent = minf(0.75, _player.defense_percent + 0.05)
+		"magnet": _player.magnet_radius += 20

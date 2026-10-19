@@ -67,13 +67,16 @@ func run() -> void:
 		var landscape: FarmLandscape = current_scene.landscape
 		check(current_scene.current_map_id == id and landscape.map_id == id,id+" escolhe a paisagem correta")
 		check(not current_scene.get_node("GroundTileMap").visible,id+" remove o piso antigo da apresentação")
-		check(not has_simulation(landscape),id+" decoração não possui física, navegação ou timers")
+		check(not has_simulation(landscape.chunks[Vector2i.ZERO]),id+" parcelas decorativas não possuem física, navegação ou timers")
+		check(landscape.landmarks.bounds.size() == 5,id+" construções e cercas únicas têm colisões próprias")
 		check(landscape.z_index < player.z_index,id+" cenário fica atrás dos atores e ataques")
 		check(landscape.chunks.size() == landscape.cache_limit(),id+" cache cobre somente a região necessária")
 		check(covered(landscape,player),id+" viewport inicial tem chão em todos os cantos")
 		var parcel: Node = landscape.chunks[Vector2i.ZERO]
 		check(parcel.floor_commands[0].rect == Rect2(-512,-512,1024,1024),id+" parcela preenche a superfície inteira")
-		check(parcel.props.size() >= 20,id+" contém grupos de elementos rurais")
+		var rural_groups: Dictionary = {}
+		for prop in parcel.props: rural_groups[prop.id] = true
+		check(rural_groups.size() >= 4,id+" mantém variedade rural na clareira, sem exigir densidade de obstáculos")
 		var signature := hash(var_to_str(parcel.props)+var_to_str(parcel.floor_commands))
 		signatures.append(signature)
 		var clear_spawn := true
@@ -124,7 +127,7 @@ func run() -> void:
 		player.joystick.reset_input()
 		check(player.speed == speed and player.max_health == health and player.get_node("CollisionShape2D").shape.radius == radius,id+" arte preserva atributos e hitbox")
 		await process_frame
-		check(landscape.get_child_count() == landscape.chunks.size(),id+" parcelas antigas são removidas da árvore")
+		check(landscape.get_child_count() == landscape.chunks.size() + 1,id+" parcelas antigas são removidas; marcos são únicos")
 	check(signatures[0] != signatures[1] and signatures[1] != signatures[2] and signatures[0] != signatures[2],"três mapas possuem composições distintas")
 	check(hash(var_to_str(root.get_node("MapDB").MAPS)) == campaign_before,"dados de campanha, chefes e balanceamento permanecem intactos")
 	pm.change_scene("res://hub.tscn")

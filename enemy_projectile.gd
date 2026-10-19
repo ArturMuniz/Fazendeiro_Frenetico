@@ -17,6 +17,7 @@ var _lifetime_timer: Timer
 
 
 func _ready() -> void:
+	collision_mask = 9
 	body_entered.connect(_on_body_entered)
 	_lifetime_timer = Timer.new()
 	_lifetime_timer.one_shot = true
@@ -48,6 +49,9 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if _despawning or get_tree().paused:
+		return
+	if body.is_in_group("farm_obstacles"):
+		_despawn()
 		return
 	if body.is_in_group("player") and body.has_method("take_damage"):
 		body.take_damage(_damage)

@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 617.14 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4050 Laptop GPU
+
+S24 CAPTURE horta_clareira
+S24 CAPTURE horta_bordas
+S24 CAPTURE horta_construcao
+S24 CAPTURE lider_e_tres_armas
+S24 CAPTURE pausa
+S24 CAPTURE cartas
+S24 CAPTURE celeiro_clareira
+S24 CAPTURE celeiro_bordas
+S24 CAPTURE celeiro_construcao
+S24 CAPTURE pomar_clareira
+S24 CAPTURE pomar_bordas
+S24 CAPTURE pomar_construcao
