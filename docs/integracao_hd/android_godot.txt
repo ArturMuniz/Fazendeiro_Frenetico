@@ -1,0 +1,18 @@
+--------- beginning of main
+10-22 00:32:11.713  3753  3753 V Godot   : Initializing Godot plugin registry
+10-22 00:32:12.022  3753  3753 V Godot   : InitEngine with params: [--xr_mode_regular, --xr-mode, off, --fullscreen, --background_color, #000000]
+10-22 00:32:12.568  3753  3753 V Godot   : Godot native layer initialization completed: true
+10-22 00:32:12.568  3753  3753 V Godot   : Setting up native layer with params: [--xr-mode, off, --fullscreen]
+10-22 00:32:12.927  3753  3753 V Godot   : Godot native layer setup completed
+10-22 00:32:12.927  3753  3753 V Godot   : OnInitRenderView: GodotFragment{b35e846} (bfaf3535-382f-40f3-bc73-02e22f3b4c08 id=0x7f0800a7)
+10-22 00:32:13.001  3753  3753 D Godot   : Render view should be transparent: false
+10-22 00:32:13.006  3753  3753 D Godot   : renderingDevice: opengl3 (ProjectSettings)
+10-22 00:32:13.006  3753  3753 D Godot   : 			renderer: gl_compatibility (ProjectSettings)
+10-22 00:32:13.154  3753  3753 V Godot   : OnStart: GodotFragment{b35e846} (bfaf3535-382f-40f3-bc73-02e22f3b4c08 id=0x7f0800a7)
+10-22 00:32:13.172  3753  3753 V Godot   : OnResume: GodotFragment{b35e846} (bfaf3535-382f-40f3-bc73-02e22f3b4c08 id=0x7f0800a7)
+10-22 00:32:13.512  3753  3795 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+10-22 00:32:16.233  3753  3795 I godot   : OpenGL API OpenGL ES 3.1 (4.5.0 NVIDIA 617.14) - Compatibility - Using Device: Google (NVIDIA Corporation) - Android Emulator OpenGL ES Translator (NVIDIA GeForce RTX 4050 Laptop GPU/PCIe/SSE2)
+10-22 00:32:16.427  3753  3795 I godot   :
+10-22 00:32:18.120  3753  3795 V Godot   : OnGodotSetupCompleted
+10-22 00:32:18.784  3753  3795 V Godot   : OnGodotMainLoopStarted
+10-22 00:35:36.186  3753  3795 I godot   : HD RUN map=horta viewport=(720.0, 1600.0) renderer=gl_compatibility

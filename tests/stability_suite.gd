@@ -96,6 +96,11 @@ func test_joystick() -> void:
 	touch.pressed = true
 	touch.position = rect.get_center() + Vector2(joystick.joystick_radius * 0.6, 0)
 	root.push_input(touch, true)
+	check(joystick.get_vector().is_zero_approx(), "joystick flutuante nasce neutro no toque")
+	var drag := InputEventScreenDrag.new()
+	drag.index = touch.index
+	drag.position = touch.position + Vector2.RIGHT * joystick.joystick_radius * 0.6
+	root.push_input(drag, true)
 	await process_frame
 	check(joystick.get_vector().x > 0.4, "toque real produz movimento")
 	var old_position: Vector2 = player.position

@@ -75,6 +75,10 @@ func controls() -> void:
 	touch.pressed = true
 	touch.position = joystick.base.get_global_rect().get_center() + Vector2.RIGHT * joystick.joystick_radius * 0.7
 	root.push_input(touch, true)
+	var drag := InputEventScreenDrag.new()
+	drag.index = touch.index
+	drag.position = touch.position + Vector2.RIGHT * joystick.joystick_radius * 0.7
+	root.push_input(drag, true)
 	var other := InputEventScreenTouch.new()
 	other.index = 5
 	other.pressed = false
@@ -223,54 +227,30 @@ func checkpoint() -> void:
 func scenery() -> void:
 	for id in ["horta", "celeiro", "pomar"]:
 		await new_run(id)
-		var landscape: Node = current_scene.landscape
-		var landmarks: Node = landscape.landmarks
-		var buildings: Array = landmarks.props.filter(func(p: Dictionary) -> bool: return p.id in ["barn_building", "garden_shed"])
-		check(buildings.size() == 1, id + " tem somente uma construção principal")
-		var central := Rect2(-400, -600, 800, 1200)
-		check(not landmarks.bounds.any(func(rect: Rect2) -> bool: return rect.intersects(central)), id + " mantém toda colisão arquitetônica fora da clareira central")
-		var repeated := false
-		for chunk in landscape.chunks.values():
-			for prop in chunk.props:
-				repeated = repeated or prop.id in ["barn_building", "garden_shed", "horta_cerca"]
-		check(not repeated, id + " não repete casas ou cercas no streaming")
-		var obstacle: Rect2 = landmarks.bounds[0]
-		var from := Vector2(obstacle.position.x - 65, obstacle.get_center().y)
-		var to := Vector2(obstacle.end.x + 65, obstacle.get_center().y)
-		var point := from
-		var routed := true
-		for step in range(250):
-			var next: Vector2 = landscape.obstacles.next_waypoint(point, to)
-			var movement := point.move_toward(next, 10)
-			routed = routed and not landscape.obstacles.blocked(point, movement, 14)
-			point = movement
-			if point.distance_to(to) < 5: break
-		check(routed and point.distance_to(to) < 5, id + " rota contorna prédio sem atravessar paredes")
-		actor.position = from
-		actor.joystick._output = Vector2.RIGHT
-		actor.set_physics_process(true)
-		await create_timer(0.7).timeout
-		actor.set_physics_process(false)
-		actor.joystick.reset_input()
-		check(actor.position.x <= obstacle.position.x - 15, id + " colisão real impede jogador de atravessar parede")
-		actor.position = obstacle.get_center()
+		var landscape: FarmLandscape = current_scene.landscape
+		check(landscape.landmarks.get_child_count() == 4, id+" tem quatro limites únicos")
+		check(landscape.obstacles.is_clear(Vector2.ZERO,80), id+" mantém clareira central acessível")
+		check(landscape.get_child_count()==2,id+" não repete construções ou árvores por streaming")
+		actor.position = Vector2.ZERO
 		var clear_spawns := true
-		for trial in range(100): clear_spawns = clear_spawns and landscape.obstacles.is_clear(spawner._spawn_point(), 40)
-		check(clear_spawns, id + " 100 posições de surgimento ficam fora das construções")
-		actor.position = to
-		var enemy: Node = spawner._spawn_enemy("pulgao", false, from)
+		for trial in range(100): clear_spawns = clear_spawns and landscape.obstacles.is_clear(spawner._spawn_point(),40)
+		check(clear_spawns,id+" 100 spawns ficam dentro da área acessível")
+		actor.position = Vector2(80,0)
+		var enemy: Node = spawner._spawn_enemy("pulgao",false,Vector2(-80,0))
 		var arrived := false
-		for step in range(700):
+		for step in range(300):
 			await physics_frame
-			if enemy.global_position.distance_to(to) < 55:
+			if enemy.global_position.distance_to(actor.position)<55:
 				arrived = true
 				break
-		check(arrived, id + " inimigo percorre desvio usando movimento e colisões reais")
+		check(arrived,id+" inimigo alcança o jogador na arena real")
 		enemy._despawn()
 		await process_frame
 		await process_frame
 		var projectile: Node = load("res://projectile.tscn").instantiate()
 		current_scene.add_child(projectile)
-		projectile.setup(Vector2.RIGHT, 200, 5)
-		projectile._on_body_entered(landmarks.get_child(0))
-		check(projectile._despawning, id + " paredes interceptam projéteis")
+		projectile.setup(Vector2.RIGHT,200,5)
+		projectile._on_body_entered(landscape.landmarks.get_child(0))
+		check(projectile._despawning,id+" limites interceptam projéteis")
+		await process_frame
+		await process_frame

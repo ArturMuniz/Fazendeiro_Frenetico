@@ -1,0 +1,86 @@
+[
+	{
+		"name": "horta_combate",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "horta_borda",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "horta_pausa",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "celeiro_combate",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "celeiro_borda",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "celeiro_pausa",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "pomar_combate",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "pomar_borda",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "pomar_pausa",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "netinho_resultado",
+		"size": [
+			720,
+			1560
+		]
+	},
+	{
+		"name": "hub_tablet",
+		"size": [
+			960,
+			1280
+		]
+	},
+	{
+		"name": "personagens_tablet",
+		"size": [
+			960,
+			1280
+		]
+	}
+]

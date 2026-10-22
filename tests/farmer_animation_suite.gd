@@ -53,7 +53,7 @@ func run() -> void:
 		count += data.frames.size()
 		check(data.frames.size() == data.durations_ms.size(), state + " tem duração para cada quadro")
 		check(data.loop == (state in ["idle", "walk", "run"]), state + " usa o loop correto")
-	check(count == 38, "trinta e oito quadros fiéis às referências no catálogo integrado")
+	check(count == 54, "54 quadros do Fazendeiro remodelado no catálogo integrado")
 
 	# Deterministic animation-clock checks, independent of machine FPS.
 	var figure := Sprite2D.new()
@@ -62,8 +62,8 @@ func run() -> void:
 	root.add_child(clock)
 	clock.set_process(false)
 	clock.configure("fazendeiro", figure)
-	clock._process(0.219)
-	check(clock.frame_index == 0, "primeiro quadro de repouso segura 220 ms")
+	clock._process(0.233)
+	check(clock.frame_index == 0, "primeiro quadro de repouso segura 234 ms")
 	clock._process(0.002)
 	check(clock.frame_index == 1, "duração por quadro respeitada")
 	clock.play("walk", true)

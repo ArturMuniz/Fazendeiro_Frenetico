@@ -5,10 +5,12 @@ extends RefCounted
 ## independently; its decorative parcels never create duplicate physics bodies.
 const CLEARANCE := 36.0
 var rectangles: Array[Rect2] = []
+var arena_bounds := Rect2()
 var _graph := AStar2D.new()
 var _corners: Array[Vector2] = []
 
-func build(bounds: Array[Rect2]) -> void:
+func build(bounds: Array[Rect2], arena: Rect2 = Rect2()) -> void:
+	arena_bounds = arena
 	rectangles = bounds.duplicate()
 	_corners.clear()
 	_graph.clear()
@@ -22,11 +24,13 @@ func build(bounds: Array[Rect2]) -> void:
 			if not blocked(_corners[i], _corners[j], CLEARANCE): _graph.connect_points(i + 2, j + 2)
 
 func is_clear(point: Vector2, radius: float = 24.0) -> bool:
+	if arena_bounds.has_area() and not arena_bounds.grow(-radius).has_point(point): return false
 	for rect in rectangles:
 		if rect.grow(radius).has_point(point): return false
 	return true
 
 func blocked(from: Vector2, to: Vector2, clearance: float = CLEARANCE) -> bool:
+	if arena_bounds.has_area() and (not arena_bounds.grow(-clearance).has_point(from) or not arena_bounds.grow(-clearance).has_point(to)): return true
 	for bounds in rectangles:
 		var rect := bounds.grow(clearance)
 		if rect.has_point(from) or rect.has_point(to): return true
@@ -56,6 +60,9 @@ func next_waypoint(from: Vector2, to: Vector2) -> Vector2:
 	return goal
 
 func _outside(point: Vector2) -> Vector2:
+	if arena_bounds.has_area():
+		var inner := arena_bounds.grow(-CLEARANCE - 2)
+		point = point.clamp(inner.position, inner.end)
 	for bounds in rectangles:
 		var rect := bounds.grow(CLEARANCE + 1)
 		if not rect.has_point(point): continue

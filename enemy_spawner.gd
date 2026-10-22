@@ -229,6 +229,8 @@ func _on_spawn_timer_timeout() -> void:
 
 func _spawn_point() -> Vector2:
 	var landscape := get_tree().current_scene.get_node_or_null("FarmLandscape") as FarmLandscape
+	if landscape != null:
+		return landscape.spawn_point(_player.global_position, spawn_radius)
 	for attempt in range(16):
 		var point := _player.global_position + Vector2.from_angle(randf() * TAU) * spawn_radius
 		if landscape == null or landscape.obstacles.is_clear(point, 40): return point
@@ -248,7 +250,10 @@ func _spawn_enemy(id: String, leader: bool = false, point: Vector2 = Vector2.INF
 	if landscape != null and not landscape.obstacles.is_clear(destination, 40): destination = _spawn_point()
 
 	var enemy: Enemy = Pool.acquire(ENEMY_SCENE)
-	get_tree().current_scene.add_child(enemy)
-	enemy.global_position = destination
+	var scene := get_tree().current_scene as Node2D
+	# Set the transform before entering physics; pooled bodies must not briefly
+	# appear at their previous position or on top of the player at the origin.
+	enemy.position = scene.to_local(destination)
+	scene.add_child(enemy)
 	enemy.configure(id, _current_difficulty_multiplier(), _player, leader)
 	return enemy

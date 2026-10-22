@@ -1,0 +1,14 @@
+# Prompt da arena interna do celeiro
+
+Ferramenta: geração de imagens nativa, com a lavoura aprovada como referência de estilo. Arquivo escolhido: `mapa_celeiro_plate.png`. A imagem foi copiada para esta pasta antes do uso no protótipo. Nenhum personagem ou HUD foi gerado no fundo.
+
+```text
+Use case: stylized-concept.
+Asset type: complete 2D game environment background plate for a rural survival roguelite, landscape 4:3 composition.
+Primary request: Create the INTERIOR OF A LARGE BRAZILIAN FARM BARN as a bounded survival arena. The supplied image is a STYLE reference only: match its polished warm rural pixel-art craftsmanship, overhead game-map camera, rich but controlled materials and charming coherent world. Replace the outdoor farmland with a roofless cutaway barn interior, not a farm exterior.
+Composition: straight rectangular room, camera high overhead with modest top-down RPG wall faces, NOT isometric, NO vanishing point. Show entire room and all four limits. Use a narrow exterior dark framing margin at the image edge. Interior perimeter near x=8% and92%, y=12% and88%. Large clearly open rectangular playable floor occupies the central 70% of width and 70% of height. Center floor is uninterrupted, worn warm honey-brown wooden planks, restrained grain, subtle straw scuffs, readable low contrast. Flat walkable surface, no crop rows or paths needed indoors.
+Perimeter identity: wooden plank walls, red-painted barn boards, sturdy beams only attached to walls, high small windows in the rear wall, modest lanterns. Neat shallow storage zones along outer walls: stacked golden hay bales, grain sacks, rustic crates, barrels, coiled rope, wall-hung rake and pitchfork. A short open empty stall at one upper corner, small workbench at the opposite upper corner. Keep all large furnishings inside a thin peripheral band, with a consistent straight inner boundary; absolutely no props projecting into the combat floor. Southern double barn doors CLOSED at center, readable as arena boundary. Bottom wall cut away enough to see the floor, a low wooden threshold and closed doors; no foreground roof covering the arena.
+Lighting: warm late-afternoon shafts from high windows, gentle ambient illumination, no dark hiding places, keep floor readable. Avoid large black shadows or visual effects that would hide mobs.
+Pixel art: distinct carefully placed pixel clusters, dark warm outlines on objects, same environment fidelity and scale as the style reference; no photorealism, no blur, no painterly strokes.
+Critical: EMPTY environment plate, no people, no farmer, no enemies, no animals, no HUD, no UI, no text, no labels, no numbers, no watermark, no white background. Do not put a roof across the scene or any central pillars, piles, railings or obstacles. Open maneuvering space is the primary gameplay requirement.
+```

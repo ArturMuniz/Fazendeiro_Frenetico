@@ -151,12 +151,7 @@ static func shell(owner: Node, title: String, subtitle: String, modal: bool = tr
 		if not is_instance_valid(root) or not root.is_inside_tree() or not is_instance_valid(panel):
 			return
 		var viewport := root.get_viewport_rect().size
-		var safe := Rect2(Vector2.ZERO, viewport)
-		if OS.has_feature("android") or OS.has_feature("ios"):
-			var physical := DisplayServer.get_display_safe_area()
-			var window_size := Vector2(DisplayServer.window_get_size())
-			if window_size.x > 0 and window_size.y > 0:
-				safe = Rect2(Vector2(physical.position) / window_size * viewport, Vector2(physical.size) / window_size * viewport)
+		var safe := TouchJoystick.safe_rect(root.get_viewport())
 		var width := minf(760.0, safe.size.x - 32.0)
 		panel.position = safe.position + Vector2((safe.size.x - width) / 2.0, 16)
 		panel.size = Vector2(width, safe.size.y - 32)

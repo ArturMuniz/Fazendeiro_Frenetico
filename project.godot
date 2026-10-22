@@ -16,7 +16,8 @@ general/ios/enabled=false
 
 config/name="fazendeiro_caotico"
 run/main_scene="res://hub.tscn"
-config/features=PackedStringArray("4.7", "Mobile")
+config/features=PackedStringArray("4.7", "GL Compatibility")
+run/max_fps=60
 config/icon="res://art/polished/app_icon.png"
 
 [autoload]
@@ -37,7 +38,7 @@ RewardedAds="*res://rewarded_ads.gd"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
@@ -61,5 +62,8 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+limits/opengl/max_renderable_lights=4
+limits/opengl/max_lights_per_object=4

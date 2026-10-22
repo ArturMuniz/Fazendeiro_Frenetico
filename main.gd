@@ -35,6 +35,8 @@ func _ready() -> void:
 	landscape.name = "FarmLandscape"
 	add_child(landscape)
 	landscape.configure(current_map_id, $player)
+	if OS.is_debug_build():
+		print("HD RUN map=", current_map_id, " viewport=", get_viewport_rect().size, " renderer=", RenderingServer.get_current_rendering_method())
 
 	AudioManager.play_music(data.get("music_id", "gameplay"))
 

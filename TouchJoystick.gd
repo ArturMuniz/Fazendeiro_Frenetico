@@ -1,12 +1,13 @@
 extends Control
 class_name TouchJoystick
 
-## Joystick virtual simples baseado em toque.
+## Joystick flutuante: nasce no ponto do toque e desaparece ao soltar.
 ## Anexe este script ao Control "VirtualJoystick" que contém
 ## os filhos "Base" e "Handle" (podem ser ColorRect como
 ## placeholder, ou TextureRect quando trocar pela arte final).
 
 @export var joystick_radius: float = 96.0
+@export var floating: bool = true
 @export_range(0.0, 0.3) var dead_zone: float = 0.08
 
 @onready var base: Control = $Base
@@ -14,6 +15,9 @@ class_name TouchJoystick
 
 var _touch_index: int = -1
 var _output: Vector2 = Vector2.ZERO
+var _origin: Vector2
+var _safe: Rect2
+var _home_position: Vector2
 
 
 func _ready() -> void:
@@ -27,21 +31,44 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
+	# Once captured, the owner's release must reach us even over a UI button.
+	# New touches are accepted only after GUI dispatch, in _unhandled_input.
+	if _touch_index < 0: return
+	if get_tree().paused:
+		reset_input()
+		return
+	if event is InputEventScreenDrag and event.index == _touch_index:
+		_update_handle(event.position)
+		get_viewport().set_input_as_handled()
+	elif event is InputEventScreenTouch and not event.pressed and event.index == _touch_index:
+		reset_input()
+		get_viewport().set_input_as_handled()
+
+
+func _unhandled_input(event: InputEvent) -> void:
 	if get_tree().paused:
 		reset_input()
 		return
 	if event is InputEventScreenTouch:
-		if event.pressed and _touch_index == -1 and base.get_global_rect().grow(16).has_point(event.position):
+		if event.pressed and _touch_index == -1 and (_safe.has_point(event.position) if floating else base.get_global_rect().grow(16).has_point(event.position)):
 			_touch_index = event.index
+			_origin = event.position if floating else base.get_global_rect().get_center()
+			if floating:
+				var reach := joystick_radius + handle.size.x / 2.0
+				var center: Vector2 = event.position.clamp(_safe.position + Vector2.ONE * reach, _safe.end - Vector2.ONE * reach)
+				position = center - size / 2.0
 			_update_handle(event.position)
+			get_viewport().set_input_as_handled()
 		elif not event.pressed and event.index == _touch_index:
 			reset_input()
+			get_viewport().set_input_as_handled()
 	elif event is InputEventScreenDrag and event.index == _touch_index:
 		_update_handle(event.position)
+		get_viewport().set_input_as_handled()
 
 
 func _update_handle(global_pos: Vector2) -> void:
-	var center: Vector2 = base.get_global_rect().get_center()
+	var center: Vector2 = _origin if floating and _touch_index >= 0 else base.get_global_rect().get_center()
 	var delta: Vector2 = global_pos - center
 	var clamped: Vector2 = delta.limit_length(joystick_radius)
 	handle.position = base.position + (base.size - handle.size) / 2.0 + clamped
@@ -66,25 +93,35 @@ static func geometry(view: Vector2, safe: Rect2) -> Dictionary:
 
 func _layout() -> void:
 	var view := get_viewport_rect().size
-	var safe := Rect2(Vector2.ZERO, view)
-	if OS.has_feature("android") or OS.has_feature("ios"):
-		var physical := DisplayServer.get_display_safe_area()
-		var window_size := Vector2(DisplayServer.window_get_size())
-		if window_size.x > 0 and window_size.y > 0 and physical.size.x > 0:
-			safe = Rect2(Vector2(physical.position) / window_size * view, Vector2(physical.size) / window_size * view)
+	var safe := safe_rect(get_viewport())
+	_safe = safe
 	var layout := geometry(view, safe)
 	joystick_radius = layout.radius
 	set_anchors_preset(Control.PRESET_TOP_LEFT)
 	size = Vector2.ONE * joystick_radius * 2
-	position = layout.center - size / 2
+	_home_position = layout.center - size / 2
+	position = _home_position
 	base.position = Vector2.ZERO
 	base.size = size
 	handle.size = Vector2.ONE * layout.knob
 	reset_input()
 
 
+static func safe_rect(viewport: Viewport) -> Rect2:
+	var view := viewport.get_visible_rect().size
+	var safe := Rect2(Vector2.ZERO, view)
+	if OS.has_feature("android") or OS.has_feature("ios"):
+		var physical := DisplayServer.get_display_safe_area()
+		var window_size := Vector2(DisplayServer.window_get_size())
+		if window_size.x > 0 and window_size.y > 0 and physical.size.x > 0:
+			safe = Rect2(Vector2(physical.position) / window_size * view, Vector2(physical.size) / window_size * view)
+	return safe
+
+
 func _draw() -> void:
 	if not is_instance_valid(base) or not is_instance_valid(handle):
+		return
+	if floating and _touch_index < 0:
 		return
 	var center := base.position + base.size / 2.0
 	var ring := GameArt.ui("joystick_base")
@@ -96,6 +133,7 @@ func _draw() -> void:
 func reset_input() -> void:
 	_touch_index = -1
 	_output = Vector2.ZERO
+	position = _home_position
 	_reset_handle()
 
 

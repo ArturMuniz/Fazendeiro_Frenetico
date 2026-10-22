@@ -1,18 +1,20 @@
 # Teste no Galaxy S24+
 
-O preset `Android Teste` gera um APK de desenvolvimento ARM64 com o plugin AdMob nativo e IDs de anúncio de teste. Nome no aparelho: **Fazendeiro Frenético (Teste)**. Identificador: `com.arturmuniz.fazendeirofrenetico.teste`. Essa instalação tem seu próprio progresso local.
+O preset `Android Teste` gera um APK de desenvolvimento ARM32/ARM64 com o plugin AdMob nativo e IDs de anúncio de teste. Nome no aparelho: **Fazendeiro Frenético (Teste)**. Identificador: `com.arturmuniz.fazendeirofrenetico.teste`. Essa instalação tem seu próprio progresso local.
 
-[Baixar APK 0.24.2 e checksum no GitHub Releases](https://github.com/ArturMuniz/Fazendeiro_Frenetico/releases/tag/v0.24.2-teste).
+[Baixar APK 0.25.0 e checksum no GitHub Releases](https://github.com/ArturMuniz/Fazendeiro_Frenetico/releases/tag/v0.25.0-teste).
 
-Build atual: **0.24.2-teste** (código 25), arquivo `Fazendeiro_Frenetico_S24_v0.24.2_Teste.apk`, com **103.881.270 bytes**. Assinatura APK v2, integridade ZIP, ABI ARM64, SDK mínimo 26/alvo 36 e inclusão dos scripts novos conferidos. App ID no manifesto é o de teste do Google. O pacote não contém documentação, marketing ou suítes de teste.
+Build atual: **0.25.0-teste** (código 26), arquivo `Fazendeiro_Frenetico_HD_v0.25.0_Teste.apk`. Requisitos: Android 8.0/API 26 ou superior, OpenGL ES 3.0 e CPU ARM de 32 ou 64 bits. O APK acompanha um arquivo `.sha256` no release para conferência de integridade. SDK alvo 36, assinatura de desenvolvimento e AdMob com IDs de teste.
 
-SHA-256: `c437ab1b99594534ecd86193c3983c286cc7fc02021a1376d6728cb296818d59`.
+Esta versão integra as três arenas delimitadas aprovadas, 13 famílias de atores remodelados, joystick flutuante e HUD compacto. Renderiza a partir de 720 × 1280 em retrato, expandindo a área conforme a proporção. Veja o [relatório e as capturas reais do APK](integracao_hd/README.md).
 
-O usuário já executou a versão 0.24.1 no S24+ e relatou problemas de ergonomia e gameplay. Esta revisão responde àquele teste; veja o [relatório técnico e roteiro dirigido](feedback_s24/README.md). **A versão 0.24.2 ainda precisa ser testada no aparelho.** O certificado e o identificador são os mesmos da versão anterior, com código de versão maior, permitindo atualização da instalação existente.
+O pacote foi instalado e executado em emulador Android API 36.1 com GPU acelerada, incluindo combate, melhoria e pausa. **Ainda precisa de teste físico desta versão no S24+ e em aparelhos de entrada.** O identificador é o mesmo das versões anteriores; a assinatura foi conferida e corresponde à versão 0.24.2. Instalar por cima deve preservar o progresso. Não desinstale para atualizar.
+
+Integridade: **196,665,403 bytes**, SHA-256 `fe6f0828c9e26168c8f61161f9e8fca486f27586c9422d82dfb0bfceb8b8625f`. [Relatório da build](integracao_hd/build_android.json).
 
 ## Instalar pelo arquivo
 
-1. Transfira `Fazendeiro_Frenetico_S24_v0.24.2_Teste.apk` para o celular usando cabo USB ou um serviço de arquivos.
+1. Transfira `Fazendeiro_Frenetico_HD_v0.25.0_Teste.apk` para o celular usando cabo USB ou um serviço de arquivos.
 2. Abra o APK no aplicativo **Meus Arquivos** do Samsung.
 3. Se solicitado, permita que esse aplicativo instale aplicativos desta origem e confirme a instalação.
 4. Abra **Fazendeiro Frenético (Teste)**. Use internet para testar a disponibilidade dos anúncios; o combate deve funcionar sem conexão.
@@ -40,7 +42,7 @@ No computador, com o Android SDK configurado:
 
 ```powershell
 adb devices
-adb install -r builds/Fazendeiro_Frenetico_S24_v0.24.2_Teste.apk
+adb install -r builds/Fazendeiro_Frenetico_HD_v0.25.0_Teste.apk
 ```
 
 Registre o momento e a ação que causaram um problema. Com o aparelho conectado, é possível coletar logs do processo sem depender apenas da captura de tela.
@@ -52,7 +54,7 @@ Requer Godot 4.7.2, Java, SDK Android API 36/Build Tools 36.1.0 e template Andro
 O diretório `android/` é gerado e não entra no Git. Instale o template Android pelo editor, ou extraia o `android_source.zip` oficial em `android/build`. O helper `tools/fetch_android_templates.py` baixa somente esse componente do pacote oficial via HTTP Range e verifica seu CRC. O arquivo `android/.build_version` deve conter `4.7.2.stable`.
 
 ```powershell
-& 'CAMINHO/Godot_v4.7.2-stable_win64_console.exe' --headless --editor --path . --export-debug 'Android Teste' 'builds/Fazendeiro_Frenetico_S24_v0.24.2_Teste.apk' --quit
+& 'CAMINHO/Godot_v4.7.2-stable_win64_console.exe' --headless --editor --path . --export-debug 'Android Teste' 'builds/Fazendeiro_Frenetico_HD_v0.25.0_Teste.apk' --quit
 ```
 
 Referências: [exportação Android](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html), [Gradle](https://docs.godotengine.org/en/stable/tutorials/export/android_gradle_build.html) e [teste pelo aparelho](https://docs.godotengine.org/en/stable/tutorials/export/one-click_deploy.html).

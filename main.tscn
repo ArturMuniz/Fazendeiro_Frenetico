@@ -13,6 +13,7 @@
 script = ExtResource("7_main")
 
 [node name="Background" type="ColorRect" parent="."]
+mouse_filter = 2
 offset_left = -10000.0
 offset_top = -10000.0
 offset_right = 10000.0
@@ -23,6 +24,7 @@ color = Color(0.35, 0.32, 0.28, 1)
 tile_set = ExtResource("9_tileset")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1638102224]
+layer = 3
 
 [node name="VirtualJoystick" parent="CanvasLayer" unique_id=160332783 instance=ExtResource("1_ig7tw")]
 

@@ -1,0 +1,22 @@
+{
+  "version": "0.25.0-teste",
+  "version_code": 26,
+  "filename": "Fazendeiro_Frenetico_HD_v0.25.0_Teste.apk",
+  "bytes": 196665403,
+  "sha256": "fe6f0828c9e26168c8f61161f9e8fca486f27586c9422d82dfb0bfceb8b8625f",
+  "apk_zip_integrity": true,
+  "apk_v2_signature": true,
+  "certificate_sha256": "82c32bab7d454785d107842b4343f28df1949fb573f7e12fd6763e33a136e2e0",
+  "same_certificate_as_0_24_2": true,
+  "package": "com.arturmuniz.fazendeirofrenetico.teste",
+  "min_sdk": 26,
+  "target_sdk": 36,
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
+  "gles": "3.0",
+  "actor_frame_imports": 368,
+  "arena_imports": 3,
+  "documentation_and_tests_excluded": true
+}

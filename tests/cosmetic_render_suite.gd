@@ -48,7 +48,7 @@ func run() -> void:
 		rows.add_child(picture)
 	await process_frame
 	await RenderingServer.frame_post_draw
-	root.get_texture().get_image().save_png("res://docs/polimento_atores/telas/skins_comparacao.png")
+	root.get_texture().get_image().save_png("res://tests/.tmp/skins_integradas.png")
 	root.get_node("AudioManager").shutdown()
 	print("COSMETIC RESULT checks=%d failures=%d" % [checks,failures])
 	quit(1 if failures else 0)

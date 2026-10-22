@@ -98,6 +98,14 @@ func _populate_maps() -> void:
 		map.resized.connect(reposition)
 		reposition.call()
 	var current: Dictionary = MapDB.MAPS[SaveManager.selected_map]
+	var preview := TextureRect.new()
+	preview.name = "SelectedArenaPreview"
+	preview.texture = load(ArenaMaps.DATA[SaveManager.selected_map].texture) as Texture2D
+	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	preview.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	preview.custom_minimum_size.y = 240
+	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_view.body.add_child(preview)
 	var status := "Concluído" if SaveManager.is_map_cleared(SaveManager.selected_map) else "Disponível"
 	_view.body.add_child(RuralUI.label("%s · %s\n3 fases e um chefe. Após a vitória, avance ou continue no modo livre." % [current.name, status], 24))
 

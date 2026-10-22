@@ -20,7 +20,9 @@ O movimento usa joystick virtual; a emulação de toque pelo mouse está habilit
 
 ## Estado do desenvolvimento
 
-O primeiro pacote de controle e estabilidade está implementado. Consulte [o relatório técnico e os comandos de teste](RELATORIO_ESTABILIDADE.md). A validação dirigida passou em Windows; após o primeiro teste do usuário no S24+, a revisão 0.24.2 aguarda nova avaliação no aparelho e partidas de longa duração.
+Versão atual: **0.25.0-teste**. As três arenas aprovadas (horta, interior do celeiro e pomar) e os novos modelos de personagens/inimigos estão integrados. A base de renderização é HD em retrato, com interface responsiva, joystick flutuante e APK ARM de 32/64 bits para Android 8.0+ com OpenGL ES 3.0. Veja [implementação, capturas, 640 verificações e limitações](docs/integracao_hd/README.md). O APK executou combate e menus em emulador Android com GPU acelerada; esta versão ainda precisa de teste físico no S24+ e em aparelhos de entrada.
+
+O primeiro pacote de controle e estabilidade está implementado. Consulte [o relatório técnico e os comandos de teste](RELATORIO_ESTABILIDADE.md).
 
 Versão em desenvolvimento. Os três personagens e os sete inimigos ativos têm famílias visuais próprias. O preset de exportação Android está incluído; o teste do usuário no Galaxy S24+ orientou o pacote de ergonomia, mapas e encontros descrito abaixo. Algumas artes complementares e o balanceamento final continuam pendentes.
 
@@ -34,16 +36,16 @@ A interface rural foi implementada com os assets aprovados. Veja o [relatório d
 
 O [relatório dos sprites polidos](RELATORIO_SPRITES_POLIDOS.md) registra a integração posterior:184 fontes revisadas, personagens/inimigos animados, substituições,275 verificações e25 capturas do renderizador.
 
-O [pacote atual do Fazendeiro, baseado nos anexos originais](docs/arte_fazendeiro_fiel/README.md), integrado em 18/10/2026, inclui 38 quadros: repouso, caminhada, corrida, dois gestos de descanso e morte. A documentação reúne GIFs, fontes Aseprite, prompts e os resultados de 322 verificações Godot. Ele substitui no jogo o estudo simplificado anterior, preservado em `docs/arte_fazendeiro/`.
+O [pacote anterior do Fazendeiro, baseado nos anexos originais](docs/arte_fazendeiro_fiel/README.md), integrado em 18/10/2026, documenta 38 quadros. Ele foi substituído no runtime pelo pacote remodelado de 54 quadros em 0.25.0; a documentação anterior preserva GIFs, fontes e histórico.
 
-A [Vovó Resistente](docs/arte_vovo_resistente/README.md) também recebeu uma família baseada nos anexos: 32 quadros de descanso, caminhada, corrida, plantio de uma muda e morte com alma de óculos. Essa integração preserva os atributos e foi verificada com 357 checks Godot em Windows. Veja as prévias, fontes e ressalvas no relatório.
+A [documentação anterior da Vovó Resistente](docs/arte_vovo_resistente/README.md) registra a família de 32 quadros. A versão atual usa os 36 quadros do pacote remodelado aprovado, mantendo os atributos.
 
-Os [mapas remodelados](docs/remodelagem_mapas/README.md) documentam a primeira composição rural. O pacote posterior de feedback S24 mantém as parcelas decorativas e seu cache limitado, mas separa construções/cercas únicas nas bordas, com colisões e rotas de desvio. O centro permanece livre de colisões arquitetônicas.
+Os [mapas remodelados anteriores](docs/remodelagem_mapas/README.md) documentam a primeira composição rural e seu streaming. Em 0.25.0, ela foi substituída pelas três arenas finitas aprovadas, com cenário único, câmera limitada e colisões no perímetro. O centro permanece livre de colisões arquitetônicas.
 
 A [pesquisa e direção musical country/sertaneja](docs/trilha_country/README.md) reúne a análise técnica das duas referências do usuário, cinco composições instrumentais de demonstração em MP3/OGG/MIDI, prompts de produção e 60 verificações técnicas. As propostas estão disponíveis para escuta e ainda não substituem a trilha ativa.
 
 O [polimento de atores, interface e monetização](docs/polimento_atores/README.md) integra 126 quadros de Netinho/inimigos, prévias animadas, vestiário com roupas compradas por ouro e anúncios recompensados com retorno ao checkpoint ou dobra de moedas. Naquela entrega foram aprovadas 508 verificações de runtime/renderização. O plugin AdMob Android está instalado com IDs de teste; a configuração da conta de produção e a validação completa dos anúncios no aparelho continuam pendentes. O relatório detalha as regras de retorno, limites e evidências visuais.
 
-O preset **Android Teste** gera APKs ARM64 de desenvolvimento para o Galaxy S24+. O [guia de instalação no Android](docs/TESTE_ANDROID.md) descreve as builds e o roteiro no aparelho. Os IDs de anúncios continuam sendo de teste; a configuração de produção permanece pendente.
+O preset **Android Teste** gera APKs ARM32/ARM64 de desenvolvimento. O [guia de instalação no Android](docs/TESTE_ANDROID.md) descreve as builds e o roteiro no aparelho. Os IDs de anúncios continuam sendo de teste; a configuração de produção permanece pendente.
 
 O [pacote de feedback S24+ 0.24.2](docs/feedback_s24/README.md) aumenta e reposiciona o joystick, remove construções repetidas, acrescenta colisões periféricas e navegação, líderes de horda, três armas fixas por run e mais itens/atributos. O relatório reúne regras, valores iniciais, 594 verificações aprovadas e 12 capturas. O conforto e a dificuldade desta revisão precisam de novo teste no aparelho.

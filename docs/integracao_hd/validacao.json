@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-21",
+  "godot": "4.7.2",
+  "version": "0.25.0-teste",
+  "suites": {
+    "stability_suite": {
+      "checks": 79,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "map_landscape_suite": {
+      "checks": 90,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "art_suite": {
+      "checks": 76,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "farmer_animation_suite": {
+      "checks": 45,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "vovo_animation_suite": {
+      "checks": 37,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "actor_polish_suite": {
+      "checks": 18,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "s24_feedback_suite": {
+      "checks": 62,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "ui_suite": {
+      "checks": 142,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "mobile_hud_suite": {
+      "checks": 35,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "monetization_suite": {
+      "checks": 50,
+      "failures": 0,
+      "stderr_empty": true
+    },
+    "cosmetic": {
+      "checks": 6,
+      "failures": 0,
+      "stderr_empty": true
+    }
+  },
+  "checks": 640,
+  "failures": 0,
+  "png_sha256_verified": 371,
+  "production_visual_captures": 12,
+  "android": {
+    "environment": "Medium Phone API 36.1 x86_64, GPU host, 2GB RAM",
+    "display": [
+      1080,
+      2400
+    ],
+    "internal_viewport": [
+      720,
+      1600
+    ],
+    "scenarios": [
+      "lobby",
+      "horta combat",
+      "upgrade confirmation",
+      "pause inventory"
+    ],
+    "script_errors_or_app_crashes_in_observed_log": 0,
+    "physical_device_tested": false,
+    "software_driver_limitation": "SwiftShader: Godot CanvasShader uniforms limit; see README"
+  }
+}
